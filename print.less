@@ -91,21 +91,25 @@ div#header {
 
 /* Footer Components */
 
-div#footer {
+nav#footer {
     display: table-footer-group;
     left: 0;
     right: 0;
     width: auto;
     min-width: 8.5in;
+
+    & > ul {
+        display: none;
+    }
 }
 
 
-div#footer > div#footerColorBar {
+nav#footer > div#footerColorBar {
     height: 0.2in;
     overflow:hidden;
 }
 
-div#footer > div#footerColorBar svg {
+nav#footer > div#footerColorBar svg {
     width:8.5in;
     height:1in;
     bottom:0;
@@ -113,7 +117,7 @@ div#footer > div#footerColorBar svg {
     display: table-row;
 }
 
-div#footer > span#printPageNumber {
+nav#footer > span#printPageNumber {
     display: block;
     height: 0.8in;
     padding: 0 1in;
@@ -121,7 +125,7 @@ div#footer > span#printPageNumber {
     opacity: 0.5; // text colors are typically ignored when printing
 }
 
-div#footer > span#printPageNumber::after {
+nav#footer > span#printPageNumber::after {
     content: counter(page);
     counter-increment: page;
 }

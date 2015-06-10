@@ -15,12 +15,21 @@ div.background {
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  max-width: 100%;
   width: auto;
   height: auto;
   z-index: -1000;
   overflow: hidden;
   display: none;
+}
+div.background video {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: hidden;
 }
 div#header div#logo {
   background-size: contain;
@@ -29,7 +38,7 @@ div#header div#logo {
   transition: background 2s;
 }
 div#corset {
-  margin: 0 18pt 30px;
+  margin: 0 18pt 35px;
   /* headers */
 }
 div#corset > section {
@@ -143,7 +152,7 @@ div#corset blockquote > p:last-child {
 div#corset blockquote p {
   text-indent: 0;
 }
-div#footer {
+nav#footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -152,12 +161,51 @@ div#footer {
   padding: 5px 33pt;
   text-align: right;
   z-index: 1000;
+  font-size: 0.8em;
   opacity: 0.87;
   transition: opacity 20s;
 }
-div#footer:hover {
+nav#footer:hover {
   opacity: 1;
   transition: opacity 0.3s;
+}
+nav#footer span.bold {
+  font-weight: bold;
+}
+nav#footer > ul {
+  margin: 0;
+}
+nav#footer > ul > li {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 20px;
+  padding: 0 1px;
+}
+nav#footer > ul > li > a {
+  display: inline-block;
+  padding-left: 20px;
+  width: 0;
+  height: 20px;
+  overflow: hidden;
+  transition: background-position 0.2s ease-in-out;
+}
+nav#footer > ul > li > a#connectFacebook {
+  background-position-x: -20px;
+}
+nav#footer > ul > li > a#connectTwitter {
+  background-position-x: -40px;
+}
+nav#footer > ul > li > a#connectGoogleP {
+  background-position-x: -60px;
+}
+nav#footer > ul > li > a#connectYoutube {
+  background-position-x: -80px;
+}
+nav#footer > ul > li > a#connectVimeo {
+  background-position-x: -100px;
+}
+nav#footer > ul > li > a#connectSoundcloud {
+  background-position-x: -120px;
 }
 body div#header div#logo {
   background: url('static/logo/RGB__wide.svg') no-repeat;
@@ -194,11 +242,30 @@ body h2::after {
 body div#corset > h1,
 body div#corset > section,
 body div#header,
-body div#footer {
+body nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
-body div#footer {
+body a,
+body a {
   color: #2c82c5;
+}
+body a:hover,
+body a:hover {
+  color: #66ccff;
+}
+body nav#footer {
+  color: #2c82c5;
+}
+body nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-.png') repeat-y top left;
+  background-size: 140px 40px;
+}
+body nav#footer > ul > li > a:hover {
+  background-position-y: 20px;
+}
+body nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background-size: 140px 40px;
 }
 body.church div#header div#logo {
   background: url('static/logo/RGB_church_wide.svg') no-repeat;
@@ -235,11 +302,30 @@ body h2.church::after {
 body.church div#corset > h1,
 body.church div#corset > section,
 body.church div#header,
-body.church div#footer {
+body.church nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
-body.church div#footer {
+body.church a,
+body a.church {
   color: #8800a1;
+}
+body.church a:hover,
+body a.church:hover {
+  color: #d11cf1;
+}
+body.church nav#footer {
+  color: #8800a1;
+}
+body.church nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-church.png') repeat-y top left;
+  background-size: 140px 40px;
+}
+body.church nav#footer > ul > li > a:hover {
+  background-position-y: 20px;
+}
+body nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background-size: 140px 40px;
 }
 body.prayer div#header div#logo {
   background: url('static/logo/RGB_prayer_wide.svg') no-repeat;
@@ -276,11 +362,30 @@ body h2.prayer::after {
 body.prayer div#corset > h1,
 body.prayer div#corset > section,
 body.prayer div#header,
-body.prayer div#footer {
+body.prayer nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
-body.prayer div#footer {
+body.prayer a,
+body a.prayer {
   color: #c91b1b;
+}
+body.prayer a:hover,
+body a.prayer:hover {
+  color: #fe7a7a;
+}
+body.prayer nav#footer {
+  color: #c91b1b;
+}
+body.prayer nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-prayer.png') repeat-y top left;
+  background-size: 140px 40px;
+}
+body.prayer nav#footer > ul > li > a:hover {
+  background-position-y: 20px;
+}
+body nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background-size: 140px 40px;
 }
 body.training div#header div#logo {
   background: url('static/logo/RGB_training_wide.svg') no-repeat;
@@ -317,11 +422,30 @@ body h2.training::after {
 body.training div#corset > h1,
 body.training div#corset > section,
 body.training div#header,
-body.training div#footer {
+body.training nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
-body.training div#footer {
+body.training a,
+body a.training {
   color: #ce6219;
+}
+body.training a:hover,
+body a.training:hover {
+  color: #f79844;
+}
+body.training nav#footer {
+  color: #ce6219;
+}
+body.training nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-training.png') repeat-y top left;
+  background-size: 140px 40px;
+}
+body.training nav#footer > ul > li > a:hover {
+  background-position-y: 20px;
+}
+body nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background-size: 140px 40px;
 }
 body.discipleship div#header div#logo {
   background: url('static/logo/RGB_discipleship_wide.svg') no-repeat;
@@ -358,11 +482,30 @@ body h2.discipleship::after {
 body.discipleship div#corset > h1,
 body.discipleship div#corset > section,
 body.discipleship div#header,
-body.discipleship div#footer {
+body.discipleship nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
-body.discipleship div#footer {
+body.discipleship a,
+body a.discipleship {
   color: #efa81e;
+}
+body.discipleship a:hover,
+body a.discipleship:hover {
+  color: #f7dd2e;
+}
+body.discipleship nav#footer {
+  color: #efa81e;
+}
+body.discipleship nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-discipleship.png') repeat-y top left;
+  background-size: 140px 40px;
+}
+body.discipleship nav#footer > ul > li > a:hover {
+  background-position-y: 20px;
+}
+body nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background-size: 140px 40px;
 }
 body.outreach div#header div#logo {
   background: url('static/logo/RGB_outreach_wide.svg') no-repeat;
@@ -399,11 +542,30 @@ body h2.outreach::after {
 body.outreach div#corset > h1,
 body.outreach div#corset > section,
 body.outreach div#header,
-body.outreach div#footer {
+body.outreach nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
-body.outreach div#footer {
+body.outreach a,
+body a.outreach {
   color: #259110;
+}
+body.outreach a:hover,
+body a.outreach:hover {
+  color: #46fe21;
+}
+body.outreach nav#footer {
+  color: #259110;
+}
+body.outreach nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-outreach.png') repeat-y top left;
+  background-size: 140px 40px;
+}
+body.outreach nav#footer > ul > li > a:hover {
+  background-position-y: 20px;
+}
+body nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background-size: 140px 40px;
 }
 .printOnly {
   display: none;

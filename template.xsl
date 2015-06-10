@@ -11,16 +11,16 @@
 
 
             <head>
-                <title><xsl:value-of select="brilliant/title" /><xsl:if test="brilliant/title != ''"> | </xsl:if>Drexel Students for Christ</title>
+                <title><xsl:value-of select="brilliant/title" /><xsl:if test="brilliant/title != ''"> // </xsl:if>Drexel Students for Christ</title>
                 <link rel="stylesheet" href="screen.css" type="text/css" media="screen" />
                 <link rel="stylesheet" href="print.css" type="text/css" media="print" />
                 <link rel="shortcut icon" href="static/ico/RGB-icon-Church.ico" />
             </head>
 
 
-            <body class="discipleship">
+            <body class="church">
                 <div class="background">
-                    <video autoplay="autoplay" loop="loop" muted="muted" preload="auto" id="videoBackground" style="position: absolute; bottom: 0px; left: 0px; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1000; overflow: hidden; background-color:#002;">
+                    <video autoplay="autoplay" loop="loop" muted="muted" preload="auto" id="videoBackground">
                         <source src="http://drexelforchrist.org/_resources/Blue_Discs.webm" type="video/webm" />
                         <source src="http://drexelforchrist.org/_resources/Blue_Discs.mp4" type="video/mp4" />
                         <!-- KURTZ alternative for browsers which don't support the Video tag -->
@@ -35,7 +35,7 @@
                         </svg>
                     </div>
                     <div id="logo">
-                        <img src="static/CMYK_community_wide.svg" class="printOnly" id="printLogo" alt="Drexel Students for Christ" />
+                        <img src="static/logo/CMYK_community_wide.svg" class="printOnly" id="printLogo" alt="Drexel Students for Christ" />
                         <div class="printOnly printPageTitle"><xsl:value-of select="brilliant/title" />
                             <span id="printPageSubtitle"><xsl:value-of select="brilliant/subtitle" /></span>
                         </div>
@@ -47,7 +47,7 @@
                     <h1 class="noPrint">
                         <span id="pageTitle"><xsl:value-of select="brilliant/title" /></span>
                         <xsl:if test="brilliant/subtitle != ''">
-                            &#160;<xsl:value-of select="brilliant/subtitle" />
+                            &#160;//&#160;<xsl:value-of select="brilliant/subtitle" />
                         </xsl:if>
                     </h1>
                     <section>
@@ -172,8 +172,18 @@
                         </table>
                     </section>
                 </div>
-                <div id="footer">
-                    <div class="noPrint">&#169;  Drexel Students for Christ | connect with us: </div>
+                <nav id="footer">
+                    <ul>
+                        <li>&#169; 2015 <span class="narrowHide">Drexel Students for Christ</span><span class="bold">&#160;|&#160;connect<span class="narrowHide"> with us</span>: </span></li>
+                        <li><a href="https://www.facebook.com/drexelforchrist" title="Facebook" id="connectFacebook">Facebook</a></li>
+                        <li><a href="https://twitter.com/drexelforchrist" title="Twitter" id="connectTwitter">Twitter</a></li>
+                        <li><a href="http://www.youtube.com/drexel4christ" title="YouTube" id="connectYoutube">YouTube</a></li>
+                        <li><a href="http://www.vimeo.com/drexel" title="Vimeo" id="connectVimeo">Vimeo</a></li>
+                        <li><a href="https://plus.google.com/+DrexelforChrist" title="Google+" id="connectGoogleP">Google+</a></li>
+                        <li><a href="https://soundcloud.com/drexelforchrist" title="SoundCloud" id="connectSoundcloud">SoundCloud</a></li>
+                        <!--<li class="connectSprite" id="connectCSB"><a href="https://drexelforchrist.org/campussoapbox">Campus Soapbox</a></li>-->
+                        <!--<li class="connectSprite" id="connectFeeds"><a href="https://drexelforchrist.org/media/feeds">Feeds</a></li>-->
+                    </ul><!-- KURTZ make year dynamic -->
                     <span id="printPageNumber" class="printOnly" />
                     <div id="footerColorBar" class="printOnly">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -181,7 +191,7 @@
                             <rect x="0" y="0" width="600" height="10" style="fill: #4fc2ff;" />
                         </svg>
                     </div>
-                </div>
+                </nav>
             </body>
         </html>
     </xsl:template>

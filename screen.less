@@ -24,12 +24,22 @@ div.background {
     left: 0;
     min-width: 100%;
     min-height: 100%;
-    max-width: 100%;
     width: auto;
     height: auto;
     z-index: -1000;
     overflow: hidden;
-    display: none
+    display: none;
+
+    video {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+    }
 }
 
 
@@ -49,7 +59,7 @@ div#header {
 
 div#corset {
     & {
-        margin: 0 @corsetPadding 30px;
+        margin: 0 @corsetPadding 35px;
     }
     & > img {
 
@@ -182,7 +192,7 @@ div#corset {
 }
 
 
-div#footer {
+nav#footer {
     position: fixed;
     //height: 30px;
     bottom: 0;
@@ -193,6 +203,7 @@ div#footer {
     padding: 5px @corsetPadding+@sectionPadding;
     text-align: right;
     z-index: 1000;
+    font-size: 0.8em;
     & {
         opacity: 0.87;
         transition: opacity 20s;
@@ -200,6 +211,46 @@ div#footer {
     &:hover {
         opacity: 1;
         transition: opacity 0.3s;
+    }
+    & span.bold {
+        font-weight: bold;
+    }
+    & > ul {
+        margin: 0;
+    }
+    & > ul > li {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 20px;
+        padding: 0 1px;
+    }
+    & > ul > li > a {
+        display: inline-block;
+        padding-left: 20px;
+        width: 0;
+        height: 20px;
+        overflow: hidden;
+        transition: background-position 0.2s ease-in-out;
+
+        //natural default is 'feed'
+        &#connectFacebook {
+            background-position-x: -20px;
+        }
+        &#connectTwitter {
+            background-position-x: -40px;
+        }
+        &#connectGoogleP {
+            background-position-x: -60px;
+        }
+        &#connectYoutube {
+            background-position-x: -80px;
+        }
+        &#connectVimeo {
+            background-position-x: -100px;
+        }
+        &#connectSoundcloud {
+            background-position-x: -120px;
+        }
     }
 }
 
@@ -252,13 +303,53 @@ div#footer {
     body@{className} div#corset > h1,
     body@{className} div#corset > section,
     body@{className} div#header,
-    body@{className} div#footer {
+    body@{className} nav#footer {
         background-color: fade(@background, 94%);
     }
 
-    body@{className} div#footer {
+    body@{className} a,
+    body a@{className} {
         color: @primary;
     }
+
+    body@{className} a:hover,
+    body a@{className}:hover {
+        color: @secondary;
+    }
+
+    body@{className} nav#footer {
+        & {
+            color: @primary;
+        }
+        & > ul > li > a {
+            @url: 'static/ConnectSprite/connect-sprite-@{classNameOnly}.png';
+            background: data-uri(@url) repeat-y top left;
+            background-size: 140px 40px;
+
+            &:hover {
+                background-position-y: 20px;
+            }
+        }
+    }
+
+    body nav#footer { // default, cleaned up by optimizer
+        & > ul > li > a {
+            @url: 'static/ConnectSprite/connect-sprite-community.png';
+            background: data-uri(@url) repeat-y top left;
+            background-size: 140px 40px;
+        }
+    }
+
+
+
+    //body@{className} div#header div#logo {
+    //    @url: 'static/logo/RGB_@{classNameOnly}_wide.svg';
+    //    background: url(@url) no-repeat;
+    //}
+    //body div#header div#logo { // Default!  Duplicates should be removed by css-optimizer
+    //    @url: 'static/logo/RGB_community_wide.svg';
+    //    background: url(@url) no-repeat;
+    //}
 }
 
 & {
