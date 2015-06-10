@@ -174,7 +174,7 @@
                 </div>
                 <nav id="footer">
                     <ul>
-                        <li>&#169; 2015 <span class="narrowHide">Drexel Students for Christ</span><span class="bold">&#160;|&#160;connect<span class="narrowHide"> with us</span>: </span></li>
+                        <li class="copyrightText">&#169; 2015 <span class="narrowHide">Drexel Students for Christ</span><span class="bold">&#160;|&#160;connect<span class="narrowHide"> with us</span>: </span></li>
                         <li><a href="https://www.facebook.com/drexelforchrist" title="Facebook" id="connectFacebook">Facebook</a></li>
                         <li><a href="https://twitter.com/drexelforchrist" title="Twitter" id="connectTwitter">Twitter</a></li>
                         <li><a href="http://www.youtube.com/drexel4christ" title="YouTube" id="connectYoutube">YouTube</a></li>
