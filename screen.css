@@ -1,0 +1,410 @@
+/* Font imports */
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+@import url(static/fonts/novecentoBook_import.css);
+@import url(static/fonts/novecentoBold_import.css);
+body {
+  font-family: Cabin, 'Segoe UI', sans-serif;
+  margin: 0;
+  color: #222;
+  background: url(static/bg-stainedGlass.jpg) fixed;
+  background-size: cover;
+}
+div.background {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  display: none;
+}
+div#header div#logo {
+  background-size: contain;
+  width: 300px;
+  height: 114px;
+  transition: background 2s;
+}
+div#corset {
+  margin: 0 18pt 30px;
+  /* headers */
+}
+div#corset > section {
+  opacity: 0.87;
+  transition: opacity 20s;
+  padding: 0 15pt 1em;
+}
+div#corset > section:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+div#corset h1 span#pageTitle,
+div#corset h2,
+div#corset h3 {
+  font-family: 'Novecento wide Bold', sans-serif;
+  text-transform: uppercase;
+}
+div#corset h1,
+div#corset h4 {
+  font-family: 'Novecento wide Book', sans-serif;
+  text-transform: uppercase;
+}
+div#corset > h1 {
+  font-size: 2.2em;
+  margin: 0;
+  padding: 15pt;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+div#corset h2 {
+  margin: 0 -24pt;
+  padding: 2px 24pt 4px;
+  display: block;
+  position: relative;
+  line-height: 1.2em;
+}
+div#corset h2::before,
+div#corset h2::after {
+  box-sizing: border-box;
+  width: 9pt;
+  height: 9pt;
+  content: ' ';
+  display: block;
+  position: absolute;
+}
+div#corset h2::before {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  bottom: -9pt;
+  left: 0;
+}
+div#corset h2::after {
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  bottom: -9pt;
+  right: 0;
+}
+div#corset h4 {
+  margin: 0;
+}
+div#corset h3 {
+  padding: 2px 15pt 4px;
+  margin: 0 -15pt;
+}
+div#corset blockquote {
+  line-height: 1.5em;
+  font-family: 'Novecento wide Book', sans-serif;
+  font-variant: small-caps;
+  text-align: center;
+  margin: .1in 10%;
+  border-style: dotted;
+  border-width: 1px 0;
+  padding: 3em;
+  position: relative;
+}
+div#corset blockquote:before {
+  content: "\201C";
+  font-size: 100px;
+  line-height: 60px;
+  float: left;
+  display: block;
+  position: absolute;
+  left: 5%;
+  opacity: 0.3;
+}
+div#corset blockquote:after {
+  content: "\201D";
+  font-size: 100px;
+  line-height: 20px;
+  float: right;
+  display: block;
+  position: absolute;
+  right: 5%;
+  opacity: 0.3;
+}
+div#corset blockquote cite {
+  font-style: italic;
+  text-wrap: none;
+}
+div#corset blockquote strong {
+  font-family: 'Novecento wide Bold', sans-serif;
+}
+div#corset blockquote > p:first-child {
+  margin-top: 0;
+}
+div#corset blockquote > p:last-child {
+  margin-bottom: 0;
+}
+div#corset blockquote p {
+  text-indent: 0;
+}
+div#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  padding: 5px 33pt;
+  text-align: right;
+  z-index: 1000;
+  opacity: 0.87;
+  transition: opacity 20s;
+}
+div#footer:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+body div#header div#logo {
+  background: url('static/logo/RGB__wide.svg') no-repeat;
+}
+body div#header div#logo {
+  background: url('static/logo/RGB_community_wide.svg') no-repeat;
+}
+body blockquote,
+body blockquote {
+  color: #2c82c5;
+  background-color: rgba(44, 130, 197, 0.04);
+  border-color: #2c82c5 white;
+}
+body h3,
+body h3 {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #66ccff;
+}
+body h4,
+body h4 {
+  color: #2c82c5;
+}
+body h2,
+body h2 {
+  background-color: #2c82c5;
+  color: white;
+}
+body h2::before,
+body h2::before,
+body h2::after,
+body h2::after {
+  border: solid 4.5pt #66ccff;
+}
+body div#corset > h1,
+body div#corset > section,
+body div#header,
+body div#footer {
+  background-color: rgba(255, 255, 255, 0.94);
+}
+body div#footer {
+  color: #2c82c5;
+}
+body.church div#header div#logo {
+  background: url('static/logo/RGB_church_wide.svg') no-repeat;
+}
+body div#header div#logo {
+  background: url('static/logo/RGB_community_wide.svg') no-repeat;
+}
+body.church blockquote,
+body blockquote.church {
+  color: #8800a1;
+  background-color: rgba(136, 0, 161, 0.04);
+  border-color: #8800a1 white;
+}
+body.church h3,
+body h3.church {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #d11cf1;
+}
+body.church h4,
+body h4.church {
+  color: #8800a1;
+}
+body.church h2,
+body h2.church {
+  background-color: #8800a1;
+  color: white;
+}
+body.church h2::before,
+body h2.church::before,
+body.church h2::after,
+body h2.church::after {
+  border: solid 4.5pt #d11cf1;
+}
+body.church div#corset > h1,
+body.church div#corset > section,
+body.church div#header,
+body.church div#footer {
+  background-color: rgba(255, 255, 255, 0.94);
+}
+body.church div#footer {
+  color: #8800a1;
+}
+body.prayer div#header div#logo {
+  background: url('static/logo/RGB_prayer_wide.svg') no-repeat;
+}
+body div#header div#logo {
+  background: url('static/logo/RGB_community_wide.svg') no-repeat;
+}
+body.prayer blockquote,
+body blockquote.prayer {
+  color: #c91b1b;
+  background-color: rgba(201, 27, 27, 0.04);
+  border-color: #c91b1b white;
+}
+body.prayer h3,
+body h3.prayer {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fe7a7a;
+}
+body.prayer h4,
+body h4.prayer {
+  color: #c91b1b;
+}
+body.prayer h2,
+body h2.prayer {
+  background-color: #c91b1b;
+  color: white;
+}
+body.prayer h2::before,
+body h2.prayer::before,
+body.prayer h2::after,
+body h2.prayer::after {
+  border: solid 4.5pt #fe7a7a;
+}
+body.prayer div#corset > h1,
+body.prayer div#corset > section,
+body.prayer div#header,
+body.prayer div#footer {
+  background-color: rgba(255, 255, 255, 0.94);
+}
+body.prayer div#footer {
+  color: #c91b1b;
+}
+body.training div#header div#logo {
+  background: url('static/logo/RGB_training_wide.svg') no-repeat;
+}
+body div#header div#logo {
+  background: url('static/logo/RGB_community_wide.svg') no-repeat;
+}
+body.training blockquote,
+body blockquote.training {
+  color: #ce6219;
+  background-color: rgba(206, 98, 25, 0.04);
+  border-color: #ce6219 white;
+}
+body.training h3,
+body h3.training {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #f79844;
+}
+body.training h4,
+body h4.training {
+  color: #ce6219;
+}
+body.training h2,
+body h2.training {
+  background-color: #ce6219;
+  color: white;
+}
+body.training h2::before,
+body h2.training::before,
+body.training h2::after,
+body h2.training::after {
+  border: solid 4.5pt #f79844;
+}
+body.training div#corset > h1,
+body.training div#corset > section,
+body.training div#header,
+body.training div#footer {
+  background-color: rgba(255, 255, 255, 0.94);
+}
+body.training div#footer {
+  color: #ce6219;
+}
+body.discipleship div#header div#logo {
+  background: url('static/logo/RGB_discipleship_wide.svg') no-repeat;
+}
+body div#header div#logo {
+  background: url('static/logo/RGB_community_wide.svg') no-repeat;
+}
+body.discipleship blockquote,
+body blockquote.discipleship {
+  color: #efa81e;
+  background-color: rgba(239, 168, 30, 0.04);
+  border-color: #efa81e white;
+}
+body.discipleship h3,
+body h3.discipleship {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #f7dd2e;
+}
+body.discipleship h4,
+body h4.discipleship {
+  color: #efa81e;
+}
+body.discipleship h2,
+body h2.discipleship {
+  background-color: #efa81e;
+  color: white;
+}
+body.discipleship h2::before,
+body h2.discipleship::before,
+body.discipleship h2::after,
+body h2.discipleship::after {
+  border: solid 4.5pt #f7dd2e;
+}
+body.discipleship div#corset > h1,
+body.discipleship div#corset > section,
+body.discipleship div#header,
+body.discipleship div#footer {
+  background-color: rgba(255, 255, 255, 0.94);
+}
+body.discipleship div#footer {
+  color: #efa81e;
+}
+body.outreach div#header div#logo {
+  background: url('static/logo/RGB_outreach_wide.svg') no-repeat;
+}
+body div#header div#logo {
+  background: url('static/logo/RGB_community_wide.svg') no-repeat;
+}
+body.outreach blockquote,
+body blockquote.outreach {
+  color: #259110;
+  background-color: rgba(37, 145, 16, 0.04);
+  border-color: #259110 white;
+}
+body.outreach h3,
+body h3.outreach {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #46fe21;
+}
+body.outreach h4,
+body h4.outreach {
+  color: #259110;
+}
+body.outreach h2,
+body h2.outreach {
+  background-color: #259110;
+  color: white;
+}
+body.outreach h2::before,
+body h2.outreach::before,
+body.outreach h2::after,
+body h2.outreach::after {
+  border: solid 4.5pt #46fe21;
+}
+body.outreach div#corset > h1,
+body.outreach div#corset > section,
+body.outreach div#header,
+body.outreach div#footer {
+  background-color: rgba(255, 255, 255, 0.94);
+}
+body.outreach div#footer {
+  color: #259110;
+}
+.printOnly {
+  display: none;
+}

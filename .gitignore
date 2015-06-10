@@ -1,0 +1,5 @@
+
+static/ico/*.ico
+static/logo/*.svg
+static/fonts/*.woff2
+static/fonts/*import.css

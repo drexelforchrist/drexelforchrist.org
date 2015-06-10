@@ -1,0 +1,277 @@
+/* Font imports */
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+@import url(static/fonts/novecentoBook_import.css);
+@import url(static/fonts/novecentoBold_import.css);
+
+
+
+
+
+
+body {
+    font-family: Cabin, 'Segoe UI', sans-serif;
+    margin:0;
+    color: #222;
+    //color: #ddd;
+    background: url(static/bg-stainedGlass.jpg) fixed;
+    //background-attachment: fixed;
+    background-size: cover;
+}
+
+div.background {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+    display: none
+}
+
+
+div#header {
+    div#logo {
+        background-size: contain;
+        width: 300px;
+        height: 114px;
+        transition: background 2s;
+        //transition-delay: 2s;
+    }
+}
+
+
+@sectionPadding: 15pt;
+@corsetPadding: 1.2*@sectionPadding;
+
+div#corset {
+    & {
+        margin: 0 @corsetPadding 30px;
+    }
+    & > img {
+
+    }
+    & > section {
+        opacity: 0.87;
+        transition: opacity 20s;
+        padding: 0 @sectionPadding 1em;
+    }
+    & > section:hover {
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+
+    /* headers */
+    h1 span#pageTitle,
+    h2,
+    h3 {
+        font-family: 'Novecento wide Bold', sans-serif;
+        text-transform: uppercase;
+    }
+    h1, h4 {
+        font-family: 'Novecento wide Book', sans-serif;
+        text-transform: uppercase;
+    }
+    & > h1 {
+        font-size: 2.2em;
+        margin: 0;
+        padding: @sectionPadding;
+        //word-wrap: break-word;
+
+
+        -webkit-hyphens: auto; // KURTZ remove vendor-specifics eventually
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+    h2 {
+        & {
+            margin: 0 (-@sectionPadding - 0.5*@corsetPadding);
+            padding: 2px (@sectionPadding + 0.5*@corsetPadding) 4px;
+            display: block;
+            position: relative; // to maintain position for :before
+            line-height:1.2em;
+        }
+        &::before,
+        &::after {
+            box-sizing: border-box;
+            width: 0.5*@corsetPadding;
+            height: 0.5*@corsetPadding;
+            content: ' '; // won't be rendered without this.
+            display: block;
+            position: absolute;
+        }
+        &::before {
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            bottom: -0.5*@corsetPadding;
+            left: 0;
+        }
+        &::after {
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            bottom: -0.5*@corsetPadding;
+            right: 0;
+        }
+
+    }
+    h4 {
+        margin: 0;
+    }
+    h3 {
+        padding: 2px @sectionPadding 4px;
+        margin: 0 -@sectionPadding;
+    }
+
+    blockquote {
+        & {
+            line-height: 1.5em;
+            font-family: 'Novecento wide Book', sans-serif;
+            font-variant: small-caps;
+            text-align: center;
+            margin: .1in 10%;
+            border-style: dotted;
+            border-width: 1px 0;
+            padding: 3em;
+            position: relative; //for position of :before and :after to have meaning
+        }
+        &:before {
+            content: "\201C";
+            font-size: 100px;
+            line-height: 60px;
+            float: left;
+            display: block;
+            position: absolute;
+            //top: 10px;
+            left: 5%;
+            opacity: 0.3;
+        }
+        &:after {
+            content: "\201D";
+            font-size: 100px;
+            line-height: 20px;
+            float: right;
+            display: block;
+            position: absolute;
+            //bottom: 10px;
+            right: 5%;
+            opacity: 0.3;
+        }
+
+        cite {
+            font-style: italic;
+            text-wrap: none;
+        }
+        strong {
+            font-family: 'Novecento wide Bold', sans-serif;
+        }
+        > p:first-child {
+            margin-top: 0;
+        }
+        > p:last-child {
+            margin-bottom: 0;
+        }
+        p {
+            text-indent: 0;
+        }
+    }
+}
+
+
+div#footer {
+    position: fixed;
+    //height: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    opacity: 0.87;
+    padding: 5px @corsetPadding+@sectionPadding;
+    text-align: right;
+    z-index: 1000;
+    & {
+        opacity: 0.87;
+        transition: opacity 20s;
+    }
+    &:hover {
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+}
+
+
+//// Color Schemes
+.template(@className: ~'', @primary: #f00, @secondary: #00f, @background: #ff0) {
+    @classNameOnly: replace(@className, ~'\.', ~'');
+    @primaryHue: hue(@primary);
+
+
+    body@{className} div#header div#logo {
+        @url: 'static/logo/RGB_@{classNameOnly}_wide.svg';
+        background: url(@url) no-repeat;
+    }
+    body div#header div#logo { // Default!  Duplicates should be removed by css-optimizer
+        @url: 'static/logo/RGB_community_wide.svg';
+        background: url(@url) no-repeat;
+    }
+
+    body@{className} blockquote,
+    body blockquote@{className} {
+        color: @primary;
+        background-color: fade(@primary, 4%);
+        border-color: @primary @background;
+    }
+
+    body@{className} h3,
+    body h3@{className} {
+        background-color: fade(@background, 50%);
+        color: @secondary;
+    }
+
+    body@{className} h4,
+    body h4@{className} {
+        color: @primary;
+    }
+
+    body@{className} h2,
+    body h2@{className} {
+        & {
+            background-color: @primary;
+            color: @background;
+        }
+        &::before,
+        &::after {
+            border: solid 0.25*@corsetPadding @secondary;
+        }
+    }
+
+    body@{className} div#corset > h1,
+    body@{className} div#corset > section,
+    body@{className} div#header,
+    body@{className} div#footer {
+        background-color: fade(@background, 94%);
+    }
+
+    body@{className} div#footer {
+        color: @primary;
+    }
+}
+
+& {
+    .template(~'',              rgb(44,130,197),    rgb(102,204,255),   white);
+    .template(~'.church',       rgb(136,0,161),     rgb(209,28,241),    white);
+    .template(~'.prayer',       rgb(201,27,27),     rgb(254,122,122),   white);
+    .template(~'.training',     rgb(206,98,25),     rgb(247,152,68),    white);
+    .template(~'.discipleship', rgb(239,168,30),    rgb(247,221,46),    white);
+    .template(~'.outreach',     rgb(37,145,16),     rgb(70,254,33),     white);
+}
+
+//// Printing
+
+.printOnly {
+    display: none;
+}
