@@ -11,13 +11,11 @@
 body {
     font-family: Cabin, 'Segoe UI', sans-serif;
     margin:0;
-    color: #222;
-    //color: #ddd;
-    background: url(static/bg-stainedGlass.jpg) fixed;
-    //background-attachment: fixed;
-    background-size: cover;
+    background: url(static/bg-stainedGlass.jpg) fixed; // KURTZ remove
+    background-size: cover; // KURTZ remove
 }
 
+//// Backgrounds
 div.background {
     position: fixed;
     bottom: 0;
@@ -42,8 +40,8 @@ div.background {
     }
 }
 
-
-div#header {
+//// Header Bar
+nav#header {
     div#logo {
         background-size: contain;
         width: 300px;
@@ -57,12 +55,15 @@ div#header {
 @sectionPadding: 15pt;
 @corsetPadding: 1.2*@sectionPadding;
 
-div#corset {
-    & {
-        margin: 0 @corsetPadding 35px;
-    }
-    & > img {
 
+@maxCorsetWidth: 1000px;
+@maxWideWidth: 1048px;
+
+
+//// Body
+div#corset {
+    & > img {
+        // KURTZ why is this here?
     }
     & > section {
         opacity: 0.87;
@@ -74,8 +75,17 @@ div#corset {
         transition: opacity 0.3s;
     }
 
+    @media (max-width: @maxWideWidth) {
+        margin: 0 @corsetPadding 35px;
+        max-width: 2*convert(@corsetPadding, px) + @maxCorsetWidth; /* use this value for @maxWideWidth */
+    }
+    @media (min-width: @maxWideWidth) {
+        margin: 0 0 35px auto;
+        max-width: @maxCorsetWidth;
+    }
 
-    /* headers */
+
+    // headers
     h1 span#pageTitle,
     h2,
     h3 {
@@ -101,13 +111,13 @@ div#corset {
     h2 {
         & {
             margin: 0 (-@sectionPadding - 0.5*@corsetPadding);
-            padding: 2px (@sectionPadding + 0.5*@corsetPadding) 4px;
+            padding: 2px (@sectionPadding + 0.5*@corsetPadding) 4px ;
             display: block;
             position: relative; // to maintain position for :before
             line-height:1.2em;
         }
         &::before,
-        &::after {
+        &::after  {
             box-sizing: border-box;
             width: 0.5*@corsetPadding;
             height: 0.5*@corsetPadding;
@@ -121,11 +131,21 @@ div#corset {
             bottom: -0.5*@corsetPadding;
             left: 0;
         }
+
         &::after {
             border-bottom-color: transparent;
             border-right-color: transparent;
             bottom: -0.5*@corsetPadding;
             right: 0;
+        }
+        @media (min-width: @maxWideWidth) {
+            & {
+                padding-right: @sectionPadding;
+                margin-right: -@sectionPadding;
+            }
+            &::after {
+                display: none;
+            }
         }
 
     }
@@ -191,7 +211,7 @@ div#corset {
     }
 }
 
-
+//// Footer
 nav#footer {
     position: fixed;
     //height: 30px;
@@ -201,6 +221,9 @@ nav#footer {
     width: auto;
     opacity: 0.87;
     padding: 5px @corsetPadding+@sectionPadding;
+    @media (min-width: @maxWideWidth) {
+        padding-right: @sectionPadding;
+    }
     text-align: right;
     z-index: 1000;
     font-size: 0.8em;
@@ -262,16 +285,19 @@ nav#footer {
 
 
 //// Color Schemes
-.template(@className: ~'', @primary: #f00, @secondary: #00f, @background: #ff0) {
+.template(@className: ~'', @primary: #f00, @secondary: #00f, @background: #ff0, @text: #222) {
     @classNameOnly: replace(@className, ~'\.', ~'');
     @primaryHue: hue(@primary);
 
 
-    body@{className} div#header div#logo {
+    body@{className} {
+        color: @text;
+    }
+    body@{className} nav#header div#logo {
         @url: 'static/logo/RGB_@{classNameOnly}_wide.svg';
         background: url(@url) no-repeat;
     }
-    body div#header div#logo { // Default!  Duplicates should be removed by css-optimizer
+    body nav#header div#logo { // Default!  Duplicates should be removed by css-optimizer
         @url: 'static/logo/RGB_community_wide.svg';
         background: url(@url) no-repeat;
     }
@@ -308,7 +334,7 @@ nav#footer {
 
     body@{className} div#corset > h1,
     body@{className} div#corset > section,
-    body@{className} div#header,
+    body@{className} nav#header,
     body@{className} nav#footer {
         background-color: fade(@background, 94%);
     }
@@ -348,11 +374,11 @@ nav#footer {
 
 
 
-    //body@{className} div#header div#logo {
+    //body@{className} nav#header div#logo {
     //    @url: 'static/logo/RGB_@{classNameOnly}_wide.svg';
     //    background: url(@url) no-repeat;
     //}
-    //body div#header div#logo { // Default!  Duplicates should be removed by css-optimizer
+    //body nav#header div#logo { // Default!  Duplicates should be removed by css-optimizer
     //    @url: 'static/logo/RGB_community_wide.svg';
     //    background: url(@url) no-repeat;
     //}
@@ -365,6 +391,7 @@ nav#footer {
     .template(~'.training',     rgb(206,98,25),     rgb(247,152,68),    white);
     .template(~'.discipleship', rgb(239,168,30),    rgb(247,221,46),    white);
     .template(~'.outreach',     rgb(37,145,16),     rgb(70,254,33),     white);
+    .template(~'.ninja',        #bbb,     #444,     black, #eee);
 }
 
 //// Printing

@@ -5,7 +5,6 @@
 body {
   font-family: Cabin, 'Segoe UI', sans-serif;
   margin: 0;
-  color: #222;
   background: url(static/bg-stainedGlass.jpg) fixed;
   background-size: cover;
 }
@@ -31,15 +30,11 @@ div.background video {
   height: auto;
   overflow: hidden;
 }
-div#header div#logo {
+nav#header div#logo {
   background-size: contain;
   width: 300px;
   height: 114px;
   transition: background 2s;
-}
-div#corset {
-  margin: 0 18pt 35px;
-  /* headers */
 }
 div#corset > section {
   opacity: 0.87;
@@ -49,6 +44,19 @@ div#corset > section {
 div#corset > section:hover {
   opacity: 1;
   transition: opacity 0.3s;
+}
+@media (max-width: 1048px) {
+  div#corset {
+    margin: 0 18pt 35px;
+    max-width: 1048px;
+    /* use this value for @maxWideWidth */
+  }
+}
+@media (min-width: 1048px) {
+  div#corset {
+    margin: 0 0 35px auto;
+    max-width: 1000px;
+  }
 }
 div#corset h1 span#pageTitle,
 div#corset h2,
@@ -97,6 +105,15 @@ div#corset h2::after {
   border-right-color: transparent;
   bottom: -9pt;
   right: 0;
+}
+@media (min-width: 1048px) {
+  div#corset h2 {
+    padding-right: 15pt;
+    margin-right: -15pt;
+  }
+  div#corset h2::after {
+    display: none;
+  }
 }
 div#corset h4 {
   margin: 0;
@@ -165,6 +182,11 @@ nav#footer {
   opacity: 0.87;
   transition: opacity 20s;
 }
+@media (min-width: 1048px) {
+  nav#footer {
+    padding-right: 15pt;
+  }
+}
 nav#footer:hover {
   opacity: 1;
   transition: opacity 0.3s;
@@ -211,10 +233,13 @@ nav#footer > ul > li > a#connectVimeo {
 nav#footer > ul > li > a#connectSoundcloud {
   background-position-x: -120px;
 }
-body div#header div#logo {
+body {
+  color: #222222;
+}
+body nav#header div#logo {
   background: url('static/logo/RGB__wide.svg') no-repeat;
 }
-body div#header div#logo {
+body nav#header div#logo {
   background: url('static/logo/RGB_community_wide.svg') no-repeat;
 }
 body blockquote,
@@ -245,7 +270,7 @@ body h2::after {
 }
 body div#corset > h1,
 body div#corset > section,
-body div#header,
+body nav#header,
 body nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
@@ -271,10 +296,13 @@ body nav#footer > ul > li > a {
   background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
-body.church div#header div#logo {
+body.church {
+  color: #222222;
+}
+body.church nav#header div#logo {
   background: url('static/logo/RGB_church_wide.svg') no-repeat;
 }
-body div#header div#logo {
+body nav#header div#logo {
   background: url('static/logo/RGB_community_wide.svg') no-repeat;
 }
 body.church blockquote,
@@ -305,7 +333,7 @@ body h2.church::after {
 }
 body.church div#corset > h1,
 body.church div#corset > section,
-body.church div#header,
+body.church nav#header,
 body.church nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
@@ -331,10 +359,13 @@ body nav#footer > ul > li > a {
   background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
-body.prayer div#header div#logo {
+body.prayer {
+  color: #222222;
+}
+body.prayer nav#header div#logo {
   background: url('static/logo/RGB_prayer_wide.svg') no-repeat;
 }
-body div#header div#logo {
+body nav#header div#logo {
   background: url('static/logo/RGB_community_wide.svg') no-repeat;
 }
 body.prayer blockquote,
@@ -365,7 +396,7 @@ body h2.prayer::after {
 }
 body.prayer div#corset > h1,
 body.prayer div#corset > section,
-body.prayer div#header,
+body.prayer nav#header,
 body.prayer nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
@@ -391,10 +422,13 @@ body nav#footer > ul > li > a {
   background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
-body.training div#header div#logo {
+body.training {
+  color: #222222;
+}
+body.training nav#header div#logo {
   background: url('static/logo/RGB_training_wide.svg') no-repeat;
 }
-body div#header div#logo {
+body nav#header div#logo {
   background: url('static/logo/RGB_community_wide.svg') no-repeat;
 }
 body.training blockquote,
@@ -425,7 +459,7 @@ body h2.training::after {
 }
 body.training div#corset > h1,
 body.training div#corset > section,
-body.training div#header,
+body.training nav#header,
 body.training nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
@@ -451,10 +485,13 @@ body nav#footer > ul > li > a {
   background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
-body.discipleship div#header div#logo {
+body.discipleship {
+  color: #222222;
+}
+body.discipleship nav#header div#logo {
   background: url('static/logo/RGB_discipleship_wide.svg') no-repeat;
 }
-body div#header div#logo {
+body nav#header div#logo {
   background: url('static/logo/RGB_community_wide.svg') no-repeat;
 }
 body.discipleship blockquote,
@@ -485,7 +522,7 @@ body h2.discipleship::after {
 }
 body.discipleship div#corset > h1,
 body.discipleship div#corset > section,
-body.discipleship div#header,
+body.discipleship nav#header,
 body.discipleship nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
@@ -511,10 +548,13 @@ body nav#footer > ul > li > a {
   background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
-body.outreach div#header div#logo {
+body.outreach {
+  color: #222222;
+}
+body.outreach nav#header div#logo {
   background: url('static/logo/RGB_outreach_wide.svg') no-repeat;
 }
-body div#header div#logo {
+body nav#header div#logo {
   background: url('static/logo/RGB_community_wide.svg') no-repeat;
 }
 body.outreach blockquote,
@@ -545,7 +585,7 @@ body h2.outreach::after {
 }
 body.outreach div#corset > h1,
 body.outreach div#corset > section,
-body.outreach div#header,
+body.outreach nav#header,
 body.outreach nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
 }
@@ -565,6 +605,69 @@ body.outreach nav#footer > ul > li > a {
   background-size: 140px 40px;
 }
 body.outreach nav#footer > ul > li > a:hover {
+  background-position-y: 20px;
+}
+body nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background-size: 140px 40px;
+}
+body.ninja {
+  color: #eeeeee;
+}
+body.ninja nav#header div#logo {
+  background: url('static/logo/RGB_ninja_wide.svg') no-repeat;
+}
+body nav#header div#logo {
+  background: url('static/logo/RGB_community_wide.svg') no-repeat;
+}
+body.ninja blockquote,
+body blockquote.ninja {
+  color: #bbbbbb;
+  background-color: rgba(187, 187, 187, 0.04);
+  border-color: #bbbbbb black;
+}
+body.ninja h3,
+body h3.ninja {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #444444;
+}
+body.ninja h4,
+body h4.ninja {
+  color: #bbbbbb;
+}
+body.ninja h2,
+body h2.ninja {
+  background-color: #bbbbbb;
+  color: black;
+}
+body.ninja h2::before,
+body h2.ninja::before,
+body.ninja h2::after,
+body h2.ninja::after {
+  border: solid 4.5pt #444444;
+}
+body.ninja div#corset > h1,
+body.ninja div#corset > section,
+body.ninja nav#header,
+body.ninja nav#footer {
+  background-color: rgba(0, 0, 0, 0.94);
+}
+body.ninja a,
+body a.ninja {
+  color: #bbbbbb;
+}
+body.ninja a:hover,
+body a.ninja:hover {
+  color: #444444;
+}
+body.ninja nav#footer {
+  color: #bbbbbb;
+}
+body.ninja nav#footer > ul > li > a {
+  background: url('static/ConnectSprite/connect-sprite-ninja.png') repeat-y top left;
+  background-size: 140px 40px;
+}
+body.ninja nav#footer > ul > li > a:hover {
   background-position-y: 20px;
 }
 body nav#footer > ul > li > a {
