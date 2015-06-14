@@ -3,13 +3,13 @@
 
 <brilliant>
     <lang>en-us</lang>
-    <title>Printing Demo</title>
-    <subtitle>An Adventure through CSS and XSL</subtitle>
+    <title>Leader Guide</title>
+    <subtitle>Fall Retreat 2014</subtitle>
     <template>outreach</template>
     <document>
         <id>1</id>
         <updated>2015-06-14T12:00:00Z</updated>
-        <summary>The guide on Colossians 1:15-23 given to discussion group leaders for Fall Retreat 2015.</summary>
+        <summary>The guide on Colossians 1:15-23 given to discussion group leaders for Fall Retreat 2014.</summary>
         <author>
             <name>James Kurtz</name>
             <id>1</id>
