@@ -13,22 +13,39 @@
             <!-- Extract body className for template. -->
             <xsl:variable name="styleClass">
                 <xsl:choose>
-                    <xsl:when test="brilliant/calendar/name != ''">
+                    <xsl:when test="brilliant/calendar/name">
                         <xsl:value-of select="translate(brilliant/calendar/name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
                     </xsl:when>
-                    <xsl:when test="brilliant/template != ''">
+                    <xsl:when test="brilliant/template">
                         <xsl:value-of select="translate(brilliant/template, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
                     </xsl:when>
-                    <xsl:otherwise>
-                        community <!-- some value is necessary for non-css components (like the icon)  -->
-                    </xsl:otherwise>
+                    <xsl:otherwise>community</xsl:otherwise><!-- some value is necessary for non-css components (like the icon)  -->
                 </xsl:choose>
             </xsl:variable>
 
+            <!-- Isolate Summary -->
+            <xsl:variable name="summary">
+
+            </xsl:variable>
+
+
+            <!-- Isolate Summary -->
+            <!--<xsl:variable name="author" as="element()">-->
+                <!--<xsl:choose>-->
+                    <!--<xsl:when test="brilliant/document/author">-->
+                        <!--<xsl:copy-of select="brilliant/document/author" />-->
+                    <!--</xsl:when>-->
+                    <!--<xsl:otherwise />-->
+                <!--</xsl:choose>-->
+            <!--</xsl:variable>-->
+
 
             <head>
+                <!-- general metas -->
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+
+                <!-- things that are actually visible -->
                 <title><xsl:value-of select="brilliant/title" /><xsl:if test="brilliant/title != ''"> // </xsl:if>Drexel Students for Christ</title>
                 <link rel="stylesheet" href="screen.css" type="text/css" media="screen" />
                 <link rel="stylesheet" href="print.css" type="text/css" media="print" />
@@ -37,6 +54,27 @@
                         <xsl:value-of select="concat('static/ico/RGB-icon-', $styleClass, '.ico')" />
                     </xsl:attribute>
                 </link>
+                <script src="static/js/templating.js" type="text/javascript" />
+
+                <!-- SEO -->
+                <xsl:if test="$summary != ''">
+                    <meta name="description">
+                        <xsl:copy-of select="$summary" />
+                    </meta>
+                </xsl:if>
+                <!--<xsl:if test="$author">-->
+                    <!--&lt;!&ndash;<xsl:for-each select="$author/*">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<xsl:copy-of select="*" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;</xsl:for-each>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<xsl:copy-of select="$author" /> &lt;!&ndash; KURTZ make this work! &ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;<meta name="author">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<xsl:value-of select="$author/name" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;</meta>&ndash;&gt;-->
+                <!--</xsl:if>-->
+
+                <!-- -->
+
+
             </head>
 
 
@@ -59,14 +97,109 @@
                             <rect x="0" y="0" width="600" height="10" style="fill:rgb(248,193,44);" />
                         </svg>
                     </div>
-                    <div id="logo">
+                    <a id="pageLogo" href="/">
                         <img src="static/logo/CMYK_community_wide.svg" class="printOnly" id="printLogo" alt="Drexel Students for Christ" />
+                        <div id="pageLogoMark" />
+                        <div id="pageLogoText" />
                         <div class="printOnly printPageTitle"><xsl:value-of select="brilliant/title" />
                             <span id="printPageSubtitle"><xsl:value-of select="brilliant/subtitle" /></span>
                         </div>
-                    </div>
+                    </a>
+
+
+                    <ul id="topNav">
+                        <li id="navMenu" tabindex="1">
+                            <a href="">Menu</a>
+                            <ul>
+                                <li class="yellow"><a href="../join" class="yellow">get involved!</a></li>
+                                <li>
+                                    <a href="../about">about us</a>
+                                    <ul>
+                                        <li><a href="../about/faith">our faith</a></li>
+                                        <!--<li><a href="../about/leadership">leadership</a></li>-->
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../churches">churches</a>
+                                </li>
+                                <li>
+                                    <a href="../events">events</a>
+                                    <ul>
+                                        <li>
+                                            <a href="../?manage">manage</a>
+                                        </li>
+                                        <li>
+                                            <a href="../retreat">retreat</a>
+                                        </li>
+                                        <li>
+                                            <a href="../smallgroups">growth groups</a>
+                                        </li>
+                                        <li>
+                                            <a href="../bridge">alpha</a>
+                                        </li>
+                                        <li>
+                                            <a href="../lg">large group</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../resources">resources</a>
+                                    <ul>
+                                        <li>
+                                            <a href="../rec">bibles</a>
+                                        </li>
+                                        <li>
+                                            <a href="../rec">recordings</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../feedback">feedback</a>
+                                    <ul>
+                                        <li>
+                                            <a href="../contact">contact us</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="../give">give</a>
+                                    <ul>
+                                        <li>
+                                            <a href="../serve">serve</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <li id="navSearch">
+                            <form method="get" action="http://www.google.com/search" class="searchContent" style="display:inline;">
+                                <input name="q" type="search" placeholder="&#160;&#160;search" />
+                            </form>
+                        </li>
+
+
+                        <li id="navUser">
+                            <a href="../me">User</a>
+                            <ul>
+                                <li>
+                                    <a href="../me">James K.</a>
+                                    <ul>
+                                        <li>
+                                            <a href="../login?out">log out</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
 
                 </nav>
+                <div id="headerSpacer" />
                 <div id="corset">
                     <!--<img class="content" src="static/img.png" />-->
                     <h1 class="noPrint">

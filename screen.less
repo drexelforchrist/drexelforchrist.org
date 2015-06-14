@@ -5,7 +5,12 @@
 
 
 
+@sectionPadding: 15pt;
+@corsetPadding: 1.2*@sectionPadding;
 
+
+@maxCorsetWidth: 1000px;
+@maxWideWidth: 1048px;
 
 
 body {
@@ -40,28 +45,214 @@ div.background {
     }
 }
 
+.inputPlaceholderColor(@color) {
+    &::-webkit-input-placeholder{
+        -webkit-text-fill-color:@color;
+        color:@color;
+        opacity:1;
+    }
+    &::-moz-placeholder{
+        color:@color;
+        opacity:1;
+    }
+    &:-moz-placeholder{
+        color:@color;
+        opacity:1;
+    }
+    &:-ms-input-placeholder {
+        color:@color;
+        opacity:1;
+    }
+}
+
+.rotate(@angle: 0deg) {
+    rotation: @angle;
+    -ms-transform:rotate(@angle); /* IE 9 */
+    -moz-transform:rotate(@angle); /* Firefox */
+    -webkit-transform:rotate(@angle); /* Safari and Chrome */
+    -o-transform:rotate(@angle); /* Opera */
+}
+
 //// Header Bar
+
+@linkHeight : 26px;
+@linkWidth: 70px;
+
+div#headerSpacer,
 nav#header {
-    div#logo {
-        background-size: contain;
-        width: 300px;
-        height: 114px;
-        transition: background 2s;
-        //transition-delay: 2s;
+    height: 110px;
+    width:100%;
+}
+
+div#headerSpacer {
+    height:110px;
+    margin-top:1em;
+}
+
+nav#header {
+    & {
+        top: 1em;
+        position: absolute;
+    }
+    &.static {
+        top: 0;
+        position: fixed;
+        height: @linkHeight + 4px;
+        z-index: 1000;
+
+        a#pageLogo {
+            @logoHeight: @linkHeight;
+            div#pageLogoMark {
+                height:@logoHeight;
+                width: @logoHeight;
+            }
+
+            div#pageLogoText {
+                height:@logoHeight;
+                width: @logoHeight*2309/865;
+            }
+        }
+    }
+
+    & {
+        a#pageLogo {
+            display: block;
+            background-size: 300px @linkHeight;
+            //width: 300px;
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            height: auto;
+            bottom: 2px;
+            z-index: 2000;
+            //transition-delay: 2s;
+
+            div#pageLogoText,
+            div#pageLogoMark {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: background 2s, rotation 0.6s, transform 0.6s, height 0.2s, width 0.2s;
+            }
+
+            @logoHeight: 105px;
+            div#pageLogoMark {
+                height:@logoHeight;
+                width: @logoHeight;
+            }
+
+            div#pageLogoText {
+                height:@logoHeight;
+                width: @logoHeight*2309/865;
+            }
+
+            &:hover div#pageLogoMark {
+                .rotate(360deg);
+            }
+        }
+    }
+
+    //// Top Nav
+    ul#topNav {
+        & {
+            position: absolute;
+            bottom:0;
+            right: 0;
+            text-align: right;
+            padding: 0;
+            display: inline-block;
+            margin: 0;
+            z-index: 1500;
+        }
+
+        ul {
+            //transition: color 0.2s, background 0.2s;
+        }
+
+        li {
+            /* All lis in Nav */
+            display: inline-block;
+            text-align: center;
+            list-style-type: none;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            height: @linkHeight + 4px;
+            //transition: color 0.2s, background 0.2s;
+        }
+        a, input {
+            /* All links in Nav */
+            height: @linkHeight;
+            margin: 0;
+            min-width: @linkWidth;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            line-height: @linkHeight;
+            //transition: color 0.2s, background 0.2s;
+        }
+        a {
+            padding: 2px 8px;
+        }
+        & > li > a {
+            /* first level links (menu, user, etc) */
+            display: none;
+        }
+        & > li > ul {
+            /* first level sub-lists (basic row) */
+            padding: 0;
+            margin: 0;
+        }
+        & > li > ul > li > a {
+            /* second level links */
+            // yup.  An empty block
+        }
+        & > li > ul > li > ul {
+            /* second level sub-lists */
+            display: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        & > li > ul > li:hover > ul {
+            /* second level sub-lists */
+            display: table;
+            padding: 0;
+            margin: 0;
+        }
+        & > li > ul > li > ul > li {
+            /* third level sub-lists */
+            display: table-row;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        & > li > ul > li > ul > li > a {
+            /* third level links */
+            height: auto;
+            min-height: @linkHeight;
+            overflow: hidden;
+            width: @linkWidth;
+        }
+
+        input {
+            border: none;
+            background-color: transparent;
+            height: @linkHeight + 4px;
+            width: @linkWidth + 16px;
+            font-family: Cabin, 'Segoe UI', sans-serif;
+            font-size: 1em;
+            text-align: center;
+        }
     }
 }
 
 
-@sectionPadding: 15pt;
-@corsetPadding: 1.2*@sectionPadding;
-
-
-@maxCorsetWidth: 1000px;
-@maxWideWidth: 1048px;
-
-
 //// Body
 div#corset {
+    & {
+        // empty block!
+    }
     & > img {
         // KURTZ why is this here?
     }
@@ -69,6 +260,10 @@ div#corset {
         opacity: 0.87;
         transition: opacity 20s;
         padding: 0 @sectionPadding 1em;
+
+        p:first-child {
+            margin-top:0;
+        }
     }
     & > section:hover {
         opacity: 1;
@@ -76,11 +271,11 @@ div#corset {
     }
 
     @media (max-width: @maxWideWidth) {
-        margin: 0 @corsetPadding 35px;
+        margin: 0.5em @corsetPadding 35px;
         max-width: 2*convert(@corsetPadding, px) + @maxCorsetWidth; /* use this value for @maxWideWidth */
     }
     @media (min-width: @maxWideWidth) {
-        margin: 0 0 35px auto;
+        margin: 0.5em 0 35px auto;
         max-width: @maxCorsetWidth;
     }
 
@@ -214,7 +409,6 @@ div#corset {
 //// Footer
 nav#footer {
     position: fixed;
-    //height: 30px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -293,13 +487,21 @@ nav#footer {
     body@{className} {
         color: @text;
     }
-    body@{className} nav#header div#logo {
-        @url: 'static/logo/RGB_@{classNameOnly}_wide.svg';
-        background: url(@url) no-repeat;
+    body@{className} nav#header a#pageLogo {
+        div#pageLogoMark {
+            @url: 'static/logo/RGB_@{classNameOnly}_icon.svg';
+            background: data-uri(@url) no-repeat;
+        }
     }
-    body nav#header div#logo { // Default!  Duplicates should be removed by css-optimizer
-        @url: 'static/logo/RGB_community_wide.svg';
-        background: url(@url) no-repeat;
+    body nav#header a#pageLogo { // Default!  Duplicates should be removed by css-optimizer
+        div#pageLogoMark {
+            @url: 'static/logo/RGB_community_icon.svg';
+            background: data-uri(@url) no-repeat;
+        }
+        div#pageLogoText {
+            @url: 'static/logo/RGB_text_only.svg';
+            background: data-uri(@url) no-repeat;
+        }
     }
 
     body@{className} blockquote,
@@ -349,6 +551,37 @@ nav#footer {
         color: @secondary;
     }
 
+
+    //// Top Nav
+    body@{className} nav#header ul#topNav {
+        ul li:hover,
+        ul li:hover ul {
+            background-color:@primary;
+            a {
+                background-color:@primary;
+                color: fade(@background, 70%);
+            }
+
+            a:hover {
+                color: fade(@text, 100%);
+                background-color:@secondary;
+            }
+        }
+
+        input{
+            .inputPlaceholderColor(fade(@primary, 50%));
+            color: @primary;
+        }
+
+        input:focus {
+            background: @secondary;
+            color: fade(@text, 100%);
+            .inputPlaceholderColor(fade(@background, 70%));
+        }
+    }
+
+
+    //// Bottom Nav
     body@{className} nav#footer {
         & {
             color: @primary;
@@ -372,16 +605,6 @@ nav#footer {
         }
     }
 
-
-
-    //body@{className} nav#header div#logo {
-    //    @url: 'static/logo/RGB_@{classNameOnly}_wide.svg';
-    //    background: url(@url) no-repeat;
-    //}
-    //body nav#header div#logo { // Default!  Duplicates should be removed by css-optimizer
-    //    @url: 'static/logo/RGB_community_wide.svg';
-    //    background: url(@url) no-repeat;
-    //}
 }
 
 & {
@@ -391,7 +614,7 @@ nav#footer {
     .template(~'.training',     rgb(206,98,25),     rgb(247,152,68),    white);
     .template(~'.discipleship', rgb(239,168,30),    rgb(247,221,46),    white);
     .template(~'.outreach',     rgb(37,145,16),     rgb(70,254,33),     white);
-    .template(~'.ninja',        #bbb,     #444,     black, #eee);
+    .template(~'.ninja',        #ccc,     #777,     black, #eee);
 }
 
 //// Printing
