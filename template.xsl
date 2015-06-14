@@ -31,12 +31,12 @@
 
             <!-- Isolate Summary -->
             <!--<xsl:variable name="author" as="element()">-->
-                <!--<xsl:choose>-->
-                    <!--<xsl:when test="brilliant/document/author">-->
-                        <!--<xsl:copy-of select="brilliant/document/author" />-->
-                    <!--</xsl:when>-->
-                    <!--<xsl:otherwise />-->
-                <!--</xsl:choose>-->
+            <!--<xsl:choose>-->
+            <!--<xsl:when test="brilliant/document/author">-->
+            <!--<xsl:copy-of select="brilliant/document/author" />-->
+            <!--</xsl:when>-->
+            <!--<xsl:otherwise />-->
+            <!--</xsl:choose>-->
             <!--</xsl:variable>-->
 
 
@@ -63,13 +63,13 @@
                     </meta>
                 </xsl:if>
                 <!--<xsl:if test="$author">-->
-                    <!--&lt;!&ndash;<xsl:for-each select="$author/*">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<xsl:copy-of select="*" />&ndash;&gt;-->
-                    <!--&lt;!&ndash;</xsl:for-each>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<xsl:copy-of select="$author" /> &lt;!&ndash; KURTZ make this work! &ndash;&gt;&ndash;&gt;-->
-                    <!--&lt;!&ndash;<meta name="author">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<xsl:value-of select="$author/name" />&ndash;&gt;-->
-                    <!--&lt;!&ndash;</meta>&ndash;&gt;-->
+                <!--&lt;!&ndash;<xsl:for-each select="$author/*">&ndash;&gt;-->
+                <!--&lt;!&ndash;<xsl:copy-of select="*" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</xsl:for-each>&ndash;&gt;-->
+                <!--&lt;!&ndash;<xsl:copy-of select="$author" /> &lt;!&ndash; KURTZ make this work! &ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;<meta name="author">&ndash;&gt;-->
+                <!--&lt;!&ndash;<xsl:value-of select="$author/name" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</meta>&ndash;&gt;-->
                 <!--</xsl:if>-->
 
                 <!-- -->
@@ -111,7 +111,9 @@
                         <li id="navMenu" tabindex="1">
                             <a href="">Menu</a>
                             <ul>
-                                <li class="yellow"><a href="../join" class="yellow">get involved!</a></li>
+                                <li>
+                                    <a href="../join">get involved!</a>
+                                </li>
                                 <li>
                                     <a href="../about">about us</a>
                                     <ul>
@@ -176,9 +178,28 @@
 
 
                         <li id="navSearch">
-                            <form method="get" action="http://www.google.com/search" class="searchContent" style="display:inline;">
-                                <input name="q" type="search" placeholder="&#160;&#160;search" />
-                            </form>
+                            <a href="../me">search</a>
+                            <ul>
+                                <li>
+                                    <form method="get" action="http://www.google.com/search" class="searchContent" style="display:inline;">
+                                        <input name="q" type="search" placeholder="&#160;&#160;search" />
+                                    </form>
+                                    <ul>
+                                        <li>
+                                            <a href="../me">Result...</a>
+                                        </li>
+                                        <li>
+                                            <a href="../me">Result...</a>
+                                        </li>
+                                        <li>
+                                            <a href="../me">Result...</a>
+                                        </li>
+                                        <li>
+                                            <a href="../me">Result...</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
 
 

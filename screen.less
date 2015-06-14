@@ -573,11 +573,13 @@ nav#footer {
             color: @primary;
         }
 
-        input:focus {
+        input:focus,
+        input:hover {
             background: @secondary;
             color: fade(@text, 100%);
             .inputPlaceholderColor(fade(@background, 70%));
         }
+
     }
 
 

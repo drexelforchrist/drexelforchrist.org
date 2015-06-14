@@ -461,24 +461,29 @@ body nav#header ul#topNav input:-ms-input-placeholder {
   color: rgba(44, 130, 197, 0.5);
   opacity: 1;
 }
-body nav#header ul#topNav input:focus {
+body nav#header ul#topNav input:focus,
+body nav#header ul#topNav input:hover {
   background: #66ccff;
   color: #222222;
 }
-body nav#header ul#topNav input:focus::-webkit-input-placeholder {
+body nav#header ul#topNav input:focus::-webkit-input-placeholder,
+body nav#header ul#topNav input:hover::-webkit-input-placeholder {
   -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body nav#header ul#topNav input:focus::-moz-placeholder {
+body nav#header ul#topNav input:focus::-moz-placeholder,
+body nav#header ul#topNav input:hover::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body nav#header ul#topNav input:focus:-moz-placeholder {
+body nav#header ul#topNav input:focus:-moz-placeholder,
+body nav#header ul#topNav input:hover:-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body nav#header ul#topNav input:focus:-ms-input-placeholder {
+body nav#header ul#topNav input:focus:-ms-input-placeholder,
+body nav#header ul#topNav input:hover:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
@@ -582,24 +587,29 @@ body.church nav#header ul#topNav input:-ms-input-placeholder {
   color: rgba(136, 0, 161, 0.5);
   opacity: 1;
 }
-body.church nav#header ul#topNav input:focus {
+body.church nav#header ul#topNav input:focus,
+body.church nav#header ul#topNav input:hover {
   background: #d11cf1;
   color: #222222;
 }
-body.church nav#header ul#topNav input:focus::-webkit-input-placeholder {
+body.church nav#header ul#topNav input:focus::-webkit-input-placeholder,
+body.church nav#header ul#topNav input:hover::-webkit-input-placeholder {
   -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.church nav#header ul#topNav input:focus::-moz-placeholder {
+body.church nav#header ul#topNav input:focus::-moz-placeholder,
+body.church nav#header ul#topNav input:hover::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.church nav#header ul#topNav input:focus:-moz-placeholder {
+body.church nav#header ul#topNav input:focus:-moz-placeholder,
+body.church nav#header ul#topNav input:hover:-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.church nav#header ul#topNav input:focus:-ms-input-placeholder {
+body.church nav#header ul#topNav input:focus:-ms-input-placeholder,
+body.church nav#header ul#topNav input:hover:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
@@ -703,24 +713,29 @@ body.prayer nav#header ul#topNav input:-ms-input-placeholder {
   color: rgba(201, 27, 27, 0.5);
   opacity: 1;
 }
-body.prayer nav#header ul#topNav input:focus {
+body.prayer nav#header ul#topNav input:focus,
+body.prayer nav#header ul#topNav input:hover {
   background: #fe7a7a;
   color: #222222;
 }
-body.prayer nav#header ul#topNav input:focus::-webkit-input-placeholder {
+body.prayer nav#header ul#topNav input:focus::-webkit-input-placeholder,
+body.prayer nav#header ul#topNav input:hover::-webkit-input-placeholder {
   -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.prayer nav#header ul#topNav input:focus::-moz-placeholder {
+body.prayer nav#header ul#topNav input:focus::-moz-placeholder,
+body.prayer nav#header ul#topNav input:hover::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.prayer nav#header ul#topNav input:focus:-moz-placeholder {
+body.prayer nav#header ul#topNav input:focus:-moz-placeholder,
+body.prayer nav#header ul#topNav input:hover:-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.prayer nav#header ul#topNav input:focus:-ms-input-placeholder {
+body.prayer nav#header ul#topNav input:focus:-ms-input-placeholder,
+body.prayer nav#header ul#topNav input:hover:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
@@ -824,24 +839,29 @@ body.training nav#header ul#topNav input:-ms-input-placeholder {
   color: rgba(206, 98, 25, 0.5);
   opacity: 1;
 }
-body.training nav#header ul#topNav input:focus {
+body.training nav#header ul#topNav input:focus,
+body.training nav#header ul#topNav input:hover {
   background: #f79844;
   color: #222222;
 }
-body.training nav#header ul#topNav input:focus::-webkit-input-placeholder {
+body.training nav#header ul#topNav input:focus::-webkit-input-placeholder,
+body.training nav#header ul#topNav input:hover::-webkit-input-placeholder {
   -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.training nav#header ul#topNav input:focus::-moz-placeholder {
+body.training nav#header ul#topNav input:focus::-moz-placeholder,
+body.training nav#header ul#topNav input:hover::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.training nav#header ul#topNav input:focus:-moz-placeholder {
+body.training nav#header ul#topNav input:focus:-moz-placeholder,
+body.training nav#header ul#topNav input:hover:-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.training nav#header ul#topNav input:focus:-ms-input-placeholder {
+body.training nav#header ul#topNav input:focus:-ms-input-placeholder,
+body.training nav#header ul#topNav input:hover:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
@@ -945,24 +965,29 @@ body.discipleship nav#header ul#topNav input:-ms-input-placeholder {
   color: rgba(239, 168, 30, 0.5);
   opacity: 1;
 }
-body.discipleship nav#header ul#topNav input:focus {
+body.discipleship nav#header ul#topNav input:focus,
+body.discipleship nav#header ul#topNav input:hover {
   background: #f7dd2e;
   color: #222222;
 }
-body.discipleship nav#header ul#topNav input:focus::-webkit-input-placeholder {
+body.discipleship nav#header ul#topNav input:focus::-webkit-input-placeholder,
+body.discipleship nav#header ul#topNav input:hover::-webkit-input-placeholder {
   -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.discipleship nav#header ul#topNav input:focus::-moz-placeholder {
+body.discipleship nav#header ul#topNav input:focus::-moz-placeholder,
+body.discipleship nav#header ul#topNav input:hover::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.discipleship nav#header ul#topNav input:focus:-moz-placeholder {
+body.discipleship nav#header ul#topNav input:focus:-moz-placeholder,
+body.discipleship nav#header ul#topNav input:hover:-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.discipleship nav#header ul#topNav input:focus:-ms-input-placeholder {
+body.discipleship nav#header ul#topNav input:focus:-ms-input-placeholder,
+body.discipleship nav#header ul#topNav input:hover:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
@@ -1066,24 +1091,29 @@ body.outreach nav#header ul#topNav input:-ms-input-placeholder {
   color: rgba(37, 145, 16, 0.5);
   opacity: 1;
 }
-body.outreach nav#header ul#topNav input:focus {
+body.outreach nav#header ul#topNav input:focus,
+body.outreach nav#header ul#topNav input:hover {
   background: #46fe21;
   color: #222222;
 }
-body.outreach nav#header ul#topNav input:focus::-webkit-input-placeholder {
+body.outreach nav#header ul#topNav input:focus::-webkit-input-placeholder,
+body.outreach nav#header ul#topNav input:hover::-webkit-input-placeholder {
   -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.outreach nav#header ul#topNav input:focus::-moz-placeholder {
+body.outreach nav#header ul#topNav input:focus::-moz-placeholder,
+body.outreach nav#header ul#topNav input:hover::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.outreach nav#header ul#topNav input:focus:-moz-placeholder {
+body.outreach nav#header ul#topNav input:focus:-moz-placeholder,
+body.outreach nav#header ul#topNav input:hover:-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
-body.outreach nav#header ul#topNav input:focus:-ms-input-placeholder {
+body.outreach nav#header ul#topNav input:focus:-ms-input-placeholder,
+body.outreach nav#header ul#topNav input:hover:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
@@ -1187,24 +1217,29 @@ body.ninja nav#header ul#topNav input:-ms-input-placeholder {
   color: rgba(204, 204, 204, 0.5);
   opacity: 1;
 }
-body.ninja nav#header ul#topNav input:focus {
+body.ninja nav#header ul#topNav input:focus,
+body.ninja nav#header ul#topNav input:hover {
   background: #777777;
   color: #eeeeee;
 }
-body.ninja nav#header ul#topNav input:focus::-webkit-input-placeholder {
+body.ninja nav#header ul#topNav input:focus::-webkit-input-placeholder,
+body.ninja nav#header ul#topNav input:hover::-webkit-input-placeholder {
   -webkit-text-fill-color: rgba(0, 0, 0, 0.7);
   color: rgba(0, 0, 0, 0.7);
   opacity: 1;
 }
-body.ninja nav#header ul#topNav input:focus::-moz-placeholder {
+body.ninja nav#header ul#topNav input:focus::-moz-placeholder,
+body.ninja nav#header ul#topNav input:hover::-moz-placeholder {
   color: rgba(0, 0, 0, 0.7);
   opacity: 1;
 }
-body.ninja nav#header ul#topNav input:focus:-moz-placeholder {
+body.ninja nav#header ul#topNav input:focus:-moz-placeholder,
+body.ninja nav#header ul#topNav input:hover:-moz-placeholder {
   color: rgba(0, 0, 0, 0.7);
   opacity: 1;
 }
-body.ninja nav#header ul#topNav input:focus:-ms-input-placeholder {
+body.ninja nav#header ul#topNav input:focus:-ms-input-placeholder,
+body.ninja nav#header ul#topNav input:hover:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.7);
   opacity: 1;
 }
