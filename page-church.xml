@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="template.xsl"?>
+
+<brilliant>
+    <lang>en-us</lang>
+    <title>Local Churches</title>
+    <template>church</template>
+    <headLoad>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfqQ82nkWfCYEw2Ix-o0dQ3KXT7atfEr0&amp;v=3&amp;libraries=geometry" />
+        <script src="static/js/churchMap.js" />
+    </headLoad>
+    <onLoad>
+        doMap();
+    </onLoad>
+    <document>
+        <id>3</id>
+        <updated>2015-06-14T12:00:00Z</updated>
+        <summary>Information on the local churches that are partnered with Drexel Students for Christ.</summary>
+        <author>
+            <name>James Kurtz</name>
+            <id>1</id>
+        </author>
+        <content type="xhtml">
+            <div id="churchMap" class="map" />
+            <section>
+                <p>We'd love to help you get plugged into a church in the Philly area! Students are involved in the local churches listed below, and the distant ones have carpools from Drexel's campus on Sundays.  Please contact us with any questions or if you need transportation! </p>
+            </section>
+            <section>
+                <h2>Antioch of Calvary Chapel</h2>
+
+            </section>
+            <section>
+                <h2>Covenant Community Church</h2>
+
+            </section>
+            <section>
+                <h2>Liberti Church</h2>
+
+            </section>
+            <section>
+                <h2>Living Word Community Church</h2>
+
+            </section>
+            <section>
+                <h2>Tenth Presbyterian Church</h2>
+
+            </section>
+
+        </content>
+
+    </document>
+
+
+</brilliant>

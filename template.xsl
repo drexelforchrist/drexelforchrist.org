@@ -56,6 +56,17 @@
                 </link>
                 <script src="static/js/templating.js" type="text/javascript" />
 
+
+                <!-- JS -->
+                <xsl:copy-of select="brilliant/headLoad/*" />
+                <xsl:if test="brilliant/onLoad">
+                    <script type="text/javascript">
+                        function load() {
+                            <xsl:value-of select="brilliant/onLoad"/>
+                        }
+                    </script>
+                </xsl:if>
+
                 <!-- SEO -->
                 <xsl:if test="$summary != ''">
                     <meta name="description">
@@ -75,6 +86,8 @@
                 <!-- -->
 
 
+
+
             </head>
 
 
@@ -82,14 +95,51 @@
                 <xsl:attribute name="class">
                     <xsl:value-of select="$styleClass" />
                 </xsl:attribute>
-                <div class="background">
-                    <video autoplay="autoplay" loop="loop" muted="muted" preload="auto" id="videoBackground">
-                        <source src="http://drexelforchrist.org/_resources/Blue_Discs.webm" type="video/webm" />
-                        <source src="http://drexelforchrist.org/_resources/Blue_Discs.mp4" type="video/mp4" />
-                        <!-- KURTZ alternative for browsers which don't support the Video tag -->
-                    </video>
 
-                </div>
+                <xsl:choose>
+                    <xsl:when test="$styleClass = 'community'">
+                        <div class="background" id="communityBackground">
+                            <img src="static/TEMP_bg-guitar.jpg" alt="" />
+                        </div>
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'church'">
+                        <div class="background" id="churchBackground">
+                            <img src="static/bg-stainedGlass.jpg" alt="" />
+                        </div>
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'prayer'">
+                        <div class="background" id="prayerBackground">
+                            <img src="static/bg-prayer.jpg" alt="" />
+                        </div>
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'training'">
+                        <div class="background" id="trainingBackground">
+                            <img src="static/bg-training.jpg" alt="" />
+                        </div>
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'discipleship'">
+                        <div class="background" id="discipleshipBackground">
+                            <img src="static/bg-discipleship.jpg" alt="" />
+                        </div>
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'outreach'">
+                        <div class="background" id="outreachBackground">
+                            <img src="static/bg-outreach.jpg" alt="" />
+                        </div>
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'ninja'" >
+                        <div class="background" id="ninjaBackground">
+                            <video autoplay="autoplay" loop="loop" muted="muted" preload="auto">
+                                <source src="http://drexelforchrist.org/_resources/Blue_Discs.webm" type="video/webm" />
+                                <source src="http://drexelforchrist.org/_resources/Blue_Discs.mp4" type="video/mp4" />
+                                <!-- KURTZ alternative for browsers which don't support the Video tag -->
+                            </video>
+                        </div>
+                    </xsl:when>
+
+
+                </xsl:choose>
+
                 <nav id="header">
                     <div id="headerColorBar" class="printOnly">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -223,6 +273,11 @@
                 <div id="headerSpacer" />
                 <div id="corset">
                     <!--<img class="content" src="static/img.png" />-->
+                    
+                    <xsl:if test="brilliant/document/content/div[@class = 'map']" >
+                        <xsl:copy-of select="brilliant/document/content/div[@class = 'map']" />
+                    </xsl:if>
+                    
                     <h1 class="noPrint">
                         <span id="pageTitle"><xsl:value-of select="brilliant/title" /></span>
                         <xsl:if test="brilliant/subtitle != ''">
@@ -231,7 +286,7 @@
                     </h1>
 
                     <xsl:for-each select="brilliant/document/content">
-                        <xsl:copy-of select="*" />
+                        <xsl:copy-of select="section" />
                     </xsl:for-each>
 
                 </div>
@@ -255,6 +310,13 @@
                         </svg>
                     </div>
                 </nav>
+                <script type="text/javascript">
+                    try {
+                        load();
+                    } catch (e) {
+                        document.addEventListener('load', load);
+                    }
+                </script>
             </body>
         </html>
     </xsl:template>

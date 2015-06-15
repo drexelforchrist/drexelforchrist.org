@@ -16,14 +16,14 @@
 body {
     font-family: Cabin, 'Segoe UI', sans-serif;
     margin:0;
-    background: url(static/bg-stainedGlass.jpg) fixed; // KURTZ remove
-    background-size: cover; // KURTZ remove
+    //background: url(static/bg-outreach.jpg) fixed; // KURTZ remove
+    //background-size: cover; // KURTZ remove
 }
 
 //// Backgrounds
 div.background {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     min-width: 100%;
     min-height: 100%;
@@ -31,11 +31,12 @@ div.background {
     height: auto;
     z-index: -1000;
     overflow: hidden;
-    display: none;
+    //display: none;
 
-    video {
+    video,
+    img {
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
         min-width: 100%;
         min-height: 100%;
@@ -253,8 +254,13 @@ div#corset {
     & {
         // empty block!
     }
+    & > div.map,
     & > img {
-        // KURTZ why is this here?
+        width:100%; // max of 1000
+        padding-bottom: 33%; // max of 330, 'cause bottom padding is based on width.  http://stackoverflow.com/questions/1495407/css-maintain-div-aspect-ratio
+    }
+    & > div.map {
+        opacity: 0.87;
     }
     & > section {
         opacity: 0.87;
@@ -487,20 +493,35 @@ nav#footer {
     body@{className} {
         color: @text;
     }
-    body@{className} nav#header a#pageLogo {
-        div#pageLogoMark {
-            @url: 'static/logo/RGB_@{classNameOnly}_icon.svg';
-            background: data-uri(@url) no-repeat;
+    body@{className} nav#header {
+        a#pageLogo {
+            div#pageLogoMark {
+                @url: 'static/logo/RGB_@{classNameOnly}_icon.svg';
+                background: data-uri(@url) no-repeat;
+            }
+        }
+
+        & > ul#topNav > li > ul > li > ul > li > a {
+            /* third level links */
+            border-top: solid 1px fade(@background, 30%);
         }
     }
-    body nav#header a#pageLogo { // Default!  Duplicates should be removed by css-optimizer
-        div#pageLogoMark {
-            @url: 'static/logo/RGB_community_icon.svg';
-            background: data-uri(@url) no-repeat;
+    body nav#header {
+        a#pageLogo {
+            div#pageLogoMark {
+                @url: 'static/logo/RGB_community_icon.svg';
+                background: data-uri(@url) no-repeat;
+            }
+
+            div#pageLogoText {
+                @url: 'static/logo/RGB_text_only.svg';
+                background: data-uri(@url) no-repeat;
+            }
         }
-        div#pageLogoText {
-            @url: 'static/logo/RGB_text_only.svg';
-            background: data-uri(@url) no-repeat;
+
+        & > ul#topNav > li > ul > li > ul > li > a {
+            /* third level links */
+            border-top: solid 1px fade(white, 30%);
         }
     }
 
