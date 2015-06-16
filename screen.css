@@ -179,7 +179,7 @@ div#corset > img {
   padding-bottom: 33%;
 }
 div#corset > div.map {
-  opacity: 0.87;
+  opacity: 0.94;
 }
 div#corset > section {
   opacity: 0.87;
@@ -196,8 +196,6 @@ div#corset > section:hover {
 @media (max-width: 1048px) {
   div#corset {
     margin: 0.5em 18pt 35px;
-    max-width: 1048px;
-    /* use this value for @maxWideWidth */
   }
 }
 @media (min-width: 1048px) {

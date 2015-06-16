@@ -251,16 +251,13 @@ nav#header {
 
 //// Body
 div#corset {
-    & {
-        // empty block!
-    }
     & > div.map,
     & > img {
         width:100%; // max of 1000
         padding-bottom: 33%; // max of 330, 'cause bottom padding is based on width.  http://stackoverflow.com/questions/1495407/css-maintain-div-aspect-ratio
     }
     & > div.map {
-        opacity: 0.87;
+        opacity: 0.94; // matches max opacity of section blocks
     }
     & > section {
         opacity: 0.87;
@@ -278,7 +275,7 @@ div#corset {
 
     @media (max-width: @maxWideWidth) {
         margin: 0.5em @corsetPadding 35px;
-        max-width: 2*convert(@corsetPadding, px) + @maxCorsetWidth; /* use this value for @maxWideWidth */
+        //max-width: 2*convert(@corsetPadding, px) + @maxCorsetWidth; /* use this value for @maxWideWidth */
     }
     @media (min-width: @maxWideWidth) {
         margin: 0.5em 0 35px auto;
