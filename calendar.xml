@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="calendarMagic.xsl"?>
+
+<calendar>
+    <week name="Spring 10">
+        <day month="5" number="31" />
+        <day month="6" number="1" />
+        <day month="6" number="2" />
+        <day month="6" number="3" />
+        <day month="6" number="4" />
+        <day month="6" number="5" />
+        <day month="6" number="6" />
+    </week>
+    <week name="Spring Finals">
+        <day month="6" number="7" />
+        <day month="6" number="8" />
+        <day month="6" number="9" />
+        <day month="6" number="10" />
+        <day month="6" number="11" />
+        <day month="6" number="12" />
+        <day month="6" number="13" />
+    </week>
+    <week name="Summer Break">
+        <day month="6" number="14" />
+        <day month="6" number="15" />
+        <day month="6" number="16" />
+        <day month="6" number="17" />
+        <day month="6" number="18" />
+        <day month="6" number="19" />
+        <day month="6" number="20" />
+    </week>
+    <week name="Summer 1">
+        <day month="6" number="21" />
+        <day month="6" number="22" />
+        <day month="6" number="23" />
+        <day month="6" number="24" />
+        <day month="6" number="25" />
+        <day month="6" number="26" />
+        <day month="6" number="27" />
+    </week>
+    <week name="Summer 2">
+        <day month="6" number="28" />
+        <day month="6" number="29" />
+        <day month="6" number="30" />
+        <day month="7" number="1" />
+        <day month="7" number="2" />
+        <day month="7" number="3" />
+        <day month="7" number="4" />
+    </week>
+</calendar>
