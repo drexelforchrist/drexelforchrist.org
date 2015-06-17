@@ -3,7 +3,7 @@
     <xsl:output method="html" encoding="utf-8" indent="yes" />
     <xsl:template match="/">
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
-        <html>
+        <html prefix="og: http://ogp.me/ns#">
             <xsl:if test="brilliant/lang != ''">
                 <xsl:attribute name="lang">
                     <xsl:value-of select="brilliant/lang" />
@@ -26,7 +26,9 @@
 
             <!-- Isolate Summary -->
             <xsl:variable name="summary">
-
+                <xsl:if test="brilliant/document/summary">
+                    <xsl:value-of select="brilliant/document/summary" />
+                </xsl:if>
             </xsl:variable>
 
 
@@ -42,9 +44,9 @@
 
 
             <head>
-                <!-- general metas -->
+                <!-- really important metas -->
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                <meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+                <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" name="viewport" />
 
                 <!-- things that are actually visible -->
                 <title><xsl:value-of select="brilliant/title" /><xsl:if test="brilliant/title != ''"> // </xsl:if>Drexel Students for Christ</title>
@@ -60,20 +62,60 @@
 
                 <!-- JS -->
                 <xsl:copy-of select="brilliant/headLoad/*" />
+
+                <xsl:text disable-output-escaping='yes'>&lt;script type=&quot;text/javascript&quot; &gt;function load() {</xsl:text>
                 <xsl:if test="brilliant/onLoad">
-                    <script type="text/javascript">
-                        function load() {
-                            <xsl:value-of select="brilliant/onLoad"/>
-                        }
-                    </script>
+                    <xsl:value-of select="brilliant/onLoad"/>
                 </xsl:if>
+                <xsl:text disable-output-escaping='yes'>}&lt;/script&gt;</xsl:text>
+
 
                 <!-- SEO -->
                 <xsl:if test="$summary != ''">
                     <meta name="description">
-                        <xsl:copy-of select="$summary" />
+                        <xsl:attribute name="content">
+                            <xsl:value-of select="$summary" />
+                        </xsl:attribute>
                     </meta>
                 </xsl:if>
+
+
+                <!-- Twitter Card data.  Twitter must come first, else will fall back to OG data -->
+                <meta name="twitter:card" content="summary" /> <!-- KURTZ when image exists, change to summary_large_image -->
+                <meta name="twitter:site" content="@DrexelForChrist" />
+                <meta name="twitter:title">
+                    <xsl:attribute name="content">
+                        <xsl:value-of select="brilliant/title" />
+                    </xsl:attribute>
+                </meta>
+                <meta name="twitter:description">
+                    <xsl:attribute name="content">
+                        <xsl:value-of select="$summary" />
+                    </xsl:attribute>
+                </meta>
+                <!--<meta name="twitter:creator" content="@author_handle">-->
+                <!-- Twitter Summary card images must be at least 120x120px -->
+                <!--<meta name="twitter:image" content="http://www.example.com/image.jpg">-->
+
+                <!-- Open Graph data -->
+                <meta property="og:title">
+                    <xsl:attribute name="content">
+                        <xsl:value-of select="brilliant/title" />
+                    </xsl:attribute>
+                </meta>
+                <!--<meta property="og:type" content="article" />-->
+                <!--<meta property="og:url" content="http://www.example.com/" />-->
+                <!--<meta property="og:image" content="http://example.com/image.jpg" />-->
+                <meta property="og:description">
+                    <xsl:attribute name="content">
+                        <xsl:value-of select="$summary" />
+                    </xsl:attribute>
+                </meta>
+                <meta property="og:site_name" content="Drexel Students for Christ" />
+                <meta property="fb:admins" content="590301109" />
+
+
+
                 <!--<xsl:if test="$author">-->
                 <!--&lt;!&ndash;<xsl:for-each select="$author/*">&ndash;&gt;-->
                 <!--&lt;!&ndash;<xsl:copy-of select="*" />&ndash;&gt;-->
@@ -274,11 +316,11 @@
                 <div id="headerSpacer" />
                 <div id="corset">
                     <!--<img class="content" src="static/img.png" />-->
-                    
+
                     <xsl:if test="brilliant/document/content/div[@class = 'map']" >
                         <xsl:copy-of select="brilliant/document/content/div[@class = 'map']" />
                     </xsl:if>
-                    
+
                     <h1 class="noPrint">
                         <span id="pageTitle"><xsl:value-of select="brilliant/title" /></span>
                         <xsl:if test="brilliant/subtitle != ''">
@@ -313,9 +355,9 @@
                 </nav>
                 <script type="text/javascript">
                     try {
-                        load();
+                    load();
                     } catch (e) {
-                        document.addEventListener('load', load);
+                    document.addEventListener('load', load);
                     }
                 </script>
             </body>
