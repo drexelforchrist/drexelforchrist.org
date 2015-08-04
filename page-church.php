@@ -5,7 +5,7 @@ $xml = new DOMDocument;
 $xml->load('page-church.xml');
 
 $xsl = new DOMDocument;
-$xsl->load('template.xsl');
+$xsl->load('xsl/default.xsl');
 
 // Configure the transformer
 $proc = new XSLTProcessor;
