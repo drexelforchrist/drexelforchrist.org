@@ -50,8 +50,8 @@
 
                 <!-- things that are actually visible -->
                 <title><xsl:value-of select="brilliant/title" /><xsl:if test="brilliant/title != ''"> // </xsl:if>Drexel Students for Christ</title>
-                <link rel="stylesheet" href="screen.css" type="text/css" media="screen" />
-                <link rel="stylesheet" href="print.css" type="text/css" media="print" />
+                <link rel="stylesheet" href="//cdn.drexelforchrist.com/formatting/screen.css" type="text/css" media="screen" />
+                <link rel="stylesheet" href="//cdn.drexelforchrist.com/formatting/print.css" type="text/css" media="print" />
                 <link rel="shortcut icon">
                     <xsl:attribute name="href">
                         <xsl:value-of select="concat('static/ico/RGB-icon-', $styleClass, '.ico')" />
@@ -147,7 +147,7 @@
                     </xsl:when>
                     <xsl:when test="$styleClass = 'church'">
                         <div class="background" id="churchBackground">
-                            <img src="static/bg-stainedGlass.jpg" alt="" />
+                            <img src="//cdn.drexelforchrist.com/formatting/static/bg-stainedGlass.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'prayer'">
@@ -167,7 +167,7 @@
                     </xsl:when>
                     <xsl:when test="$styleClass = 'outreach'">
                         <div class="background" id="outreachBackground">
-                            <img src="static/bg-outreach.jpg" alt="" />
+                            <img src="//cdn.drexelforchrist.com/formatting/static/bg-outreach.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'ninja'" >
