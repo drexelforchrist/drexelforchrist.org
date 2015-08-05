@@ -1,7 +1,7 @@
 /* Font imports */
 @import url(http://fonts.googleapis.com/css?family=Cabin);
-@import (inline) url(static/fonts/novecentoBook_import.css);
-@import (inline) url(static/fonts/novecentoBold_import.css);
+@import url(../fonts/novecentoBook_import.css);
+@import url(../fonts/novecentoBold_import.css);
 
 
 
@@ -493,7 +493,7 @@ nav#footer {
     body@{className} nav#header {
         a#pageLogo {
             div#pageLogoMark {
-                @url: 'static/logo/RGB_@{classNameOnly}_icon.svg';
+                @url: '../logo/RGB_@{classNameOnly}_icon.svg';
                 background: data-uri(@url) no-repeat;
             }
         }
@@ -506,12 +506,12 @@ nav#footer {
     body nav#header {
         a#pageLogo {
             div#pageLogoMark {
-                @url: 'static/logo/RGB_community_icon.svg';
+                @url: '../logo/RGB_community_icon.svg';
                 background: data-uri(@url) no-repeat;
             }
 
             div#pageLogoText {
-                @url: 'static/logo/RGB_text_only.svg';
+                @url: '../logo/RGB_text_only.svg';
                 background: data-uri(@url) no-repeat;
             }
         }
@@ -607,7 +607,7 @@ nav#footer {
             color: @primary;
         }
         & > ul > li > a {
-            @url: 'static/ConnectSprite/connect-sprite-@{classNameOnly}.png';
+            @url: '../ConnectSprites/connect-sprite-@{classNameOnly}.png';
             background: data-uri(@url) repeat-y top left;
             background-size: 140px 40px;
 
@@ -619,7 +619,7 @@ nav#footer {
 
     body nav#footer { // default, cleaned up by optimizer
         & > ul > li > a {
-            @url: 'static/ConnectSprite/connect-sprite-community.png';
+            @url: '../ConnectSprites/connect-sprite-community.png';
             background: data-uri(@url) repeat-y top left;
             background-size: 140px 40px;
         }

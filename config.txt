@@ -1,0 +1,2 @@
+host:cdn	cdn
+host:static	static

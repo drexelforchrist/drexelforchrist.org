@@ -1,19 +1,7 @@
 /* Font imports */
 @import url(http://fonts.googleapis.com/css?family=Cabin);
-/* latin */
-@font-face {
-    font-family: 'Novecento wide Book';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Novecento wide Book'), local('NovecentowideBook'), url(Novecentowide-Book.woff2) format('woff2');
-}
-/* latin */
-@font-face {
-    font-family: 'Novecento wide Bold';
-    font-style: normal;
-    font-weight: 800;
-    src: local('Novecento wide Bold'), local('NovecentowideBold'), url(Novecentowide-Bold.woff2) format('woff2');
-}
+@import url(../fonts/novecentoBook_import.css);
+@import url(../fonts/novecentoBold_import.css);
 body {
   font-family: Cabin, 'Segoe UI', sans-serif;
   margin: 0;
@@ -395,7 +383,7 @@ body {
   color: #222222;
 }
 body nav#header a#pageLogo div#pageLogoMark {
-  background: url('static/logo/RGB__icon.svg') no-repeat;
+  background: url('../logo/RGB__icon.svg') no-repeat;
 }
 body nav#header > ul#topNav > li > ul > li > ul > li > a {
   /* third level links */
@@ -515,14 +503,14 @@ body nav#footer {
   color: #2c82c5;
 }
 body nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body nav#footer > ul > li > a:hover {
   background-position-y: 20px;
 }
 body nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.church {
@@ -649,14 +637,14 @@ body.church nav#footer {
   color: #8800a1;
 }
 body.church nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-church.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-church.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.church nav#footer > ul > li > a:hover {
   background-position-y: 20px;
 }
 body nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.prayer {
@@ -783,14 +771,14 @@ body.prayer nav#footer {
   color: #c91b1b;
 }
 body.prayer nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-prayer.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-prayer.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.prayer nav#footer > ul > li > a:hover {
   background-position-y: 20px;
 }
 body nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.training {
@@ -917,14 +905,14 @@ body.training nav#footer {
   color: #ce6219;
 }
 body.training nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-training.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-training.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.training nav#footer > ul > li > a:hover {
   background-position-y: 20px;
 }
 body nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.discipleship {
@@ -1051,14 +1039,14 @@ body.discipleship nav#footer {
   color: #efa81e;
 }
 body.discipleship nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-discipleship.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-discipleship.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.discipleship nav#footer > ul > li > a:hover {
   background-position-y: 20px;
 }
 body nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.outreach {
@@ -1185,21 +1173,21 @@ body.outreach nav#footer {
   color: #259110;
 }
 body.outreach nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-outreach.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-outreach.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.outreach nav#footer > ul > li > a:hover {
   background-position-y: 20px;
 }
 body nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.ninja {
   color: #eeeeee;
 }
 body.ninja nav#header a#pageLogo div#pageLogoMark {
-  background: url('static/logo/RGB_ninja_icon.svg') no-repeat;
+  background: url('../logo/RGB_ninja_icon.svg') no-repeat;
 }
 body.ninja nav#header > ul#topNav > li > ul > li > ul > li > a {
   /* third level links */
@@ -1319,14 +1307,14 @@ body.ninja nav#footer {
   color: #cccccc;
 }
 body.ninja nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-ninja.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-ninja.png') repeat-y top left;
   background-size: 140px 40px;
 }
 body.ninja nav#footer > ul > li > a:hover {
   background-position-y: 20px;
 }
 body nav#footer > ul > li > a {
-  background: url('static/ConnectSprite/connect-sprite-community.png') repeat-y top left;
+  background: url('../ConnectSprites/connect-sprite-community.png') repeat-y top left;
   background-size: 140px 40px;
 }
 .printOnly {

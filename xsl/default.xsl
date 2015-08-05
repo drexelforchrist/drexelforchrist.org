@@ -50,14 +50,14 @@
 
                 <!-- things that are actually visible -->
                 <title><xsl:value-of select="brilliant/title" /><xsl:if test="brilliant/title != ''"> // </xsl:if>Drexel Students for Christ</title>
-                <link rel="stylesheet" href="//cdn.drexelforchrist.com/formatting/screen.css" type="text/css" media="screen" />
-                <link rel="stylesheet" href="//cdn.drexelforchrist.com/formatting/print.css" type="text/css" media="print" />
+                <link rel="stylesheet" href="%%host:cdn%%/style/screen.css" type="text/css" media="screen" />
+                <link rel="stylesheet" href="%%host:cdn%%/style/print.css" type="text/css" media="print" />
                 <link rel="shortcut icon">
                     <xsl:attribute name="href">
                         <xsl:value-of select="concat('static/ico/RGB-icon-', $styleClass, '.ico')" />
                     </xsl:attribute>
                 </link>
-                <script src="static/js/templating.js" type="text/javascript" />
+                <script src="%%host:static%%/js/templating.js" type="text/javascript" />
 
 
                 <!-- JS -->
@@ -142,32 +142,32 @@
                 <xsl:choose>
                     <xsl:when test="$styleClass = 'community'">
                         <div class="background" id="communityBackground">
-                            <img src="static/TEMP_bg-guitar.jpg" alt="" />
+                            <img src="%%host:cdn%%/backgrounds/TEMP_bg-guitar.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'church'">
                         <div class="background" id="churchBackground">
-                            <img src="//cdn.drexelforchrist.com/formatting/static/bg-stainedGlass.jpg" alt="" />
+                            <img src="%%host:cdn%%/backgrounds/bg-stainedGlass.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'prayer'">
                         <div class="background" id="prayerBackground">
-                            <img src="static/bg-prayer.jpg" alt="" />
+                            <img src="%%host:cdn%%/backgrounds/bg-prayer.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'training'">
                         <div class="background" id="trainingBackground">
-                            <img src="static/bg-training.jpg" alt="" />
+                            <img src="%%host:cdn%%/backgrounds/bg-training.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'discipleship'">
                         <div class="background" id="discipleshipBackground">
-                            <img src="static/bg-discipleship.jpg" alt="" />
+                            <img src="%%host:cdn%%/backgrounds/bg-discipleship.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'outreach'">
                         <div class="background" id="outreachBackground">
-                            <img src="//cdn.drexelforchrist.com/formatting/static/bg-outreach.jpg" alt="" />
+                            <img src="%%host:cdn%%/backgrounds/bg-outreach.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'ninja'" >
@@ -191,7 +191,7 @@
                         </svg>
                     </div>
                     <a id="pageLogo" href="/">
-                        <img src="static/logo/CMYK_community_wide.svg" class="printOnly" id="printLogo" alt="Drexel Students for Christ" />
+                        <img src="%%host:cdn%%/logo/CMYK_community_wide.svg" class="printOnly" id="printLogo" alt="Drexel Students for Christ" />
                         <div id="pageLogoMark" />
                         <div id="pageLogoText" />
                         <div class="printOnly printPageTitle"><xsl:value-of select="brilliant/title" />
