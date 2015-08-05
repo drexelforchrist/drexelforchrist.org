@@ -7,6 +7,10 @@
 
 
 static/ico/*.ico
+cdn/ico/*.ico
 static/logo/*.svg
+cdn/logo/*.svg
 static/fonts/*.woff2
+cdn/fonts/*.woff2
 static/fonts/*import.css
+cdn/fonts/*import.css
