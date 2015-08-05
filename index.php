@@ -29,7 +29,7 @@ function loadAndProcess($requestedContent)
 	$hostReplacements = array();
 	if (($handle = fopen("config.txt", "r")) !== FALSE) {
 		while (($data = fgetcsv($handle, 1000, "\t")) !== FALSE) {
-			if (count($data) < 2) {
+			if (count($data) < 2 || substr($data[0], 0, 1) == "#") {
 				continue;
 			}
 			if (substr($data[0], 0, 5) == "host:") {
