@@ -48,6 +48,10 @@ nav#header {
         display: table-row;
     }
 
+    & > ul#topNav {
+        display:none;
+    }
+
     & > div#headerColorBar svg {
         width: 8.5in;
         height: 0.2in;
@@ -56,15 +60,15 @@ nav#header {
         display: table-row;
     }
 
-    & div#logo {
+    & div#pageLogo {
         & > img#printLogo,
-        &  > div.printPageTitle {
+        & > div.printPageTitle {
             height: 1in;
         }
 
         & > img#printLogo {
             float: left;
-            margin: 0.8in .3in .1in 1in;
+            margin: 0 .3in 0 1in;
         }
 
         & > div.printPageTitle {
@@ -159,7 +163,7 @@ h1#pageTitle {
     display: none;
 }
 
-nav#header > div#logo > div.printPageTitle,
+nav#header > div#pageLogo > div.printPageTitle,
 h4 {
     font-family: 'Novecento wide Book', sans-serif;
     text-transform: uppercase;

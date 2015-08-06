@@ -101,14 +101,14 @@ nav#header {
         height: @linkHeight + 4px;
         z-index: 1000;
 
-        a#pageLogo {
+        div#pageLogo {
             @logoHeight: @linkHeight;
-            div#pageLogoMark {
+            a#pageLogoMark {
                 height:@logoHeight;
                 width: @logoHeight;
             }
 
-            div#pageLogoText {
+            a#pageLogoText {
                 height:@logoHeight;
                 width: @logoHeight*2309/865;
             }
@@ -116,7 +116,7 @@ nav#header {
     }
 
     & {
-        a#pageLogo {
+        div#pageLogo {
             display: block;
             background-size: 300px @linkHeight;
             //width: 300px;
@@ -128,8 +128,8 @@ nav#header {
             z-index: 2000;
             //transition-delay: 2s;
 
-            div#pageLogoText,
-            div#pageLogoMark {
+            a#pageLogoText,
+            a#pageLogoMark {
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -137,17 +137,17 @@ nav#header {
             }
 
             @logoHeight: 105px;
-            div#pageLogoMark {
+            a#pageLogoMark {
                 height:@logoHeight;
                 width: @logoHeight;
             }
 
-            div#pageLogoText {
+            a#pageLogoText {
                 height:@logoHeight;
                 width: @logoHeight*2309/865;
             }
 
-            &:hover div#pageLogoMark {
+            &:hover a#pageLogoMark {
                 .rotate(360deg);
             }
         }
@@ -491,8 +491,8 @@ nav#footer {
         color: @text;
     }
     body@{className} nav#header {
-        a#pageLogo {
-            div#pageLogoMark {
+        div#pageLogo {
+            a#pageLogoMark {
                 @url: '../logo/RGB_@{classNameOnly}_icon.svg';
                 background: data-uri(@url) no-repeat;
             }
@@ -504,13 +504,13 @@ nav#footer {
         }
     }
     body nav#header {
-        a#pageLogo {
-            div#pageLogoMark {
+        div#pageLogo {
+            a#pageLogoMark {
                 @url: '../logo/RGB_community_icon.svg';
                 background: data-uri(@url) no-repeat;
             }
 
-            div#pageLogoText {
+            a#pageLogoText {
                 @url: '../logo/RGB_text_only.svg';
                 background: data-uri(@url) no-repeat;
             }
@@ -607,7 +607,7 @@ nav#footer {
             color: @primary;
         }
         & > ul > li > a {
-            @url: '../ConnectSprites/connect-sprite-@{classNameOnly}.png';
+            @url: '../connectSprites/connect-sprite-@{classNameOnly}.png';
             background: data-uri(@url) repeat-y top left;
             background-size: 140px 40px;
 
@@ -619,7 +619,7 @@ nav#footer {
 
     body nav#footer { // default, cleaned up by optimizer
         & > ul > li > a {
-            @url: '../ConnectSprites/connect-sprite-community.png';
+            @url: '../connectSprites/connect-sprite-community.png';
             background: data-uri(@url) repeat-y top left;
             background-size: 140px 40px;
         }

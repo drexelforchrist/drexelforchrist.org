@@ -60,6 +60,9 @@ nav#header > div#headerColorBar,
 nav#header > div#logo {
   display: table-row;
 }
+nav#header > ul#topNav {
+  display: none;
+}
 nav#header > div#headerColorBar svg {
   width: 8.5in;
   height: 0.2in;
@@ -67,22 +70,22 @@ nav#header > div#headerColorBar svg {
   left: 0;
   display: table-row;
 }
-nav#header div#logo > img#printLogo,
-nav#header div#logo > div.printPageTitle {
+nav#header div#pageLogo > img#printLogo,
+nav#header div#pageLogo > div.printPageTitle {
   height: 1in;
 }
-nav#header div#logo > img#printLogo {
+nav#header div#pageLogo > img#printLogo {
   float: left;
-  margin: 0.8in .3in .1in 1in;
+  margin: 0 .3in 0 1in;
 }
-nav#header div#logo > div.printPageTitle {
+nav#header div#pageLogo > div.printPageTitle {
   right: 0;
   vertical-align: middle;
   text-align: right;
   font-size: 0.4in;
   margin: 0.8in 1in .2in .3in;
 }
-nav#header div#logo > div.printPageTitle > span#printPageSubtitle {
+nav#header div#pageLogo > div.printPageTitle > span#printPageSubtitle {
   font-family: Cabin, 'Segoe UI', sans-serif;
   display: block;
   font-size: 0.2in;
@@ -142,7 +145,7 @@ div#corset > * {
 h1#pageTitle {
   display: none;
 }
-nav#header > div#logo > div.printPageTitle,
+nav#header > div#pageLogo > div.printPageTitle,
 h4 {
   font-family: 'Novecento wide Book', sans-serif;
   text-transform: uppercase;

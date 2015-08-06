@@ -190,14 +190,17 @@
                             <rect x="0" y="0" width="600" height="10" style="fill:rgb(248,193,44);" />
                         </svg>
                     </div>
-                    <a id="pageLogo" href="/">
+                    <div id="pageLogo">
                         <img src="%%host:cdn%%/logo/CMYK_community_wide.svg" class="printOnly" id="printLogo" alt="Drexel Students for Christ" />
-                        <div id="pageLogoMark" />
-                        <div id="pageLogoText" />
+                        <a id="pageLogoMark" href="/" />
+                        <a id="pageLogoText" href="/" />
+
                         <div class="printOnly printPageTitle"><xsl:value-of select="brilliant/title" />
                             <span id="printPageSubtitle"><xsl:value-of select="brilliant/subtitle" /></span>
                         </div>
-                    </a>
+                    </div>
+
+
 
 
                     <ul id="topNav">
