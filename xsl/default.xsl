@@ -317,7 +317,7 @@
 
                 </nav>
                 <div id="headerSpacer" />
-                <div id="corset">
+                <main id="corset">
                     <!--<img class="content" src="static/img.png" />-->
 
                     <xsl:if test="brilliant/document/content/div[@class = 'map']" >
@@ -335,7 +335,7 @@
                         <xsl:copy-of select="section" />
                     </xsl:for-each>
 
-                </div>
+                </main>
                 <nav id="footer">
                     <ul>
                         <li class="copyrightText">&#169;&#160;2015 <span class="narrowHide">Drexel&#160;Students&#160;for&#160;Christ</span> // <span class="bold">connect<span class="narrowHide">&#160;with&#160;us</span>: </span></li>
