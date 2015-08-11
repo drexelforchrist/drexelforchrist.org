@@ -12,6 +12,9 @@
 @maxCorsetWidth: 1000px;
 @maxWideWidth: 1048px;
 
+@narrowHide: 600px;
+@thickHeader: 600px;
+
 
 body {
     font-family: Cabin, 'Segoe UI', sans-serif;
@@ -33,8 +36,8 @@ div.background {
     overflow: hidden;
     //display: none;
 
-    video,
-    img {
+    & > video,
+    & > img {
         position: absolute;
         top: 0;
         left: 0;
@@ -78,16 +81,20 @@ div.background {
 
 @linkHeight : 26px;
 @linkWidth: 70px;
+@headerHeight: 110px;
 
 div#headerSpacer,
 nav#header {
-    height: 110px;
     width:100%;
+    height: @headerHeight;
+    @media (max-width:@thickHeader) {
+        height: (@headerHeight + @linkHeight);
+    }
 }
 
 div#headerSpacer {
-    height:110px;
     margin-top:1em;
+    transition: height 0.3s;
 }
 
 nav#header {
@@ -106,11 +113,13 @@ nav#header {
             a#pageLogoMark {
                 height:@logoHeight;
                 width: @logoHeight;
+                bottom: 0;
             }
 
             a#pageLogoText {
                 height:@logoHeight;
                 width: @logoHeight*2309/865;
+                bottom: 0;
             }
         }
     }
@@ -132,6 +141,9 @@ nav#header {
             a#pageLogoMark {
                 position: absolute;
                 bottom: 0;
+                @media (max-width:@thickHeader) {
+                    bottom: @linkHeight;
+                }
                 left: 0;
                 transition: background 2s, rotation 0.6s, transform 0.6s, height 0.2s, width 0.2s;
             }
@@ -250,7 +262,7 @@ nav#header {
 
 
 //// Body
-div#corset {
+main#corset {
     & > div.map,
     & > img {
         width:100%; // max of 1000
@@ -323,6 +335,7 @@ div#corset {
             display: block;
             position: absolute;
         }
+
         &::before {
             border-bottom-color: transparent;
             border-left-color: transparent;
@@ -416,7 +429,6 @@ nav#footer {
     left: 0;
     right: 0;
     width: auto;
-    opacity: 0.87;
     padding: 5px @corsetPadding+@sectionPadding;
     @media (min-width: @maxWideWidth) {
         padding-right: @sectionPadding;
@@ -428,6 +440,9 @@ nav#footer {
         opacity: 0.87;
         transition: opacity 20s;
     }
+    @media (max-width:@narrowHide) { // Makes footer more subtle on smaller displays.  KURTZ consider making this based on height rather than width, since that's the dimension that benefits from it.
+        opacity: 0.64;
+    }
     &:hover {
         opacity: 1;
         transition: opacity 0.3s;
@@ -435,8 +450,14 @@ nav#footer {
     & span.bold {
         font-weight: bold;
     }
+    @media (max-width: @narrowHide) {
+        .narrowHide {
+            display:none;
+        }
+    }
     & > ul {
         margin: 0;
+        padding: 0;
     }
     & > ul > li {
         & {
@@ -445,6 +466,7 @@ nav#footer {
             line-height: 20px;
             padding: 0 1px;
             max-width: 20px; // required for Safari
+            height: 20px;
         }
         &.copyrightText {
             max-width: none;
@@ -552,8 +574,8 @@ nav#footer {
         }
     }
 
-    body@{className} div#corset > h1,
-    body@{className} div#corset > section,
+    body@{className} main#corset > h1,
+    body@{className} main#corset > section,
     body@{className} nav#header,
     body@{className} nav#footer {
         background-color: fade(@background, 94%);

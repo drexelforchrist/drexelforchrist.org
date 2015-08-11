@@ -17,8 +17,8 @@ div.background {
   z-index: -1000;
   overflow: hidden;
 }
-div.background video,
-div.background img {
+div.background > video,
+div.background > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,12 +30,18 @@ div.background img {
 }
 div#headerSpacer,
 nav#header {
-  height: 110px;
   width: 100%;
+  height: 110px;
+}
+@media (max-width: 600px) {
+  div#headerSpacer,
+  nav#header {
+    height: 136px;
+  }
 }
 div#headerSpacer {
-  height: 110px;
   margin-top: 1em;
+  transition: height 0.3s;
 }
 nav#header {
   top: 1em;
@@ -50,10 +56,12 @@ nav#header.static {
 nav#header.static div#pageLogo a#pageLogoMark {
   height: 26px;
   width: 26px;
+  bottom: 0;
 }
 nav#header.static div#pageLogo a#pageLogoText {
   height: 26px;
   width: 69.40346821px;
+  bottom: 0;
 }
 nav#header div#pageLogo {
   display: block;
@@ -71,6 +79,12 @@ nav#header div#pageLogo a#pageLogoMark {
   bottom: 0;
   left: 0;
   transition: background 2s, rotation 0.6s, transform 0.6s, height 0.2s, width 0.2s;
+}
+@media (max-width: 600px) {
+  nav#header div#pageLogo a#pageLogoText,
+  nav#header div#pageLogo a#pageLogoMark {
+    bottom: 26px;
+  }
 }
 nav#header div#pageLogo a#pageLogoMark {
   height: 105px;
@@ -173,49 +187,49 @@ nav#header ul#topNav input {
   font-size: 1em;
   text-align: center;
 }
-div#corset > div.map,
-div#corset > img {
+main#corset > div.map,
+main#corset > img {
   width: 100%;
   padding-bottom: 33%;
 }
-div#corset > div.map {
+main#corset > div.map {
   opacity: 0.94;
 }
-div#corset > section {
+main#corset > section {
   opacity: 0.87;
   transition: opacity 20s;
   padding: 0 15pt 1em;
 }
-div#corset > section p:first-child {
+main#corset > section p:first-child {
   margin-top: 0;
 }
-div#corset > section:hover {
+main#corset > section:hover {
   opacity: 1;
   transition: opacity 0.3s;
 }
 @media (max-width: 1048px) {
-  div#corset {
+  main#corset {
     margin: 0.5em 18pt 35px;
   }
 }
 @media (min-width: 1048px) {
-  div#corset {
+  main#corset {
     margin: 0.5em 0 35px auto;
     max-width: 1000px;
   }
 }
-div#corset h1 span#pageTitle,
-div#corset h2,
-div#corset h3 {
+main#corset h1 span#pageTitle,
+main#corset h2,
+main#corset h3 {
   font-family: 'Novecento wide Bold', sans-serif;
   text-transform: uppercase;
 }
-div#corset h1,
-div#corset h4 {
+main#corset h1,
+main#corset h4 {
   font-family: 'Novecento wide Book', sans-serif;
   text-transform: uppercase;
 }
-div#corset > h1 {
+main#corset > h1 {
   font-size: 2.2em;
   margin: 0;
   padding: 15pt;
@@ -224,15 +238,15 @@ div#corset > h1 {
   -ms-hyphens: auto;
   hyphens: auto;
 }
-div#corset h2 {
+main#corset h2 {
   margin: 0 -24pt;
   padding: 2px 24pt 4px;
   display: block;
   position: relative;
   line-height: 1.2em;
 }
-div#corset h2::before,
-div#corset h2::after {
+main#corset h2::before,
+main#corset h2::after {
   box-sizing: border-box;
   width: 9pt;
   height: 9pt;
@@ -240,35 +254,35 @@ div#corset h2::after {
   display: block;
   position: absolute;
 }
-div#corset h2::before {
+main#corset h2::before {
   border-bottom-color: transparent;
   border-left-color: transparent;
   bottom: -9pt;
   left: 0;
 }
-div#corset h2::after {
+main#corset h2::after {
   border-bottom-color: transparent;
   border-right-color: transparent;
   bottom: -9pt;
   right: 0;
 }
 @media (min-width: 1048px) {
-  div#corset h2 {
+  main#corset h2 {
     padding-right: 15pt;
     margin-right: -15pt;
   }
-  div#corset h2::after {
+  main#corset h2::after {
     display: none;
   }
 }
-div#corset h4 {
+main#corset h4 {
   margin: 0;
 }
-div#corset h3 {
+main#corset h3 {
   padding: 2px 15pt 4px;
   margin: 0 -15pt;
 }
-div#corset blockquote {
+main#corset blockquote {
   line-height: 1.5em;
   font-family: 'Novecento wide Book', sans-serif;
   font-variant: small-caps;
@@ -279,7 +293,7 @@ div#corset blockquote {
   padding: 3em;
   position: relative;
 }
-div#corset blockquote:before {
+main#corset blockquote:before {
   content: "\201C";
   font-size: 100px;
   line-height: 60px;
@@ -289,7 +303,7 @@ div#corset blockquote:before {
   left: 5%;
   opacity: 0.3;
 }
-div#corset blockquote:after {
+main#corset blockquote:after {
   content: "\201D";
   font-size: 100px;
   line-height: 20px;
@@ -299,20 +313,20 @@ div#corset blockquote:after {
   right: 5%;
   opacity: 0.3;
 }
-div#corset blockquote cite {
+main#corset blockquote cite {
   font-style: italic;
   text-wrap: none;
 }
-div#corset blockquote strong {
+main#corset blockquote strong {
   font-family: 'Novecento wide Bold', sans-serif;
 }
-div#corset blockquote > p:first-child {
+main#corset blockquote > p:first-child {
   margin-top: 0;
 }
-div#corset blockquote > p:last-child {
+main#corset blockquote > p:last-child {
   margin-bottom: 0;
 }
-div#corset blockquote p {
+main#corset blockquote p {
   text-indent: 0;
 }
 nav#footer {
@@ -333,6 +347,11 @@ nav#footer {
     padding-right: 15pt;
   }
 }
+@media (max-width: 600px) {
+  nav#footer {
+    opacity: 0.64;
+  }
+}
 nav#footer:hover {
   opacity: 1;
   transition: opacity 0.3s;
@@ -340,8 +359,14 @@ nav#footer:hover {
 nav#footer span.bold {
   font-weight: bold;
 }
+@media (max-width: 600px) {
+  nav#footer .narrowHide {
+    display: none;
+  }
+}
 nav#footer > ul {
   margin: 0;
+  padding: 0;
 }
 nav#footer > ul > li {
   display: inline-block;
@@ -349,6 +374,7 @@ nav#footer > ul > li {
   line-height: 20px;
   padding: 0 1px;
   max-width: 20px;
+  height: 20px;
 }
 nav#footer > ul > li.copyrightText {
   max-width: none;
@@ -425,8 +451,8 @@ body h2::after,
 body h2::after {
   border: solid 4.5pt #66ccff;
 }
-body div#corset > h1,
-body div#corset > section,
+body main#corset > h1,
+body main#corset > section,
 body nav#header,
 body nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
@@ -559,8 +585,8 @@ body.church h2::after,
 body h2.church::after {
   border: solid 4.5pt #d11cf1;
 }
-body.church div#corset > h1,
-body.church div#corset > section,
+body.church main#corset > h1,
+body.church main#corset > section,
 body.church nav#header,
 body.church nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
@@ -693,8 +719,8 @@ body.prayer h2::after,
 body h2.prayer::after {
   border: solid 4.5pt #fe7a7a;
 }
-body.prayer div#corset > h1,
-body.prayer div#corset > section,
+body.prayer main#corset > h1,
+body.prayer main#corset > section,
 body.prayer nav#header,
 body.prayer nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
@@ -827,8 +853,8 @@ body.training h2::after,
 body h2.training::after {
   border: solid 4.5pt #f79844;
 }
-body.training div#corset > h1,
-body.training div#corset > section,
+body.training main#corset > h1,
+body.training main#corset > section,
 body.training nav#header,
 body.training nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
@@ -961,8 +987,8 @@ body.discipleship h2::after,
 body h2.discipleship::after {
   border: solid 4.5pt #f7dd2e;
 }
-body.discipleship div#corset > h1,
-body.discipleship div#corset > section,
+body.discipleship main#corset > h1,
+body.discipleship main#corset > section,
 body.discipleship nav#header,
 body.discipleship nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
@@ -1095,8 +1121,8 @@ body.outreach h2::after,
 body h2.outreach::after {
   border: solid 4.5pt #46fe21;
 }
-body.outreach div#corset > h1,
-body.outreach div#corset > section,
+body.outreach main#corset > h1,
+body.outreach main#corset > section,
 body.outreach nav#header,
 body.outreach nav#footer {
   background-color: rgba(255, 255, 255, 0.94);
@@ -1229,8 +1255,8 @@ body.ninja h2::after,
 body h2.ninja::after {
   border: solid 4.5pt #777777;
 }
-body.ninja div#corset > h1,
-body.ninja div#corset > section,
+body.ninja main#corset > h1,
+body.ninja main#corset > section,
 body.ninja nav#header,
 body.ninja nav#footer {
   background-color: rgba(0, 0, 0, 0.94);
