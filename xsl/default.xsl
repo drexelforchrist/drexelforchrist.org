@@ -54,7 +54,7 @@
                 <link rel="stylesheet" href="%%host:cdn%%/style/print.css" type="text/css" media="print" />
                 <link rel="shortcut icon">
                     <xsl:attribute name="href">
-                        <xsl:value-of select="concat('static/ico/RGB-icon-', $styleClass, '.ico')" />
+                        <xsl:value-of select="concat('%%host:cdn%%/ico/RGB-icon-', $styleClass, '.ico')" />
                     </xsl:attribute>
                 </link>
                 <script src="%%host:static%%/js/templating.js" type="text/javascript" />
@@ -248,14 +248,6 @@
                                         </li>
                                         <li>
                                             <a href="../rec">recordings</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="../feedback">feedback</a>
-                                    <ul>
-                                        <li>
-                                            <a href="../contact">contact us</a>
                                         </li>
                                     </ul>
                                 </li>
