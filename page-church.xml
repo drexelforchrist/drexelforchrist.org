@@ -3,17 +3,22 @@
 
 <brilliant>
     <lang>en-us</lang>
-    <title>Local Churches</title>
-    <template>church</template>
-    <headLoad>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfqQ82nkWfCYEw2Ix-o0dQ3KXT7atfEr0&amp;v=3&amp;libraries=geometry" />
-        <script src="static/js/churchMap.js" />
-    </headLoad>
-    <onLoad>
-        doMap();
-    </onLoad>
     <document>
         <id>3</id>
+
+        <title>Local Churches</title>
+        <template>
+            <name>church</name>
+        </template>
+        <headLoad>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfqQ82nkWfCYEw2Ix-o0dQ3KXT7atfEr0&amp;v=3&amp;libraries=geometry" />
+            <script src="static/js/churchMap.js" />
+        </headLoad>
+        <onLoad>
+            doMap();
+        </onLoad>
+
+
         <updated>2015-06-14T12:00:00Z</updated>
         <summary>Information on the local churches that are partnered with Drexel Students for Christ.</summary>
         <author>

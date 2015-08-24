@@ -14,11 +14,8 @@
             <!-- Extract body className for template. -->
             <xsl:variable name="styleClass">
                 <xsl:choose>
-                    <xsl:when test="brilliant/calendar/name">
-                        <xsl:value-of select="translate(brilliant/calendar/name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
-                    </xsl:when>
-                    <xsl:when test="brilliant/template">
-                        <xsl:value-of select="translate(brilliant/template, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
+                    <xsl:when test="brilliant/document/template/name">
+                        <xsl:value-of select="translate(brilliant/document/template/name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
                     </xsl:when>
                     <xsl:otherwise>community</xsl:otherwise><!-- some value is necessary for non-css components (like the icon)  -->
                 </xsl:choose>
@@ -49,7 +46,7 @@
                 <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" name="viewport" />
 
                 <!-- things that are actually visible -->
-                <title><xsl:value-of select="brilliant/title" /><xsl:if test="brilliant/title != ''"> // </xsl:if>Drexel Students for Christ</title>
+                <title><xsl:value-of select="brilliant/document/title" /><xsl:if test="brilliant/document/title != ''"> // </xsl:if>Drexel Students for Christ</title>
                 <link rel="stylesheet" href="%%host:cdn%%/style/screen.css" type="text/css" media="screen" />
                 <link rel="stylesheet" href="%%host:cdn%%/style/print.css" type="text/css" media="print" />
                 <link rel="shortcut icon">
@@ -61,11 +58,11 @@
 
 
                 <!-- JS -->
-                <xsl:copy-of select="brilliant/headLoad/*" />
+                <xsl:copy-of select="brilliant/document/headLoad/*" />
 
                 <xsl:text disable-output-escaping='yes'>&lt;script type=&quot;text/javascript&quot; &gt;function load() {</xsl:text>
-                <xsl:if test="brilliant/onLoad">
-                    <xsl:value-of select="brilliant/onLoad"/>
+                <xsl:if test="brilliant/document/onLoad">
+                    <xsl:value-of select="brilliant/document/onLoad"/>
                 </xsl:if>
                 <xsl:text disable-output-escaping='yes'>}&lt;/script&gt;</xsl:text>
 
@@ -85,7 +82,7 @@
                 <meta name="twitter:site" content="@DrexelForChrist" />
                 <meta name="twitter:title">
                     <xsl:attribute name="content">
-                        <xsl:value-of select="brilliant/title" />
+                        <xsl:value-of select="brilliant/document/title" />
                     </xsl:attribute>
                 </meta>
                 <meta name="twitter:description">
@@ -100,7 +97,7 @@
                 <!-- Open Graph data -->
                 <meta property="og:title">
                     <xsl:attribute name="content">
-                        <xsl:value-of select="brilliant/title" />
+                        <xsl:value-of select="brilliant/document/title" />
                     </xsl:attribute>
                 </meta>
                 <!--<meta property="og:type" content="article" />-->
@@ -195,8 +192,8 @@
                         <a id="pageLogoMark" href="/" />
                         <a id="pageLogoText" href="/" />
 
-                        <div class="printOnly printPageTitle"><xsl:value-of select="brilliant/title" />
-                            <span id="printPageSubtitle"><xsl:value-of select="brilliant/subtitle" /></span>
+                        <div class="printOnly printPageTitle"><xsl:value-of select="brilliant/document/title" />
+                            <span id="printPageSubtitle"><xsl:value-of select="brilliant/document/subtitle" /></span>
                         </div>
                     </div>
 
@@ -310,21 +307,21 @@
                 </nav>
                 <div id="headerSpacer" />
                 <main id="corset">
-                    <!--<img class="content" src="static/img.png" />-->
+                    <!--<img class="content" src="static/img.png" />--> <!--KURTZ restore main image -->
 
                     <xsl:if test="brilliant/document/content/div[@class = 'map']" >
                         <xsl:copy-of select="brilliant/document/content/div[@class = 'map']" />
                     </xsl:if>
 
                     <h1 class="noPrint">
-                        <span id="pageTitle"><xsl:value-of select="brilliant/title" /></span>
-                        <xsl:if test="brilliant/subtitle != ''">
-                            &#160;//&#160;<xsl:value-of select="brilliant/subtitle" />
+                        <span id="pageTitle"><xsl:value-of select="brilliant/document/title" /></span>
+                        <xsl:if test="brilliant/document/subtitle != ''">
+                            //&#160;<xsl:value-of select="brilliant/document/subtitle" />
                         </xsl:if>
                     </h1>
 
                     <xsl:for-each select="brilliant/document/content">
-                        <xsl:copy-of select="section" />
+                        <xsl:copy-of select="*[not(@class = 'map')]" />
                     </xsl:for-each>
 
                 </main>
