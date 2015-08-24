@@ -95,6 +95,9 @@
                 <!--<meta name="twitter:image" content="http://www.example.com/image.jpg">-->
 
                 <!-- Open Graph data -->
+                <meta property="og:url">
+                    <xsl:attribute name="content">http://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
+                </meta>
                 <meta property="og:title">
                     <xsl:attribute name="content">
                         <xsl:value-of select="brilliant/document/title" />
