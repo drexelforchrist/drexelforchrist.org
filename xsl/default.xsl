@@ -56,7 +56,6 @@
                 </link>
                 <script src="%%host:static%%/js/templating.js" type="text/javascript" />
 
-
                 <!-- JS -->
                 <xsl:copy-of select="brilliant/document/headLoad/*" />
 
@@ -65,6 +64,11 @@
                     <xsl:value-of select="brilliant/document/onLoad"/>
                 </xsl:if>
                 <xsl:text disable-output-escaping='yes'>}&lt;/script&gt;</xsl:text>
+
+
+                <!-- Third Party -->
+                <!--Font Awesome-->
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 
 
                 <!-- SEO -->
@@ -205,7 +209,7 @@
 
                     <ul id="topNav">
                         <li id="navMenu" tabindex="1">
-                            <a href="">Menu</a>
+                            <a class="fa fa-bars" title="Menu" />
                             <ul>
                                 <li>
                                     <a href="../join">get involved!</a>
@@ -266,7 +270,7 @@
 
 
                         <li id="navSearch">
-                            <a href="../me">search</a>
+                            <a class="fa fa-search" title="search" />
                             <ul>
                                 <li>
                                     <form method="get" action="http://www.google.com/search" class="searchContent" style="display:inline;">
@@ -292,7 +296,7 @@
 
 
                         <li id="navUser">
-                            <a href="../me">User</a>
+                            <a class="fa fa-user" title="You" />
                             <ul>
                                 <li>
                                     <a href="../me">James K.</a>

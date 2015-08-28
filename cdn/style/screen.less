@@ -13,7 +13,9 @@
 @maxWideWidth: 1048px;
 
 @narrowHide: 600px;
-@thickHeader: 1029px;
+@thickHeader: 1050px;
+
+@iconicNavThreshold: 835px;
 
 
 body {
@@ -170,7 +172,8 @@ nav#header {
         & {
             position: absolute;
             bottom:0;
-            right: 0;
+            right: @corsetPadding*.5;
+            left: @corsetPadding*.5;
             text-align: right;
             padding: 0;
             display: inline-block;
@@ -207,45 +210,147 @@ nav#header {
         a {
             padding: 2px 8px;
         }
-        & > li > a {
-            /* first level links (menu, user, etc) */
-            display: none;
+        @media (min-width:@iconicNavThreshold) { /* non-iconic nav */
+            & > li > a {
+                /* first level links (menu, user, etc) */
+                display: none;
+            }
+
+            & > li > ul {
+                /* first level sub-lists (basic row) */
+                padding: 0;
+                margin: 0;
+            }
+
+            & > li > ul > li > a {
+                /* second level links */
+                // yup.  An empty block
+            }
+
+            & > li > ul > li > ul {
+                /* second level sub-lists */
+                display: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+
+            & > li > ul > li:hover > ul {
+                /* second level sub-lists */
+                display: table;
+                padding: 0;
+                margin: 0;
+            }
+
+            & > li > ul > li > ul > li {
+                /* third level sub-lists */
+                display: table-row;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            & > li > ul > li > ul > li > a {
+                /* third level links */
+                height: auto;
+                min-height: @linkHeight;
+                overflow: hidden;
+                width: @linkWidth;
+            }
         }
-        & > li > ul {
-            /* first level sub-lists (basic row) */
-            padding: 0;
-            margin: 0;
-        }
-        & > li > ul > li > a {
-            /* second level links */
-            // yup.  An empty block
-        }
-        & > li > ul > li > ul {
-            /* second level sub-lists */
-            display: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-        & > li > ul > li:hover > ul {
-            /* second level sub-lists */
-            display: table;
-            padding: 0;
-            margin: 0;
-        }
-        & > li > ul > li > ul > li {
-            /* third level sub-lists */
-            display: table-row;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-        }
-        & > li > ul > li > ul > li > a {
-            /* third level links */
-            height: auto;
-            min-height: @linkHeight;
-            overflow: hidden;
-            width: @linkWidth;
+
+        @media (max-width: @iconicNavThreshold) { /* iconic nav mode */
+
+            a, input {
+                /* All links in Nav */
+                height: @linkHeight;
+                margin: 0;
+                min-width: @linkHeight;
+                text-decoration: none;
+                font-weight: bold;
+                display: block;
+                line-height: @linkHeight;
+                //transition: color 0.2s, background 0.2s;
+            }
+
+            & ul a {
+                padding: 2px 0;
+            }
+
+
+            & > li > a {
+                /* first level links (menu, user, etc) */
+                display: block;
+                width: @linkHeight;
+                overflow: hidden;
+            }
+
+            & > li > ul {
+                /* first level sub-lists (basic row) */
+                display: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                position: absolute;
+                text-align: right;
+                left: 0;
+                right: 0;
+                overflow: hidden;
+            }
+
+            & > li:hover > ul,
+            & > li.navOpen > ul,
+            & > li:focus > ul {
+                /* first level sub-lists (basic row) */
+                width: 100%;
+                display: block;
+            }
+
+            & > li > ul > li {
+                /* second level list */
+                display: block;
+                width: 50%;
+            }
+
+            & > li > ul > li > a {
+                /* second level links */
+                // yup.  An empty block
+            }
+
+            & > li > ul > li > ul {
+                /* second level sub-lists */
+                display: none;
+            }
+
+            & > li > ul > li:hover > ul {
+                /* second level sub-lists */
+                display: block;
+                position: absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                //top: @linkHeight;
+                //right: @linkWidth;
+                width: 50%;
+                //float: right;
+                padding: 0;
+                margin: 0;
+                //display: none;
+            }
+
+            & > li > ul > li > ul > li {
+                /* third level sub-lists */
+                display: block;
+                padding: 0;
+                margin: 0;
+            }
+
+            & > li > ul > li > ul > li > a {
+                /* third level links */
+                height: auto;
+                min-height: @linkHeight;
+                width:100%;
+            }
         }
 
         input {
@@ -519,11 +624,6 @@ nav#footer {
                 background: data-uri(@url) no-repeat;
             }
         }
-
-        & > ul#topNav > li > ul > li > ul > li > a {
-            /* third level links */
-            border-top: solid 1px fade(@background, 30%);
-        }
     }
     body nav#header {
         div#pageLogo {
@@ -536,11 +636,6 @@ nav#footer {
                 @url: '../logo/RGB_text_only.svg';
                 background: data-uri(@url) no-repeat;
             }
-        }
-
-        & > ul#topNav > li > ul > li > ul > li > a {
-            /* third level links */
-            border-top: solid 1px fade(white, 30%);
         }
     }
 
@@ -594,17 +689,71 @@ nav#footer {
 
     //// Top Nav
     body@{className} nav#header ul#topNav {
-        ul li:hover,
-        ul li:hover ul {
-            background-color:@primary;
-            a {
-                background-color:@primary;
+        ul ul a {
+            color: fade(@background, 70%);
+        }
+        @media (max-width: @iconicNavThreshold) { // iconic nav
+            ul a {
                 color: fade(@background, 70%);
+            }
+            & > li:hover > a,
+            & > li.navOpen > a,
+            & > li:focus > a {
+                color: fade(@background, 90%);
+                background-color: fade(@primary, 94%);
+            }
+
+            & > li > ul {
+                /* the "menu" that "descends" */
+                background-color: fade(@primary, 94%);
+            }
+
+            & > li > ul > li > a {
+                /* second level links */
+                border-bottom: solid 1px fade(@background, 30%);
+            }
+
+            & > li > ul > li > ul > li > a {
+                /* second level links */
+                border-bottom: solid 1px fade(@primary, 50%);
+            }
+
+            ul li:hover,
+            ul li:hover ul {
+                background-color:fade(@secondary, 50%);
             }
 
             a:hover {
                 color: fade(@text, 100%);
-                background-color:@secondary;
+                background-color: @secondary;
+            }
+        }
+
+        @media (min-width: @iconicNavThreshold) { // non-iconic nav
+            ul li:hover,
+            ul li:hover ul {
+                background-color:@primary;
+            }
+
+            ul li:hover a,
+            ul li:hover ul a {
+                background-color: @primary;
+                color: fade(@background, 70%);
+            }
+
+            & > li > ul > li:hover a {
+                //color: @background;
+            }
+
+            & > li > ul > li > ul > li > a {
+                /* third level links */
+                border-top: solid 1px fade(@background, 30%);
+            }
+
+            a:hover,
+            ul li:hover a:hover {
+                color: fade(@text, 100%);
+                background-color: @secondary;
             }
         }
 
