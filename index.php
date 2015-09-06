@@ -7,20 +7,21 @@ if (isset($_SERVER['QUERY_STRING'])) {
 //	$requestedContent = explode("/", $requestedContent)[1];
 }
 
-if (!file_exists($requestedContent)) {
-	directoryListing();
+if (file_exists($requestedContent)) {
+	loadAndProcess($requestedContent);
+	die();
+} else if (strpos($_SERVER['QUERY_STRING'], 'xslExport') !== false) {
+	loadAndProcess($requestedContent);
 	die();
 } else {
-	loadAndProcess($requestedContent);
+	directoryListing();
 }
 
 
 
 function loadAndProcess($requestedContent)
 {
-	// Load the XML source
-	$xml = new DOMDocument;
-	$xml->load($requestedContent);
+
 
 	// Load the XSL
 	$xslContent = file_get_contents('xsl/default.xsl');
@@ -44,6 +45,15 @@ function loadAndProcess($requestedContent)
 	foreach ($hostReplacements as $needle => $replacement) {
 		$xslContent = str_replace("%%".$needle."%%", $replacement, $xslContent);
 	}
+
+	if (strpos($_SERVER['QUERY_STRING'], 'xslExport') !== false) {
+		echo $xslContent;
+		die();
+	}
+
+	// Load the XML source
+	$xml = new DOMDocument;
+	$xml->load($requestedContent);
 
 	// Load XSL content into DOMDocument.
 	$xsl = new DOMDocument;
