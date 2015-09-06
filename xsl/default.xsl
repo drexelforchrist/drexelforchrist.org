@@ -12,7 +12,7 @@
 
 
             <!-- Extract body className for template. -->
-            <xsl:variable name="styleClass">
+            <xsl:variable name="rawStyleClass">
                 <xsl:choose>
                     <xsl:when test="brilliant/document/template/name">
                         <xsl:value-of select="translate(brilliant/document/template/name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
@@ -20,6 +20,22 @@
                     <xsl:otherwise>community</xsl:otherwise><!-- some value is necessary for non-css components (like the icon)  -->
                 </xsl:choose>
             </xsl:variable>
+
+            <xsl:variable name="styleClass">
+                <xsl:choose>
+                    <xsl:when test="$rawStyleClass = 'community' or
+                                    $rawStyleClass = 'church' or
+                                    $rawStyleClass = 'prayer' or
+                                    $rawStyleClass = 'training' or
+                                    $rawStyleClass = 'discipleship' or
+                                    $rawStyleClass = 'outreach' or
+                                    $rawStyleClass = 'ninja'">
+                        <xsl:value-of select="$rawStyleClass" />
+                    </xsl:when>
+                    <xsl:otherwise>community</xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
+
 
             <!-- Isolate Summary -->
             <xsl:variable name="summary">
@@ -82,7 +98,7 @@
 
 
                 <!-- Twitter Card data.  Twitter must come first, else will fall back to OG data -->
-                <meta name="twitter:card" content="summary" /> <!-- KURTZ when image exists, change to summary_large_image -->
+                <meta name="twitter:card" content="summary_large_image" /> <!-- KURTZ when image exists, change to summary_large_image -->
                 <meta name="twitter:site" content="@DrexelForChrist" />
                 <meta name="twitter:title">
                     <xsl:attribute name="content">
@@ -96,20 +112,26 @@
                 </meta>
                 <!--<meta name="twitter:creator" content="@author_handle">-->
                 <!-- Twitter Summary card images must be at least 120x120px -->
-                <!--<meta name="twitter:image" content="http://www.example.com/image.jpg">-->
+                <meta property="twitter:image">
+                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php?eid=<xsl:value-of select="brilliant/document/id" /><!-- KURTZ rearrange --></xsl:attribute>
+                </meta>
 
                 <!-- Open Graph data -->
-                <meta property="og:url">
-                    <xsl:attribute name="content">http://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
-                </meta>
+                <!--<meta property="og:url">-->
+                    <!--<xsl:attribute name="content">http://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>-->
+                <!--</meta>-->
                 <meta property="og:title">
                     <xsl:attribute name="content">
                         <xsl:value-of select="brilliant/document/title" />
                     </xsl:attribute>
                 </meta>
                 <!--<meta property="og:type" content="article" />-->
-                <!--<meta property="og:url" content="http://www.example.com/" />-->
-                <!--<meta property="og:image" content="http://example.com/image.jpg" />-->
+                <meta property="og:image">
+                    <xsl:attribute name="content">
+                        https://drexelforchrist.org/dev/imageText/facebook.php?eid=<xsl:value-of select="brilliant/document/id" /><!-- KURTZ rearrange -->
+                    </xsl:attribute>
+                </meta>
+
                 <meta property="og:description">
                     <xsl:attribute name="content">
                         <xsl:value-of select="$summary" />
@@ -132,6 +154,7 @@
 
                 <!-- -->
 
+                <base href="https://drexelforchrist.org/" />
 
 
 
@@ -146,7 +169,7 @@
                 <xsl:choose>
                     <xsl:when test="$styleClass = 'community'">
                         <div class="background" id="communityBackground">
-                            <img src="%%host:cdn%%/backgrounds/TEMP_bg-guitar.jpg" alt="" />
+                            <img src="%%host:cdn%%/backgrounds/bg_hanes_Community.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'church'">
@@ -341,7 +364,9 @@
                         <li><a href="http://www.vimeo.com/drexel" title="Vimeo" id="connectVimeo">Vimeo</a></li>
                         <li><a href="https://plus.google.com/+DrexelforChrist" title="Google+" id="connectGoogleP">Google+</a></li>
                         <li><a href="https://soundcloud.com/drexelforchrist" title="SoundCloud" id="connectSoundcloud">SoundCloud</a></li>
-                        <!--<li class="connectSprite" id="connectCSB"><a href="https://drexelforchrist.org/campussoapbox">Campus Soapbox</a></li>-->
+                        <xsl:if test="$styleClass = 'ninja'" >
+                        <li><a href="https://github.com/drexelforchrist" title="GitHub" id="connectGithub">Github</a></li>
+                        </xsl:if>
                         <!--<li class="connectSprite" id="connectFeeds"><a href="https://drexelforchrist.org/media/feeds">Feeds</a></li>-->
                     </ul><!-- KURTZ make year dynamic -->
                     <span id="printPageNumber" class="printOnly" />

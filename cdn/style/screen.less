@@ -21,6 +21,7 @@
 body {
     font-family: Cabin, 'Segoe UI', sans-serif;
     margin:0;
+    background: #333;
     //background: url(static/bg-outreach.jpg) fixed; // KURTZ remove
     //background-size: cover; // KURTZ remove
 }
@@ -310,6 +311,7 @@ nav#header {
                 /* second level list */
                 display: block;
                 width: 50%;
+                margin-left:50%;
             }
 
             & > li > ul > li > a {
@@ -328,7 +330,7 @@ nav#header {
                 position: absolute;
                 top:0;
                 bottom:0;
-                right:0;
+                left:0;
                 //top: @linkHeight;
                 //right: @linkWidth;
                 width: 50%;
@@ -603,6 +605,9 @@ nav#footer {
             &#connectSoundcloud {
                 background-position-x: -120px;
             }
+            &#connectGithub {
+                background-position-x: -140px;
+            }
         }
     }
 }
@@ -778,9 +783,9 @@ nav#footer {
             color: @primary;
         }
         & > ul > li > a {
-            @url: '../connectSprites/connect-sprite-@{classNameOnly}.png';
+            @url: '../connectSprites/@{classNameOnly}.png';
             background: data-uri(@url) repeat-y top left;
-            background-size: 140px 40px;
+            background-size: 160px 40px;
 
             &:hover {
                 background-position-y: 20px;
@@ -790,12 +795,11 @@ nav#footer {
 
     body nav#footer { // default, cleaned up by optimizer
         & > ul > li > a {
-            @url: '../connectSprites/connect-sprite-community.png';
+            @url: '../connectSprites/community.png';
             background: data-uri(@url) repeat-y top left;
-            background-size: 140px 40px;
+            background-size: 160px 40px;
         }
     }
-
 }
 
 & {
