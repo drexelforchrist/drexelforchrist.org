@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/default.xsl"?>
+
+<brilliant>
+    <lang>en-us</lang>
+    <document>
+        <id>1</id>
+        <canonical>drexelforchrist.org/_/1</canonical>
+        <title>What We Believe</title>
+        <template>
+            <name>community</name>
+        </template>
+        <updated>2015-08-28T12:00:00Z</updated>
+        <summary>The guide on Colossians 1:15-23 given to discussion group leaders for Fall Retreat 2014.</summary>
+        <author>
+            <name>James Kurtz</name>
+            <id>1</id>
+        </author>
+        <content type="xhtml">
+            <section>
+                <p>Drexel Students for Christ is an evangelical Christian student organization that, while not a member of any one Protestant denomination, seeks fellowship and common cause with other evangelical ministries across denominational lines.</p>
+
+                <p>We believe in historical, Biblical Christianity as expressed by the great creeds and confessions of the early church and the Reformation. We value a gospel-based approach to ministry, expressed in a loving community, centered around God's truth, empowered by God's Spirit, focused on God's glory, and fleshed out for today's world that shares his love across the street and around the world.</p>
+
+                <p>Every year, all of our leadership signs our statement of faith.</p>
+            </section>
+            <section>
+                <h2>Statement of Faith</h2>
+                <p>The Holy Bible is the Word of God, fully inspired and without error. It is the supreme and final authority for all matters of Christian life and belief. We accept those areas of doctrinal teaching on which, historically, there has been agreement among all true Christians. Because of the specialized calling of our movement, we desire to allow for freedom of conviction on other doctrinal matters, provided that any interpretation is based upon the Bible alone, and that no such interpretation shall become an issue which hinders the ministry to which God has called us.</p>
+                <p>There is one true and living God, who eternally exists in three persons—Father, Son, and Holy Spirit—who are equal in every divine perfection and who execute distinct but harmonious offices in all the work of the Godhead. This is often referred to as the Trinity.</p>
+                <p>Man was created by God in His own image, but through his sin incurred physical and spiritual death. As a result, all people are separated from God because of their sin and are lost and without hope apart from salvation in Christ.</p>
+                <p>The Gospel is the good news of God's saving actions towards sinners through Jesus Christ. Jesus Christ, the eternal son of God, took on human nature, lived a sinless life, and died a substitutionary death for sinners. We believe in His bodily resurrection and ascension into heaven. We believe that He is one and the same as God. He was fully human and fully God.</p>
+                <p>Salvation is a free gift that comes only by God's grace, through faith in Jesus Christ alone. Anyone who turns from their sin and trusts in Jesus Christ and His death on their behalf receives forgiveness of sins and the gift of eternal life. We believe Jesus satisfies divine justice through His death and resurrection.</p>
+                <p>The Holy Spirit works progressively to transform genuine believers more and more into the image of Christ through the process of sanctification. His work is carried on in our hearts through such appointed means as the study of Scripture, prayer, worship, and fellowship with other believers. The Holy Spirit also empowers believers for Christian witness and service.</p>
+                <p>Jesus Christ will return to the earth, personally and visibly, to establish His kingdom in the new heavens and the new earth. We believe in the literal return of Jesus Christ.</p>
+                <p>The Lord Jesus Christ commanded all believers to proclaim the Gospel and to disciple men and women. The fulfillment of that Great Commission requires that all worldly and personal ambitions be subordinated to a total commitment to "Him who loved us and gave Himself for us." As mentioned above, the Holy Spirit empowers believers to be effective witnesses for Christ and His Kingdom.</p>
+            </section>
+        </content>
+    </document>
+</brilliant>
