@@ -189,7 +189,7 @@
                     </xsl:when>
                     <xsl:when test="$styleClass = 'discipleship'">
                         <div class="background" id="discipleshipBackground">
-                            <img src="%%host:cdn%%/backgrounds/bg-discipleship.jpg" alt="" />
+                            <img src="%%host:cdn%%/backgrounds/bg-bibleStudyTable.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'outreach'">
@@ -384,6 +384,24 @@
                     document.addEventListener('load', load);
                     }
                 </script>
+                <!--<script src="http://www.esvapi.org/crossref/crossref.min.js" type="text/javascript" />-->
+                <!--<script>-->
+                    <!--var refTagger = {-->
+                    <!--settings: {-->
+                    <!--bibleVersion: "ESV",-->
+                    <!--dropShadow: false,-->
+                    <!--socialSharing: []-->
+                    <!--}-->
+                    <!--};-->
+                    <!--(function(d, t) {-->
+                    <!--var g = d.createElement(t), s = d.getElementsByTagName(t)[0];-->
+                    <!--g.src = "//api.reftagger.com/v2/RefTagger.js";-->
+                    <!--s.parentNode.insertBefore(g, s);-->
+                    <!--}(document, "script"));-->
+                <!--</script>-->
+
+                <script src="http://code.bib.ly/bibly.min.js"></script>
+                <link href="http://code.bib.ly/bibly.min.css" rel="stylesheet" />
             </body>
         </html>
     </xsl:template>
