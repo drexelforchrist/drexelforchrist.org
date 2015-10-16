@@ -1,3 +1,4 @@
-#host:cdn	//cdn.drexelforchrist.com/formatting
-host:cdn	cdn
+#host:cdn	http://cdn.drexelforchrist.com/formatting
+#host:static	/_formatting/static
+host:cdn	http://sexy.drexelforchrist.org:8000/DrexelForChrist/ideas/xsl/cdn
 host:static	static
