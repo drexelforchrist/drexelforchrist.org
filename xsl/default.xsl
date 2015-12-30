@@ -292,30 +292,30 @@
 
 
 
-                        <li id="navSearch">
-                            <a class="fa fa-search" title="search" />
-                            <ul>
-                                <li>
-                                    <form method="get" action="http://www.google.com/search" class="searchContent" style="display:inline;">
-                                        <input name="q" type="search" placeholder="&#160;&#160;search" />
-                                    </form>
-                                    <ul>
-                                        <li>
-                                            <a href="../me">Result...</a>
-                                        </li>
-                                        <li>
-                                            <a href="../me">Result...</a>
-                                        </li>
-                                        <li>
-                                            <a href="../me">Result...</a>
-                                        </li>
-                                        <li>
-                                            <a href="../me">Result...</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+                        <!--<li id="navSearch">-->
+                            <!--<a class="fa fa-search" title="search" />-->
+                            <!--<ul>-->
+                                <!--<li>-->
+                                    <!--<form method="get" action="http://www.google.com/search" class="searchContent" style="display:inline;">-->
+                                        <!--<input name="q" type="search" placeholder="&#160;&#160;search" />-->
+                                    <!--</form>-->
+                                    <!--<ul>-->
+                                        <!--<li>-->
+                                            <!--<a href="../me">Result...</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="../me">Result...</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="../me">Result...</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="../me">Result...</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
 
 
                         <li id="navUser">
