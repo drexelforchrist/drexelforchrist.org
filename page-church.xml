@@ -3,6 +3,9 @@
 
 <brilliant>
     <lang>en-us</lang>
+    <session>
+        <nouser />
+    </session>
     <document>
         <id>3</id>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:output method="html" encoding="utf-8" indent="yes" />
+    <xsl:output method="html" encoding="utf-8" indent="no" />
     <xsl:template match="/">
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html prefix="og: http://ogp.me/ns#">
@@ -62,7 +62,7 @@
                 <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" name="viewport" />
 
                 <!-- things that are actually visible -->
-                <title><xsl:value-of select="brilliant/document/title" /><xsl:if test="brilliant/document/title != ''"> // </xsl:if>Drexel Students for Christ</title>
+                <title><xsl:value-of select="brilliant/document/title/text()" /><xsl:if test="brilliant/document/title/text() != ''"> // </xsl:if>Drexel Students for Christ</title>
                 <link rel="stylesheet" href="%%host:cdn%%/style/screen.css" type="text/css" media="screen" />
                 <link rel="stylesheet" href="%%host:cdn%%/style/print.css" type="text/css" media="print" />
                 <link rel="shortcut icon">
@@ -77,7 +77,7 @@
 
                 <xsl:text disable-output-escaping='yes'>&lt;script type=&quot;text/javascript&quot; &gt;function load() {</xsl:text>
                 <xsl:if test="brilliant/document/onLoad">
-                    <xsl:value-of select="brilliant/document/onLoad"/>
+                    <xsl:value-of select="brilliant/document/onLoad/text()"/>
                 </xsl:if>
                 <xsl:text disable-output-escaping='yes'>}&lt;/script&gt;</xsl:text>
 
@@ -102,7 +102,7 @@
                 <meta name="twitter:site" content="@DrexelForChrist" />
                 <meta name="twitter:title">
                     <xsl:attribute name="content">
-                        <xsl:value-of select="brilliant/document/title" />
+                        <xsl:value-of select="brilliant/document/title/text()" />
                     </xsl:attribute>
                 </meta>
                 <meta name="twitter:description">
@@ -113,7 +113,7 @@
                 <!--<meta name="twitter:creator" content="@author_handle">-->
                 <!-- Twitter Summary card images must be at least 120x120px -->
                 <meta property="twitter:image">
-                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php?eid=<xsl:value-of select="brilliant/document/id" /><!-- KURTZ rearrange --></xsl:attribute>
+                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php?eid=<xsl:value-of select="brilliant/document/id/text()" /><!-- KURTZ rearrange --></xsl:attribute>
                 </meta>
 
                 <!-- Open Graph data -->
@@ -122,13 +122,13 @@
                 <!--</meta>-->
                 <meta property="og:title">
                     <xsl:attribute name="content">
-                        <xsl:value-of select="brilliant/document/title" />
+                        <xsl:value-of select="brilliant/document/title/text()" />
                     </xsl:attribute>
                 </meta>
                 <!--<meta property="og:type" content="article" />-->
                 <meta property="og:image">
                     <xsl:attribute name="content">
-                        https://drexelforchrist.org/dev/imageText/facebook.php?eid=<xsl:value-of select="brilliant/document/id" /><!-- KURTZ rearrange -->
+                        https://drexelforchrist.org/dev/imageText/facebook.php?eid=<xsl:value-of select="brilliant/document/id/text()" /><!-- KURTZ rearrange -->
                     </xsl:attribute>
                 </meta>
 
@@ -322,12 +322,32 @@
                             <a class="fa fa-user" title="You" />
                             <ul>
                                 <li>
-                                    <a href="../me">James K.</a>
-                                    <ul>
-                                        <li>
-                                            <a href="../login?out">log out</a>
-                                        </li>
-                                    </ul>
+                                    <xsl:choose>
+                                        <xsl:when test="brilliant/session/person">
+                                            <a>
+                                                <xsl:attribute name="href">
+                                                    <xsl:value-of select="brilliant/session/person/address/text()" />
+                                                </xsl:attribute>
+                                                <xsl:value-of select="brilliant/session/person/name/first/text()" />
+                                                <xsl:if test="brilliant/session/person/name/first/text() != ''">
+                                                    &#160;<xsl:value-of select="substring(brilliant/session/person/name/last/text(),1,1)" />.
+                                                </xsl:if>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <a href="../login?out">log out</a>
+                                                </li>
+                                            </ul>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <a href="/login">log in</a>
+                                            <!--<ul>-->
+                                                <!--<li>-->
+                                                    <!--<a href="../login?out">log out</a>-->
+                                                <!--</li>-->
+                                            <!--</ul>-->
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </li>
                             </ul>
                         </li>

@@ -4,6 +4,19 @@
 <brilliant>
     <lang>en-us</lang>
     <title>About Us</title>
+    <session>
+        <person>
+            <id>1</id>
+            <canonical>drexelforchrist.org/_people/1</canonical>
+            <address>me</address>
+            <name>
+                <first>James</first>
+                <middle>K</middle>
+                <last>Kurtz</last>
+                <preferred>James</preferred>
+            </name>
+        </person>
+    </session>
     <document>
         <id>2</id>
         <updated>2015-06-14T12:00:00Z</updated>

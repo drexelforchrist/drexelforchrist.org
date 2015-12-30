@@ -3,6 +3,9 @@
 
 <brilliant>
     <lang>en-us</lang>
+    <session>
+        <nouser />
+    </session>
     <document>
         <id>1</id>
         <canonical>drexelforchrist.org/_/1</canonical>
