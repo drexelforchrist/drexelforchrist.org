@@ -19,9 +19,7 @@ if (file_exists($requestedContent)) {
 
 
 
-function loadAndProcess($requestedContent)
-{
-
+function loadAndProcess($requestedContent) {
 
 	// Load the XSL
 	$xslContent = file_get_contents('xsl/default.xsl');
@@ -47,6 +45,7 @@ function loadAndProcess($requestedContent)
 	}
 
 	if (strpos($_SERVER['QUERY_STRING'], 'xslExport') !== false) {
+		header("Content-Type: text/plain");
 		echo $xslContent;
 		die();
 	}
@@ -70,6 +69,8 @@ function loadAndProcess($requestedContent)
 
 
 function directoryListing() {
+	echo "<p><a href=\"?xslExport\" >XSL Export...</a></p>";
+
 	if ($handle = opendir('.')) {
 		echo "<p>Choose a content file:</p><ul>";
 		while (false !== ($entry = readdir($handle))) {
