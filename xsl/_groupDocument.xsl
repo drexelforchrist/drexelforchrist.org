@@ -20,6 +20,19 @@
                 <section>
                     <p>This group is a thing.</p>
                 </section>
+                <xsl:if test="members">
+                    <section>
+                        <h2>Members</h2>
+                        <table>
+                        <xsl:for-each select="members/member">
+                            <tr>
+                                <td><xsl:value-of select="person/name/preferred/text()" /></td>
+                                <td><xsl:value-of select="substring(person/name/first/text(),1,1)" /></td>
+                            </tr>
+                        </xsl:for-each>
+                        </table>
+                    </section>
+                </xsl:if>
             </content>
         </document>
     </xsl:template>
