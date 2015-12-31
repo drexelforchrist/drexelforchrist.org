@@ -245,39 +245,41 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="../churches">churches</a>
+                                    <a href="/churches">churches</a>
                                 </li>
                                 <li>
-                                    <a href="../events">events</a>
+                                    <a href="/events">events</a>
                                     <ul>
+                                        <xsl:if test="brilliant/session/person">
+                                            <li>
+                                                <a href="/_events?manage">manage</a>
+                                            </li>
+                                        </xsl:if>
                                         <li>
-                                            <a href="../?manage">manage</a>
+                                            <a href="/retreat">retreat</a>
                                         </li>
                                         <li>
-                                            <a href="../retreat">retreat</a>
+                                            <a href="/smallgroups">growth groups</a>
                                         </li>
                                         <li>
-                                            <a href="../smallgroups">growth groups</a>
+                                            <a href="/bridge">alpha</a>
                                         </li>
                                         <li>
-                                            <a href="../bridge">alpha</a>
-                                        </li>
-                                        <li>
-                                            <a href="../lg">large group</a>
+                                            <a href="/lg">large group</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="../resources">resources</a>
-                                    <ul>
-                                        <li>
-                                            <a href="../rec">bibles</a>
-                                        </li>
-                                        <li>
-                                            <a href="../rec">recordings</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <!--<li>-->
+                                    <!--<a href="../resources">resources</a>-->
+                                    <!--<ul>-->
+                                        <!--<li>-->
+                                            <!--<a href="../rec">bibles</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="../rec">recordings</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
                                 <li>
                                     <a href="../give">give</a>
                                     <ul>
@@ -341,11 +343,6 @@
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <a href="/login">log in</a>
-                                            <!--<ul>-->
-                                                <!--<li>-->
-                                                    <!--<a href="../login?out">log out</a>-->
-                                                <!--</li>-->
-                                            <!--</ul>-->
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </li>
