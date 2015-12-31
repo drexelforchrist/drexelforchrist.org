@@ -27,7 +27,7 @@
                         <xsl:for-each select="members/member">
                             <tr>
                                 <td><xsl:value-of select="person/name/preferred/text()" /></td>
-                                <td><xsl:value-of select="substring(person/name/first/text(),1,1)" /></td>
+                                <td><xsl:value-of select="substring(person/name/last/text(),1,1)" />.</td>
                             </tr>
                         </xsl:for-each>
                         </table>
