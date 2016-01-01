@@ -123,9 +123,9 @@
                 </meta>
 
                 <!-- Open Graph data -->
-                <!--<meta property="og:url">-->
-                    <!--<xsl:attribute name="content">http://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>-->
-                <!--</meta>-->
+                <meta property="og:url">
+                    <xsl:attribute name="content">http://dev.<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute><!-- KURTZ remove dev.*  Possibly switch to https? -->
+                </meta>
                 <meta property="og:title">
                     <xsl:attribute name="content">
                         <xsl:value-of select="brilliant/document/title/text()" />
@@ -145,6 +145,7 @@
                 </meta>
                 <meta property="og:site_name" content="Drexel Students for Christ" />
                 <meta property="fb:admins" content="590301109" />
+                <meta property="fb:app_id" content="471343559743264" />
 
 
 
@@ -157,12 +158,6 @@
                 <!--&lt;!&ndash;<xsl:value-of select="$author/name" />&ndash;&gt;-->
                 <!--&lt;!&ndash;</meta>&ndash;&gt;-->
                 <!--</xsl:if>-->
-
-                <!-- -->
-
-                <base href="https://drexelforchrist.org/" />
-
-
 
             </head>
 
@@ -241,12 +236,12 @@
                             <a class="fa fa-bars" title="Menu" />
                             <ul>
                                 <li>
-                                    <a href="../join">get involved!</a>
+                                    <a href="https://drexelforchrist.org/join">get involved!</a>
                                 </li>
                                 <li>
-                                    <a href="../about">about us</a>
+                                    <a href="/about">about us</a>
                                     <ul>
-                                        <li><a href="../about/faith">our faith</a></li>
+                                        <li><a href="/about/faith">our faith</a></li>
                                         <!--<li><a href="../about/leadership">leadership</a></li>-->
                                     </ul>
                                 </li>
@@ -258,7 +253,7 @@
                                     <ul>
                                         <xsl:if test="brilliant/session/person">
                                             <li>
-                                                <a href="/_events?manage">manage</a>
+                                                <a href="/events/_manage">manage</a>
                                             </li>
                                         </xsl:if>
                                         <li>
@@ -268,7 +263,7 @@
                                             <a href="/smallgroups">growth groups</a>
                                         </li>
                                         <li>
-                                            <a href="/bridge">alpha</a>
+                                            <a href="/alpha">alpha</a>
                                         </li>
                                         <li>
                                             <a href="/lg">large group</a>
@@ -287,10 +282,10 @@
                                     <!--</ul>-->
                                 <!--</li>-->
                                 <li>
-                                    <a href="../give">give</a>
+                                    <a href="https://drexelforchrist.org/give">give</a>
                                     <ul>
                                         <li>
-                                            <a href="../serve">serve</a>
+                                            <a href="/serve">serve</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -343,12 +338,12 @@
                                             </a>
                                             <ul>
                                                 <li>
-                                                    <a href="../login?out">log out</a>
+                                                    <a href="/_login?out">log out</a>
                                                 </li>
                                             </ul>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <a href="/login">log in</a>
+                                            <a href="/_login">log in</a>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </li>
@@ -360,7 +355,6 @@
                 </nav>
                 <div id="headerSpacer" />
                 <main id="corset">
-                    <!--<img class="content" src="static/img.png" />--> <!--KURTZ restore main image -->
 
                     <xsl:if test="brilliant/document/content/div[@class = 'map']" >
                         <xsl:copy-of select="brilliant/document/content/div[@class = 'map']" />
@@ -433,7 +427,7 @@
                     <!--}(document, "script"));-->
                 <!--</script>-->
 
-                <script src="http://code.bib.ly/bibly.min.js"></script>
+                <script src="http://code.bib.ly/bibly.min.js"><!--Bibly--></script>
             </body>
         </html>
     </xsl:template>
