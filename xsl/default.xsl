@@ -63,6 +63,8 @@
 
                 <!-- things that are actually visible -->
                 <title><xsl:value-of select="brilliant/document/title/text()" /><xsl:if test="brilliant/document/title/text() != ''"> // </xsl:if>Drexel Students for Christ</title>
+
+                <!-- First Party CSS -->
                 <link rel="stylesheet" href="%%host:cdn%%/style/screen.css" type="text/css" media="screen" />
                 <link rel="stylesheet" href="%%host:cdn%%/style/print.css" type="text/css" media="print" />
                 <link rel="shortcut icon">
@@ -70,9 +72,18 @@
                         <xsl:value-of select="concat('%%host:cdn%%/ico/RGB-icon-', $styleClass, '.ico')" />
                     </xsl:attribute>
                 </link>
+
+                <!-- Third Party CSS -->
+                <!--Font Awesome-->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+                <!-- Bibly -->
+                <link href="http://code.bib.ly/bibly.min.css" rel="stylesheet" />
+
+
                 <script src="%%host:static%%/js/templating.js" type="text/javascript" />
 
-                <!-- JS -->
+                <!-- Header JS -->
                 <xsl:copy-of select="brilliant/document/headLoad/*" />
 
                 <xsl:text disable-output-escaping='yes'>&lt;script type=&quot;text/javascript&quot; &gt;function load() {</xsl:text>
@@ -80,11 +91,6 @@
                     <xsl:value-of select="brilliant/document/onLoad/text()"/>
                 </xsl:if>
                 <xsl:text disable-output-escaping='yes'>}&lt;/script&gt;</xsl:text>
-
-
-                <!-- Third Party -->
-                <!--Font Awesome-->
-                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 
 
                 <!-- SEO -->
@@ -428,7 +434,6 @@
                 <!--</script>-->
 
                 <script src="http://code.bib.ly/bibly.min.js"></script>
-                <link href="http://code.bib.ly/bibly.min.css" rel="stylesheet" />
             </body>
         </html>
     </xsl:template>
