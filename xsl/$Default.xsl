@@ -22,7 +22,7 @@
                         <xsl:for-each select="softmember">
                             <tr>
                                 <td><xsl:value-of select="@type" /></td>
-                                <td><xsl:apply-templates /></td>
+                                <td><xsl:apply-templates select="event" /><xsl:apply-templates select="person" /></td>
                             </tr>
                         </xsl:for-each>
                     </table>
@@ -31,13 +31,13 @@
         </document>
     </xsl:template>
 
-    <xsl:template match="softmember/event">
+    <xsl:template match="event">
         <a>
             <xsl:attribute name="href">http://<xsl:value-of select="canonical/text()" /></xsl:attribute>
             <xsl:value-of select="name" />
         </a>
     </xsl:template>
-    <xsl:template match="softmember/person">
+    <xsl:template match="person">
         <a>
             <xsl:attribute name="href">http://<xsl:value-of select="canonical/text()" /></xsl:attribute>
             <xsl:value-of select="name/preferred" /> <xsl:value-of select="name/last" />
