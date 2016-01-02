@@ -133,9 +133,7 @@
                 </meta>
                 <!--<meta property="og:type" content="article" />-->
                 <meta property="og:image">
-                    <xsl:attribute name="content">
-                        https://drexelforchrist.org/dev/imageText/facebook.php?eid=<xsl:value-of select="brilliant/document/id/text()" /><!-- KURTZ rearrange -->
-                    </xsl:attribute>
+                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(brilliant/document/canonical, 21)" /></xsl:attribute>
                 </meta>
 
                 <meta property="og:description">

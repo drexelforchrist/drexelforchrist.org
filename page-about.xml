@@ -2,8 +2,6 @@
 <?xml-stylesheet type="text/xsl" href="xsl/default.xsl"?>
 
 <brilliant>
-    <lang>en-us</lang>
-    <title>About Us</title>
     <session>
         <person>
             <id>1</id>
@@ -11,69 +9,66 @@
             <address>me</address>
             <name>
                 <first>James</first>
-                <middle>K</middle>
+                <middle>Karl</middle>
                 <last>Kurtz</last>
                 <preferred>James</preferred>
             </name>
         </person>
     </session>
     <document>
-        <id>2</id>
-        <updated>2015-06-14T12:00:00Z</updated>
-        <summary generator="smmry">Drexel Students for Christ is an interdenominational student-led organization committed to seeing lives continually changed by and for the Gospel of Jesus Christ.  We exist to make and build disciples of Jesus Christ and strive to accomplish that by building a community where God grows Students in Love for Jesus Christ, the mission of proclaiming His gospel, and the local church.</summary>
-        <author>
-            <name>James Kurtz</name>
-            <id>1</id>
-        </author>
+        <id>3</id>
+        <canonical>drexelforchrist.org/_pages/3</canonical>
+        <title>About Us</title>
+        <template>
+            <name>church</name>
+            <!-- KURTZ figure out how to handle this -->
+        </template>
+        <headLoad>
+            <!--					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfqQ82nkWfCYEw2Ix-o0dQ3KXT7atfEr0&amp;v=3&amp;libraries=geometry" />-->
+            <!--					<script src="static/js/churchMap.js" />-->
+            <!-- KURTZ figure out how to handle this -->
+        </headLoad>
+        <onLoad>
+            <!--				doMap();-->
+            <!-- KURTZ figure out how to handle this -->
+        </onLoad>
+        <updated>2015-09-20T15:01:36-04:00</updated>
+        <summary>We exist to make and build disciples of Jesus Christ and strive to accomplish that by building a community where God grows Students in Love for Jesus Christ, the mission of proclaiming His gospel, and the local church.</summary>
+        <!--				<author>-->
+        <!--					<name>James Kurtz</name>-->
+        <!--					<id>1</id>-->
+        <!--				</author>-->
+        <!-- KURTZ figure out how to handle this -->
         <content type="xhtml">
             <section>
                 <p>Welcome.  Drexel Students for Christ is an interdenominational student-led organization committed to seeing lives continually changed by and for the Gospel of Jesus Christ. As an independent student organization of Drexel University, we strive to build close bonds with and seek directional counsel from our local churches.</p>
-
-                <p>We exist to <strong>make and build disciples of Jesus Christ</strong> and strive to accomplish that by <strong>building a community where God grows Students in Love for Jesus Christ, the mission of proclaiming His gospel, and the local church.</strong></p>
-
-                <p>At Drexel Students for Christ, through the grace of God, we see that vision lived out. See how you can be a part of it in our <a href="join">Get Involved</a> section!</p>
-
-            </section>
-
-            <section>
+                <p>We exist to
+                    <strong>make and build disciples of Jesus Christ</strong> and strive to accomplish that by
+                    <strong>building a community where God grows Students in Love for Jesus Christ, the mission of proclaiming His gospel, and the local church.</strong>
+                </p>
+                <p>At Drexel Students for Christ, through the grace of God, we see that vision lived out. See how you can be a part of it in our
+                    <a href="/join">Get Involved</a> section!
+                </p>
                 <h2>Values</h2>
-
                 <p>As we plan for the future and evaluate our past, we will be looking for cooperative growth in each of our six values, both in organized ministry activities, and in the lives of our leadership and membership.</p>
-
-                <p>For a more thorough explanation, check out our <a href="http://drexelforchrist.org/documents/pom.pdf">Philosophy of Ministry</a>.</p>
-
+                <p>For a more thorough explanation, check out our
+                    <a href="/about/pom">Philosophy of Ministry</a>.
+                </p>
                 <h3 class="church">Church</h3>
                 <p>We define the church as the God-ordained universal body of all believers, represented in distinct local churches. The church is God's intended vehicle for carrying out His purposes this side of heaven. Campus Ministry is not a substitute for the local church, but an extension of it. We believe disciples must be actively involved in a sound local church, above and beyond helping to fill a pew.</p>
-
-
                 <h3 class="prayer">Prayer</h3>
                 <p>We define prayer as the offering up of our desires to God for things agreeable to His will, in the name of Christ, with confession of our sins, and thankful acknowledgement of His mercies. We expect disciples to pray regularly, earnestly, and expectantly because their prayers are heard.</p>
-
-
                 <h3 class="training">Training</h3>
                 <p>We define training as growth in understanding of truth, particularly who God is. We know and believe that every Christian—that is, every disciple of Jesus Christ—is a theologian. Thus, we must pursue a better understanding of doctrine.</p>
-
-
                 <h3 class="discipleship">Discipleship</h3>
                 <p>We define discipleship as your choice to accept and spread the love and teachings of Jesus Christ for the rest of your life. Biblical discipleship has several characteristics: putting Jesus first in everything, following the teachings of Jesus, and fruitfulness.</p>
-
-
                 <h3 class="outreach">Outreach</h3>
                 <p>We define outreach as sharing the good news of Jesus Christ with non-believers that they may know Christ and be known by Him. In short, people need to know who Jesus is, what He has done for them, why they need Him, and how they can have Him.</p>
-
-
                 <h3 class="community">Community</h3>
                 <p>We define community as the building of a subculture. We believe disciples must develop a unique subculture, that is flexible and loving, so as to be inviting to anyone from any background, but also unwavering in convictions and distinct from secular society.</p>
-            </section>
-
-            <section>
                 <h2>We Don't Do Everything</h2>
-                <p>If you're looking for a place where you can go with with the program and automatically live the "Christian Life," this isn't it. While we're confident that you'll grow here, the goal is really for you to move on from Drexel, in love with Jesus and his Church.  Really, the church is where God accomplishes his earthly purposes, and that is where you can "seek justice, love mercy and walk humbly before God."</p>
+                <p>If you're looking for a place where you can go with with the program and automatically live the "Christian Life," this isn't it.  While we're confident that you'll grow here, the goal is really for you to move on from Drexel, in love with Jesus and his Church.  Really, the church is where God accomplishes his earthly purposes, and that is where you can "seek justice, love mercy and walk humbly before God."</p>
             </section>
-
         </content>
-
     </document>
-
-
 </brilliant>
