@@ -34,13 +34,19 @@
     <xsl:template match="event">
         <a>
             <xsl:attribute name="href">http://dev.<xsl:value-of select="canonical/text()" /></xsl:attribute><!-- TODO remove dev. -->
-            <xsl:value-of select="name" />
+            <b><xsl:value-of select="name/text()" /></b>
+            <xsl:if test="subtitle">
+                : <xsl:value-of select="subtitle/text()" />
+            </xsl:if>
         </a>
+        <xsl:if test="when/human">
+            <br /><xsl:value-of select="when/human/text()" />
+        </xsl:if>
     </xsl:template>
     <xsl:template match="person">
         <a>
             <xsl:attribute name="href">http://dev.<xsl:value-of select="canonical/text()" /></xsl:attribute><!-- TODO remove dev. -->
-            <xsl:value-of select="name/preferred" />&#160;<xsl:value-of select="name/last" />
+            <b><xsl:value-of select="name/preferred" />&#160;<xsl:value-of select="name/last" /></b>
         </a>
     </xsl:template>
 
