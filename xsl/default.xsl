@@ -268,6 +268,9 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li>
+                                    <a href="/contact">contact us</a>
+                                </li>
                                 <!--<li>-->
                                     <!--<a href="../resources">resources</a>-->
                                     <!--<ul>-->
