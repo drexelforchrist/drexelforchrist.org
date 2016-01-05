@@ -60,6 +60,7 @@
 
     <xsl:template match="brilliant/event">
         <document>
+            <itemscope itemtype="http://schema.org/Event" />
             <title><xsl:value-of select="name" /></title>
             <subtitle><xsl:value-of select="subtitle" /></subtitle>
             <canonical><xsl:value-of select="canonical" /></canonical>
@@ -77,7 +78,8 @@
                     <table>
                         <tr>
                             <td>When:</td>
-                            <td><xsl:value-of select="when/human" /></td>
+                            <td itemprop="startDate"><xsl:value-of select="when/human" /><xsl:attribute name="content" ><xsl:value-of
+                                    select="when/startDate/text()" /></xsl:attribute></td>
                         </tr>
                         <tr>
                             <td>Where:</td>

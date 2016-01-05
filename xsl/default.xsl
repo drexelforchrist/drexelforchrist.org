@@ -356,17 +356,28 @@
                 </nav>
                 <div id="headerSpacer" />
                 <main id="corset">
+                    <xsl:if test="brilliant/document/itemscope[@itemtype]">
+                        <xsl:attribute name="itemscope" />
+                        <xsl:attribute name="itemtype"><xsl:value-of select="brilliant/document/itemscope[@itemtype]" /></xsl:attribute>
+                    </xsl:if>
 
                     <xsl:if test="brilliant/document/content/div[@class = 'map']" >
                         <xsl:copy-of select="brilliant/document/content/div[@class = 'map']" />
                     </xsl:if>
 
-                    <h1 class="noPrint">
-                        <span id="pageTitle"><xsl:value-of select="brilliant/document/title" /></span>
-                        <xsl:if test="brilliant/document/subtitle != ''">
-                            //&#160;<xsl:value-of select="brilliant/document/subtitle" />
-                        </xsl:if>
-                    </h1>
+                    <xsl:if test="not(brilliant/template/notitle)" >
+                        <h1 class="noPrint">
+                            <span id="pageTitle">
+                                <xsl:value-of select="brilliant/document/title" />
+                                <xsl:if test="brilliant/document/itemscope[@itemtype]">
+                                    <xsl:attribute name="itemprop">name</xsl:attribute>
+                                </xsl:if>
+                            </span>
+                            <xsl:if test="brilliant/document/subtitle != ''">
+                                //&#160;<xsl:value-of select="brilliant/document/subtitle" />
+                            </xsl:if>
+                        </h1>
+                    </xsl:if>
 
                     <xsl:for-each select="brilliant/document/content">
                         <xsl:copy-of select="*[not(@class = 'map')]" />
