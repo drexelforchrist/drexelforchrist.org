@@ -79,10 +79,7 @@
                         <tr>
                             <td>When:</td>
                             <td>
-                                <span itemprop="startDate">
-                                    <xsl:attribute name="content" ><xsl:value-of select="when/startDate/text()" /></xsl:attribute>
-                                    <xsl:value-of select="when/human" />
-                                </span>
+                                <span itemprop="startDate"><xsl:attribute name="content" ><xsl:value-of select="when/startDate/text()" /></xsl:attribute><xsl:value-of select="when/human" /></span>
                                 <span itemprop="endDate"><xsl:attribute name="content" ><xsl:value-of select="when/endDate/text()" /></xsl:attribute></span>
                             </td>
                         </tr>
