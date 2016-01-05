@@ -78,12 +78,17 @@
                     <table>
                         <tr>
                             <td>When:</td>
-                            <td itemprop="startDate"><xsl:value-of select="when/human" /><xsl:attribute name="content" ><xsl:value-of
-                                    select="when/startDate/text()" /></xsl:attribute></td>
+                            <td>
+                                <span itemprop="startDate">
+                                    <xsl:attribute name="content" ><xsl:value-of select="when/startDate/text()" /></xsl:attribute>
+                                    <xsl:value-of select="when/human" />
+                                </span>
+                                <span itemprop="endDate"><xsl:attribute name="content" ><xsl:value-of select="when/endDate/text()" /></xsl:attribute></span>
+                            </td>
                         </tr>
-                        <tr>
+                        <tr itemprop="location" itemscope="" itemtype="http://schema.org/Place">
                             <td>Where:</td>
-                            <td><xsl:value-of select="location/name" /></td>
+                            <td itemprop="name"><xsl:value-of select="location/name" /></td>
                         </tr>
                         <xsl:if test="eventStatus != 'confirmed'" >
                             <tr>
@@ -92,6 +97,12 @@
                             </tr>
                         </xsl:if>
                     </table>
+                    <xsl:if test="eventStatus = 'cancelled'" >
+                        <meta itemprop="eventStatus" content="http://schema.org/EventCancelled" />
+                    </xsl:if>
+                    <xsl:if test="eventStatus = 'confirmed'" >
+                        <meta itemprop="eventStatus" content="http://schema.org/EventScheduled" />
+                    </xsl:if>
                 </section>
             </content>
         </document>
