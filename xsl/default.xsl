@@ -283,7 +283,7 @@
                                     <!--</ul>-->
                                 <!--</li>-->
                                 <li>
-                                    <a href="https://drexelforchrist.org/give">give</a>
+                                    <a href="/give">give</a>
                                     <ul>
                                         <li>
                                             <a href="/serve">serve</a>
