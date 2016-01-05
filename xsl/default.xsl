@@ -358,7 +358,7 @@
                 <main id="corset">
                     <xsl:if test="brilliant/document/itemscope[@itemtype]">
                         <xsl:attribute name="itemscope" />
-                        <xsl:attribute name="itemtype"><xsl:value-of select="brilliant/document/itemscope[@itemtype]" /></xsl:attribute>
+                        <xsl:attribute name="itemtype"><xsl:value-of select="brilliant/document/itemscope/@itemtype" /></xsl:attribute>
                     </xsl:if>
 
                     <xsl:if test="brilliant/document/content/div[@class = 'map']" >
