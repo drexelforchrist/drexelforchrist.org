@@ -11,7 +11,27 @@
         </brilliant>
     </xsl:template>
 
-    <xsl:template match="brilliant/soft">
+    <xsl:template match="brilliant/softclass">
+        <document>
+            <title><xsl:value-of select="name" /></title>
+            <canonical><xsl:value-of select="canonical" /></canonical>
+            <id><xsl:value-of select="id" /></id>
+            <content type="xhtml">
+                <section>
+                    <table>
+                        <xsl:for-each select="softobjects">
+                            <tr>
+                                <td><xsl:value-of select="@type" /></td>
+                                <td><xsl:apply-templates select="*" /></td>
+                            </tr>
+                        </xsl:for-each>
+                    </table>
+                </section>
+            </content>
+        </document>
+    </xsl:template>
+
+    <xsl:template match="brilliant/softobject">
         <document>
             <title><xsl:value-of select="name" /></title>
             <canonical><xsl:value-of select="canonical" /></canonical>
