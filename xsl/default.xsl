@@ -367,12 +367,10 @@
 
                     <xsl:if test="not(brilliant/template/notitle)" >
                         <h1 class="noPrint">
-                            <span id="pageTitle">
-                                <xsl:value-of select="brilliant/document/title" />
-                                <xsl:if test="brilliant/document/itemscope[@itemtype]">
-                                    <xsl:attribute name="itemprop">name</xsl:attribute>
-                                </xsl:if>
-                            </span>
+                            <xsl:if test="brilliant/document/itemscope[@itemtype]">
+                                <xsl:attribute name="itemprop">name</xsl:attribute>
+                            </xsl:if>
+                            <span id="pageTitle"><xsl:value-of select="brilliant/document/title" /></span>
                             <xsl:if test="brilliant/document/subtitle != ''">
                                 //&#160;<xsl:value-of select="brilliant/document/subtitle" />
                             </xsl:if>
