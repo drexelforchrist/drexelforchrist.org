@@ -21,10 +21,10 @@
                 <name><xsl:value-of select="eventCalendar/address" /></name>
             </template>
             <id><xsl:value-of select="id" /></id>
-            <summary><xsl:value-of select="description" /></summary>
+            <summary><xsl:value-of select="description[@type='text']" /></summary>
             <content type="xhtml">
                 <section>
-                    <xsl:copy-of select="description[@type='xhtml']" />
+                    <xsl:copy-of select="description[@type='xhtml']/*" />
                 </section>
                 <xsl:if test="children/event != ''">
                     <section>
@@ -35,7 +35,7 @@
                                 select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
-                                <p><xsl:copy-of select="description[@type='xhtml']" /></p>
+                                <p><xsl:copy-of select="description[@type='xhtml']/*" /></p>
                             </xsl:if>
                         </xsl:for-each>
                     </section>
@@ -49,7 +49,7 @@
                                     select="location/name" /> &#8901; </xsl:if><a><xsl:attribute name="href">//dev.<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
-                                <p><xsl:copy-of select="description[@type='xhtml']" /></p>
+                                <p><xsl:copy-of select="description[@type='xhtml']/*" /></p>
                             </xsl:if>
                         </xsl:for-each>
                     </section>
@@ -71,7 +71,7 @@
             <summary><xsl:value-of select="when/human" /> &#8901; <xsl:value-of select="description" /></summary>
             <content type="xhtml">
                 <section>
-                    <xsl:copy-of select="description[@type='xhtml']" />
+                    <xsl:copy-of select="description[@type='xhtml']/*" />
                 </section>
                 <section>
                     <h2>Details</h2>
