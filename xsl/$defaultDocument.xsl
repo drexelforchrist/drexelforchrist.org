@@ -70,10 +70,10 @@
         </a>
     </xsl:template>
     <xsl:template match="scripture">
-        <a>
-            <xsl:attribute name="href">http://dev.<xsl:value-of select="canonical/text()" /></xsl:attribute><!-- TODO remove dev. -->
+        <!--<a>-->
+            <!--<xsl:attribute name="href">http://dev.<xsl:value-of select="canonical/text()" /></xsl:attribute>&lt;!&ndash; TODO remove dev. &ndash;&gt;-->
             <b><xsl:value-of select="name" /></b>
-        </a>
+        <!--</a>-->
     </xsl:template>
 
 </xsl:stylesheet>
