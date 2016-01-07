@@ -69,5 +69,11 @@
             <b><xsl:value-of select="name/preferred" />&#160;<xsl:value-of select="name/last" /></b>
         </a>
     </xsl:template>
+    <xsl:template match="scripture">
+        <a>
+            <xsl:attribute name="href">http://dev.<xsl:value-of select="canonical/text()" /></xsl:attribute><!-- TODO remove dev. -->
+            <b><xsl:value-of select="name" /></b>
+        </a>
+    </xsl:template>
 
 </xsl:stylesheet>
