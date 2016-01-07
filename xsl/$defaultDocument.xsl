@@ -19,10 +19,16 @@
             <content type="xhtml">
                 <section>
                     <table>
-                        <xsl:for-each select="softobjects">
+                        <tr>
+                            <xsl:for-each select="softmember">
+                                <td><xsl:value-of select="@title" /></td>
+                            </xsl:for-each>
+                        </tr>
+                        <xsl:for-each select="softobject">
                             <tr>
-                                <td><xsl:value-of select="@type" /></td>
-                                <td><xsl:apply-templates select="*" /></td>
+                                <xsl:for-each select="softmember" >
+                                    <td><xsl:apply-templates select="*" /></td>
+                                </xsl:for-each>
                             </tr>
                         </xsl:for-each>
                     </table>
