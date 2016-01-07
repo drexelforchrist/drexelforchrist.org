@@ -21,7 +21,7 @@
                     <table>
                         <tr>
                             <xsl:for-each select="softmember">
-                                <td><xsl:value-of select="@title" /></td>
+                                <th><xsl:value-of select="@title" /></th>
                             </xsl:for-each>
                         </tr>
                         <xsl:for-each select="softobject">
