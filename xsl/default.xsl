@@ -119,7 +119,7 @@
                 <!--<meta name="twitter:creator" content="@author_handle">-->
                 <!-- Twitter Summary card images must be at least 120x120px -->
                 <meta property="twitter:image">
-                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php?eid=<xsl:value-of select="brilliant/document/id/text()" /><!-- KURTZ rearrange --></xsl:attribute>
+                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(brilliant/document/canonical, 21)" /></xsl:attribute>
                 </meta>
 
                 <!-- Open Graph data -->
@@ -133,7 +133,7 @@
                 </meta>
                 <!--<meta property="og:type" content="article" />-->
                 <meta property="og:image">
-                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(brilliant/document/canonical, 21)" /></xsl:attribute>
+                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(brilliant/document/canonical, 21)" />?1</xsl:attribute><!-- 1the 1 is meant to effectively invalidate facebook's cache. -->
                 </meta>
 
                 <meta property="og:description">
