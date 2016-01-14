@@ -84,7 +84,7 @@
                 <script src="%%host:static%%/js/templating.js" type="text/javascript" />
 
                 <!-- Header JS -->
-                <xsl:copy-of select="brilliant/document/headLoad/*" />
+                <xsl:copy-of select="brilliant/document/headload/*" />
 
                 <xsl:text disable-output-escaping='yes'>&lt;script type=&quot;text/javascript&quot; &gt;function load() {</xsl:text>
                 <xsl:if test="brilliant/document/onLoad">
@@ -365,7 +365,7 @@
                         <xsl:copy-of select="brilliant/document/content/div[@class = 'map']" />
                     </xsl:if>
 
-                    <xsl:if test="not(brilliant/template/notitle)" >
+                    <xsl:if test="not(brilliant/document/template/notitle)" >
                         <h1 class="noPrint">
                             <xsl:if test="brilliant/document/itemscope[@itemtype]">
                                 <xsl:attribute name="itemprop">name</xsl:attribute>

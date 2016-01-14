@@ -23,11 +23,11 @@
             <name>church</name>
             <!-- KURTZ figure out how to handle this -->
         </template>
-        <headLoad>
+        <headload>
             <!--					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfqQ82nkWfCYEw2Ix-o0dQ3KXT7atfEr0&amp;v=3&amp;libraries=geometry" />-->
             <!--					<script src="static/js/churchMap.js" />-->
             <!-- KURTZ figure out how to handle this -->
-        </headLoad>
+        </headload>
         <onLoad>
             <!--				doMap();-->
             <!-- KURTZ figure out how to handle this -->

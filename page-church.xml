@@ -13,10 +13,10 @@
         <template>
             <name>church</name>
         </template>
-        <headLoad>
+        <headload>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfqQ82nkWfCYEw2Ix-o0dQ3KXT7atfEr0&amp;v=3&amp;libraries=geometry" />
             <script src="static/js/churchMap.js" />
-        </headLoad>
+        </headload>
         <onLoad>
             doMap();
         </onLoad>
