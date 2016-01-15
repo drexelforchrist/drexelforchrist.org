@@ -383,7 +383,22 @@ main#corset {
         transition: opacity 20s;
         padding: 0 @sectionPadding 1em;
 
-        p:first-child {
+        img {
+            max-width:100%;
+        }
+
+        table {
+            overflow-x:auto;
+            max-width:100%;
+            display:block;
+
+            -ms-overflow-style: none;
+        }
+        table::-webkit-scrollbar {
+            width: 0 !important
+        }
+
+        :first-child {
             margin-top:0;
         }
     }
