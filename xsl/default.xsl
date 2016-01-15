@@ -229,7 +229,7 @@
 
 
 
-                    <ul id="topNav">
+                    <ul id="topNav" oncontextmenu="return false;">
                         <li id="navMenu" tabindex="1">
                             <a class="fa fa-bars" title="Menu" />
                             <ul>
