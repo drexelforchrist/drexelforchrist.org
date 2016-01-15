@@ -151,6 +151,7 @@ div.background {
 /* Body Components */
 main {
     display: table-row-group;
+    color: #000;
 }
 
 main > * {
@@ -181,10 +182,17 @@ h2 {
     border: solid white 0;
     border-top: solid rgb(248,193,44) 2pt;  // KURTZ give flavors
     color: rgb(79, 129, 189); // KURTZ give flavors
+    page-break-after: avoid;
 }
 h3, h4 {
     color: rgb(64, 159, 216); // KURTZ give flavors
     margin: 0;
+    page-break-after: avoid;
+}
+
+a:link, a:visited, a:hover, a {
+    color: #000;
+    text-decoration-color: rgb(79, 129, 189);
 }
 
 

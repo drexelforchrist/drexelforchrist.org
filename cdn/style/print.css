@@ -137,6 +137,7 @@ div.background {
 /* Body Components */
 main {
   display: table-row-group;
+  color: #000;
 }
 main > * {
   padding: 0 1in;
@@ -160,11 +161,20 @@ h2 {
   border: solid white 0;
   border-top: solid #f8c12c 2pt;
   color: #4f81bd;
+  page-break-after: avoid;
 }
 h3,
 h4 {
   color: #409fd8;
   margin: 0;
+  page-break-after: avoid;
+}
+a:link,
+a:visited,
+a:hover,
+a {
+  color: #000;
+  text-decoration-color: #4f81bd;
 }
 p {
   padding: 0 0 10pt;
