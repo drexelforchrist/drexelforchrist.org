@@ -386,7 +386,7 @@ main#corset blockquote {
   font-family: 'Novecento wide Book', sans-serif;
   font-variant: small-caps;
   text-align: center;
-  margin: .1in 10%;
+  margin: .1in 8%;
   border-style: dotted;
   border-width: 1px 0;
   padding: 3em;
@@ -522,12 +522,12 @@ body nav#header div#pageLogo a#pageLogoText {
 body blockquote,
 body blockquote {
   color: #2c82c5;
-  background-color: rgba(44, 130, 197, 0.04);
+  background-color: rgba(44, 130, 197, 0.08);
   border-color: #2c82c5 white;
 }
 body h3,
 body h3 {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
   color: #66ccff;
 }
 body h4,
@@ -688,12 +688,12 @@ body nav#header div#pageLogo a#pageLogoText {
 body.church blockquote,
 body blockquote.church {
   color: #8800a1;
-  background-color: rgba(136, 0, 161, 0.04);
+  background-color: rgba(136, 0, 161, 0.08);
   border-color: #8800a1 white;
 }
 body.church h3,
 body h3.church {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
   color: #d11cf1;
 }
 body.church h4,
@@ -854,12 +854,12 @@ body nav#header div#pageLogo a#pageLogoText {
 body.prayer blockquote,
 body blockquote.prayer {
   color: #c91b1b;
-  background-color: rgba(201, 27, 27, 0.04);
+  background-color: rgba(201, 27, 27, 0.08);
   border-color: #c91b1b white;
 }
 body.prayer h3,
 body h3.prayer {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
   color: #fe7a7a;
 }
 body.prayer h4,
@@ -1020,12 +1020,12 @@ body nav#header div#pageLogo a#pageLogoText {
 body.training blockquote,
 body blockquote.training {
   color: #ce6219;
-  background-color: rgba(206, 98, 25, 0.04);
+  background-color: rgba(206, 98, 25, 0.08);
   border-color: #ce6219 white;
 }
 body.training h3,
 body h3.training {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
   color: #f79844;
 }
 body.training h4,
@@ -1186,12 +1186,12 @@ body nav#header div#pageLogo a#pageLogoText {
 body.discipleship blockquote,
 body blockquote.discipleship {
   color: #efa81e;
-  background-color: rgba(239, 168, 30, 0.04);
+  background-color: rgba(239, 168, 30, 0.08);
   border-color: #efa81e white;
 }
 body.discipleship h3,
 body h3.discipleship {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
   color: #f7dd2e;
 }
 body.discipleship h4,
@@ -1352,12 +1352,12 @@ body nav#header div#pageLogo a#pageLogoText {
 body.outreach blockquote,
 body blockquote.outreach {
   color: #259110;
-  background-color: rgba(37, 145, 16, 0.04);
+  background-color: rgba(37, 145, 16, 0.08);
   border-color: #259110 white;
 }
 body.outreach h3,
 body h3.outreach {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
   color: #46fe21;
 }
 body.outreach h4,
@@ -1518,12 +1518,12 @@ body nav#header div#pageLogo a#pageLogoText {
 body.ninja blockquote,
 body blockquote.ninja {
   color: #cccccc;
-  background-color: rgba(204, 204, 204, 0.04);
+  background-color: rgba(204, 204, 204, 0.08);
   border-color: #cccccc black;
 }
 body.ninja h3,
 body h3.ninja {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
   color: #777777;
 }
 body.ninja h4,
