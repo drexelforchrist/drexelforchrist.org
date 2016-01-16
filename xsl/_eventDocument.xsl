@@ -26,7 +26,21 @@
                 <section>
                     <xsl:copy-of select="description[@type='xhtml']/*" />
                 </section>
-                <xsl:if test="children/event != ''">
+                <xsl:if test="children/event[@tense='present'] != ''">
+                    <section>
+                        <h2>Happening Now</h2>
+                        <xsl:for-each select="children/event">
+                            <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
+                            <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
+                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="canonical" /></xsl:attribute>details...</a>
+                            <xsl:if test="description[@type='xhtml'] != $topMostDescription">
+                                <p><xsl:copy-of select="description[@type='xhtml']/*" /></p>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </section>
+                </xsl:if>
+                <xsl:if test="children/event[@tense='future'] != ''">
                     <section>
                         <h2>Upcoming Instances</h2>
                         <xsl:for-each select="children/event">
@@ -40,9 +54,51 @@
                         </xsl:for-each>
                     </section>
                 </xsl:if>
-                <xsl:if test="children/eventSet != ''">
+                <xsl:if test="children/event[@tense='past'] != ''">
                     <section>
-                        <h2>Event Sets</h2>
+                        <h2>Past Instances</h2>
+                        <xsl:for-each select="children/event">
+                            <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
+                            <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
+                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="canonical" /></xsl:attribute>details...</a>
+                            <xsl:if test="description[@type='xhtml'] != $topMostDescription">
+                                <p><xsl:copy-of select="description[@type='xhtml']/*" /></p>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </section>
+                </xsl:if>
+                <xsl:if test="children/eventSet[@tense='present'] != ''">
+                    <section>
+                        <h2>Current Event Sets</h2>
+                        <xsl:for-each select="children/eventSet">
+                            <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
+                            <xsl:if test="location/name != ''"><xsl:value-of
+                                    select="location/name" /> &#8901; </xsl:if><a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="canonical" /></xsl:attribute>details...</a>
+                            <xsl:if test="description[@type='xhtml'] != $topMostDescription">
+                                <p><xsl:copy-of select="description[@type='xhtml']/*" /></p>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </section>
+                </xsl:if>
+                <xsl:if test="children/eventSet[@tense='future'] != ''">
+                    <section>
+                        <h2>Upcoming Event Sets</h2>
+                        <xsl:for-each select="children/eventSet">
+                            <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
+                            <xsl:if test="location/name != ''"><xsl:value-of
+                                    select="location/name" /> &#8901; </xsl:if><a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="canonical" /></xsl:attribute>details...</a>
+                            <xsl:if test="description[@type='xhtml'] != $topMostDescription">
+                                <p><xsl:copy-of select="description[@type='xhtml']/*" /></p>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </section>
+                </xsl:if>
+                <xsl:if test="children/eventSet[@tense='past'] != ''">
+                    <section>
+                        <h2>Past Event Sets</h2>
                         <xsl:for-each select="children/eventSet">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:if test="location/name != ''"><xsl:value-of
