@@ -133,7 +133,7 @@
                 </meta>
                 <!--<meta property="og:type" content="article" />-->
                 <meta property="og:image">
-                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(brilliant/document/canonical, 21)" />/image</xsl:attribute><!-- the /image is meant to effectively invalidate facebook's cache.  Soon, this will break.  -->
+                    <xsl:attribute name="content">https://drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(brilliant/document/canonical, 21)" /></xsl:attribute><!-- the /image is meant to effectively invalidate facebook's cache.  Soon, this will break.  -->
                 </meta>
 
                 <meta property="og:description">
