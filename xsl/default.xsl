@@ -97,6 +97,7 @@
                 <xsl:if test="$summary != ''">
                     <meta name="description">
                         <xsl:attribute name="content">
+                            Drexel Students for Christ // <xsl:value-of select="brilliant/document/title/text()" /><xsl:if test="brilliant/document/title/text() != ''"> // </xsl:if>
                             <xsl:value-of select="$summary" />
                         </xsl:attribute>
                     </meta>
