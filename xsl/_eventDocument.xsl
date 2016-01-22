@@ -26,7 +26,7 @@
                 <section>
                     <xsl:copy-of select="description[@type='xhtml']/*" />
                 </section>
-                <xsl:if test="children/event[@tense='present'] != ''">
+                <xsl:if test="children/event[@tense='present']/eventStatus != 'cancelled'"><!-- TODO Replace with something cleaner. -->
                     <section>
                         <h2>Happening Now</h2>
                         <xsl:for-each select="children/event[@tense='present']">
@@ -68,7 +68,7 @@
                         </xsl:for-each>
                     </section>
                 </xsl:if>
-                <xsl:if test="children/eventSet[@tense='present'] != ''">
+                <xsl:if test="children/eventSet[@tense='present']/eventStatus != 'cancelled'">
                     <section>
                         <h2>Current Event Sets</h2>
                         <xsl:for-each select="children/eventSet[@tense='present']">
