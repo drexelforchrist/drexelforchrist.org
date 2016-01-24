@@ -6,6 +6,7 @@ body {
   font-family: Cabin, 'Segoe UI', sans-serif;
   margin: 0;
   background: #333;
+  overflow-x: hidden;
 }
 div.background {
   position: fixed;
