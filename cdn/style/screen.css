@@ -429,6 +429,16 @@ main#corset blockquote > p:last-child {
 main#corset blockquote p {
   text-indent: 0;
 }
+@media (max-width: 600px) {
+  body .narrowHide {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  body .narrowOnly {
+    display: none;
+  }
+}
 nav#footer {
   position: fixed;
   bottom: 0;
@@ -458,11 +468,6 @@ nav#footer:hover {
 }
 nav#footer span.bold {
   font-weight: bold;
-}
-@media (max-width: 600px) {
-  nav#footer .narrowHide {
-    display: none;
-  }
 }
 nav#footer > ul {
   margin: 0;

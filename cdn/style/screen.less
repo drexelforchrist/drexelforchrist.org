@@ -545,6 +545,18 @@ main#corset {
     }
 }
 
+@media (max-width: @narrowHide) {
+    body .narrowHide {
+        display:none;
+    }
+}
+
+@media (min-width: @narrowHide) {
+    body .narrowOnly {
+        display:none;
+    }
+}
+
 //// Footer
 nav#footer {
     position: fixed;
@@ -572,11 +584,6 @@ nav#footer {
     }
     & span.bold {
         font-weight: bold;
-    }
-    @media (max-width: @narrowHide) {
-        .narrowHide {
-            display:none;
-        }
     }
     & > ul {
         margin: 0;
