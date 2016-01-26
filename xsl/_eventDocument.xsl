@@ -158,7 +158,7 @@
                         <meta itemprop="eventStatus" content="http://schema.org/EventScheduled" />
                     </xsl:if>
                 </section>
-                <xsl:if test="children/*/event[@tense='present']/eventStatus != 'cancelled'"><!-- TODO Replace with something cleaner. -->
+                <xsl:if test="children/event[@tense='present']/eventStatus != 'cancelled'"><!-- TODO Replace with something cleaner. -->
                     <section>
                         <h2>Happening Now</h2>
                         <xsl:for-each select="children/event[@tense='present']">
@@ -172,7 +172,7 @@
                         </xsl:for-each>
                     </section>
                 </xsl:if>
-                <xsl:if test="children/*/event[@tense='future']/eventStatus != 'cancelled'"><!-- TODO Replace with something cleaner. -->
+                <xsl:if test="children/event[@tense='future']/eventStatus != 'cancelled'"><!-- TODO Replace with something cleaner. -->
                     <section>
                         <h2>Upcoming</h2>
                         <xsl:for-each select="children/event[@tense='future']">
