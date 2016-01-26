@@ -77,6 +77,12 @@
                 <!--Font Awesome-->
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 
+
+                <!-- SEO Canon -->
+                <link rel="canonical">
+                    <xsl:attribute name="href">http://dev.<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute><!-- KURTZ remove dev.*  Possibly switch to https? -->
+                </link>
+
                 <!-- Bibly -->
                 <link href="http://code.bib.ly/bibly.min.css" rel="stylesheet" />
 
