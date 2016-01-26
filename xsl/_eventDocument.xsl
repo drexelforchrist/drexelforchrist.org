@@ -161,7 +161,7 @@
                 <xsl:if test="children/*/event[@tense='present']/eventStatus != 'cancelled'"><!-- TODO Replace with something cleaner. -->
                     <section>
                         <h2>Happening Now</h2>
-                        <xsl:for-each select="children/*/event[@tense='present']">
+                        <xsl:for-each select="children/event[@tense='present']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
                                 select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
@@ -175,7 +175,7 @@
                 <xsl:if test="children/*/event[@tense='future']/eventStatus != 'cancelled'"><!-- TODO Replace with something cleaner. -->
                     <section>
                         <h2>Upcoming</h2>
-                        <xsl:for-each select="children/*/event[@tense='future']">
+                        <xsl:for-each select="children/event[@tense='future']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
                                 select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
