@@ -11,6 +11,85 @@
         </brilliant>
     </xsl:template>
 
+    <xsl:template match="brilliant/eventCalendar">
+        <xsl:variable name="topMostDescription" select="description[@type='xhtml']" />
+        <document>
+            <title><xsl:value-of select="name" /></title>
+            <subtitle><xsl:value-of select="subtitle" /></subtitle>
+            <canonical><xsl:value-of select="canonical" /></canonical>
+            <template>
+                <name><xsl:value-of select="address" /></name>
+            </template>
+            <id><xsl:value-of select="id" /></id>
+            <summary><xsl:value-of select="description" /></summary>
+            <content type="xhtml">
+                <section>
+                    <xsl:copy-of select="description[@type='xhtml']/*" />
+                </section>
+                <section>
+
+
+                    <!-- TODO remove and replace with a legitimate thing -->
+
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;
+src=qk2letk797p777abs6g9alhlbui78kel%40import.calendar.google.com&amp;color=%235229A3&amp;
+src=f7i0ob76ovene2b81ftkcijcg8sjhtoo%40import.calendar.google.com&amp;color=%232952A3&amp;
+src=hlal0f5pe2832u0t9jj47hok07gjjc1s%40import.calendar.google.com&amp;color=%23AB8B00&amp;
+src=gbsnkvmb74f1a84ii1spjtl6p3ov9bgj%40import.calendar.google.com&amp;color=%232F6309&amp;
+src=kqc92veva7o3aiuc4veeqkffcvksrveh%40import.calendar.google.com&amp;color=%23711616&amp;
+src=mdjno10u33s927vhes7442l1mp2rl7me%40import.calendar.google.com&amp;color=%238C500B&amp;
+src=vq75c0mikt3uiecu2ujgpi6n24%40group.calendar.google.com&amp;color=%23333333&amp;
+src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23333333&amp;
+ctz=America%2FNew_York" style="border-width:0 min-width:600px; min-height:600px; width:98%; height:inherit; right:15px;" frameborder="0" scrolling="no" class="narrowHide" />
+
+                    <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;
+src=qk2letk797p777abs6g9alhlbui78kel%40import.calendar.google.com&amp;color=%235229A3&amp;
+src=f7i0ob76ovene2b81ftkcijcg8sjhtoo%40import.calendar.google.com&amp;color=%232952A3&amp;
+src=hlal0f5pe2832u0t9jj47hok07gjjc1s%40import.calendar.google.com&amp;color=%23AB8B00&amp;
+src=gbsnkvmb74f1a84ii1spjtl6p3ov9bgj%40import.calendar.google.com&amp;color=%232F6309&amp;
+src=kqc92veva7o3aiuc4veeqkffcvksrveh%40import.calendar.google.com&amp;color=%23711616&amp;
+src=mdjno10u33s927vhes7442l1mp2rl7me%40import.calendar.google.com&amp;color=%238C500B&amp;
+src=vq75c0mikt3uiecu2ujgpi6n24%40group.calendar.google.com&amp;color=%23333333&amp;
+src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23333333&amp;
+ctz=America%2FNew_York&amp;mode=AGENDA" style="border-width:0 min-width:600px; min-height:600px; width:100%; height:inherit;" frameborder="0" scrolling="no" class="narrowShow" />
+
+
+
+
+
+                </section>
+                <xsl:if test="instances/event[@tense='present']/eventStatus != 'cancelled'"><!-- TODO Replace with something cleaner. -->
+                    <section>
+                        <h2>Happening Now</h2>
+                        <xsl:for-each select="instances/event[@tense='present']">
+                            <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
+                            <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
+                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="canonical" /></xsl:attribute>details...</a>
+                            <xsl:if test="description[@type='xhtml'] != $topMostDescription">
+                                <p><xsl:copy-of select="description[@type='xhtml']/*" /></p>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </section>
+                </xsl:if>
+                <xsl:if test="instances/event[@tense='future']/eventStatus != 'cancelled'"><!-- TODO Replace with something cleaner. -->
+                    <section>
+                        <h2>Upcoming</h2>
+                        <xsl:for-each select="instances/event[@tense='future']">
+                            <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
+                            <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
+                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="canonical" /></xsl:attribute>details...</a>
+                            <xsl:if test="description[@type='xhtml'] != $topMostDescription">
+                                <p><xsl:copy-of select="description[@type='xhtml']/*" /></p>
+                            </xsl:if>
+                        </xsl:for-each>
+                    </section>
+                </xsl:if>
+            </content>
+        </document>
+    </xsl:template>
+
     <xsl:template match="brilliant/eventSet">
         <xsl:variable name="topMostDescription" select="description[@type='xhtml']" />
         <document>
