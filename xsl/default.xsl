@@ -80,7 +80,7 @@
 
                 <!-- SEO Canon -->
                 <link rel="canonical">
-                    <xsl:attribute name="href">http://dev.<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute><!-- KURTZ remove dev.*  Possibly switch to https? -->
+                    <xsl:attribute name="href">https://dev.<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute><!-- KURTZ remove dev.*  Possibly switch to https? -->
                 </link>
 
                 <!-- Bibly -->
@@ -131,7 +131,7 @@
 
                 <!-- Open Graph data -->
                 <meta property="og:url">
-                    <xsl:attribute name="content">http://dev.<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute><!-- KURTZ remove dev.*  Possibly switch to https? -->
+                    <xsl:attribute name="content">https://dev.<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute><!-- KURTZ remove dev.*  Possibly switch to https? -->
                 </meta>
                 <meta property="og:title">
                     <xsl:attribute name="content">
@@ -206,8 +206,8 @@
                     <xsl:when test="$styleClass = 'ninja'" >
                         <div class="background" id="ninjaBackground">
                             <video autoplay="autoplay" loop="loop" muted="muted" preload="auto">
-                                <source src="http://drexelforchrist.org/_resources/Blue_Discs.webm" type="video/webm" />
-                                <source src="http://drexelforchrist.org/_resources/Blue_Discs.mp4" type="video/mp4" />
+                                <source src="https://drexelforchrist.org/_resources/Blue_Discs.webm" type="video/webm" />
+                                <source src="https://drexelforchrist.org/_resources/Blue_Discs.mp4" type="video/mp4" />
                                 <!-- KURTZ alternative for browsers which don't support the Video tag -->
                             </video>
                         </div>
@@ -394,8 +394,8 @@
                         <li class="copyrightText">&#169;&#160;2016 <span class="narrowHide">Drexel&#160;Students&#160;for&#160;Christ</span> // <span class="bold">connect<span class="narrowHide">&#160;with&#160;us</span>: </span></li>
                         <li><a href="https://www.facebook.com/drexelforchrist" title="Facebook" id="connectFacebook">Facebook</a></li>
                         <li><a href="https://twitter.com/drexelforchrist" title="Twitter" id="connectTwitter">Twitter</a></li>
-                        <li><a href="http://www.youtube.com/drexel4christ" title="YouTube" id="connectYoutube">YouTube</a></li>
-                        <li><a href="http://www.vimeo.com/drexel" title="Vimeo" id="connectVimeo">Vimeo</a></li>
+                        <li><a href="https://www.youtube.com/drexel4christ" title="YouTube" id="connectYoutube">YouTube</a></li>
+                        <li><a href="https://www.vimeo.com/drexel" title="Vimeo" id="connectVimeo">Vimeo</a></li>
                         <li><a href="https://plus.google.com/+DrexelforChrist" title="Google+" id="connectGoogleP">Google+</a></li>
                         <li><a href="https://soundcloud.com/drexelforchrist" title="SoundCloud" id="connectSoundcloud">SoundCloud</a></li>
                         <xsl:if test="$styleClass = 'ninja'" >
