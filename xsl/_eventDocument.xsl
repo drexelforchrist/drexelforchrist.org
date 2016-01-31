@@ -201,10 +201,12 @@
                                 <span itemprop="endDate"><xsl:attribute name="content" ><xsl:value-of select="when/endDate/text()" /></xsl:attribute></span>
                             </td>
                         </tr>
-                        <tr itemprop="location" itemscope="" itemtype="http://schema.org/Place">
-                            <td>Where:</td>
-                            <td itemprop="name"><xsl:value-of select="location/name" /></td>
-                        </tr>
+                        <xsl:if test="location/name != ''" >
+                            <tr itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                <td>Where:</td>
+                                <td itemprop="name"><xsl:value-of select="location/name" /></td>
+                            </tr>
+                        </xsl:if>
                         <xsl:if test="eventStatus != 'confirmed'" >
                             <tr>
                                 <td>Status:</td>
