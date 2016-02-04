@@ -1,0 +1,3 @@
+[submodule "libs/bibly"]
+	path = libs/bibly
+	url = https://github.com/jkrrv/bibly.git
