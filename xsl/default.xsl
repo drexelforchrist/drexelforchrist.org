@@ -84,7 +84,8 @@
                 </link>
 
                 <!-- Bibly -->
-                <link href="http://code.bib.ly/bibly.min.css" rel="stylesheet" />
+                <link href="https://cdn.drexelforchrist.com/bibly/bibly.core.min.css" rel="stylesheet" />
+                <link href="https://cdn.drexelforchrist.com/bibly/bibly.user.min.css" rel="stylesheet" />
 
 
                 <script src="%%host:static%%/js/templating.js" type="text/javascript" />
@@ -460,7 +461,7 @@
                     <!--}(document, "script"));-->
                 <!--</script>-->
 
-                <script src="http://code.bib.ly/bibly.min.js"><!--Bibly--></script>
+                <script src="https://cdn.drexelforchrist.com/bibly/bibly.min.js"><!--Bibly--></script>
             </body>
         </html>
     </xsl:template>
