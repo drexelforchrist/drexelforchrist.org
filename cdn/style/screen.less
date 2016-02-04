@@ -715,9 +715,11 @@ nav#footer {
     }
 
 
-
     //// Bibly User
     @import (reference) "../../libs/bibly/bibly.user.less";
+    body@{className} {
+        .biblyUser(@background, @text, @primary);
+    }
 
 
     //// Top Nav

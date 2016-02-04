@@ -85,8 +85,6 @@
 
                 <!-- Bibly -->
                 <link href="https://cdn.drexelforchrist.com/bibly/bibly.core.min.css" rel="stylesheet" />
-                <link href="https://cdn.drexelforchrist.com/bibly/bibly.user.min.css" rel="stylesheet" />
-
 
                 <script src="%%host:static%%/js/templating.js" type="text/javascript" />
 
