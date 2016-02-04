@@ -462,6 +462,12 @@
                 <!--</script>-->
 
                 <script src="https://cdn.drexelforchrist.com/bibly/bibly.min.js"><!--Bibly--></script>
+                <script type="text/javascript"><![CDATA[
+                    bibly.toShortUrl = function (reference) {
+                        if (reference.bookIndex < 0 || reference.bookIndex >= bible.Books.length) return "invalid";
+                        return 'http://www.esvbible.org/' + bible.Books[reference.bookIndex].names[1] + reference.chapterAndVerse(':','-','-');
+                    };
+                ]]></script>
             </body>
         </html>
     </xsl:template>
