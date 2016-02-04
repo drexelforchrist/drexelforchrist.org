@@ -1,19 +1,7 @@
 /* Font imports */
 @import url(https://fonts.googleapis.com/css?family=Cabin);
-/* latin */
-@font-face {
-    font-family: 'Novecento wide Book';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Novecento wide Book'), local('NovecentowideBook'), url(Novecentowide-Book.woff2) format('woff2');
-}
-/* latin */
-@font-face {
-    font-family: 'Novecento wide Bold';
-    font-style: normal;
-    font-weight: 800;
-    src: local('Novecento wide Bold'), local('NovecentowideBold'), url(Novecentowide-Bold.woff2) format('woff2');
-}
+@import url(../fonts/novecentoBook_import.css);
+@import url(../fonts/novecentoBold_import.css);
 body {
   font-family: Cabin, 'Segoe UI', sans-serif;
   margin: 0;
