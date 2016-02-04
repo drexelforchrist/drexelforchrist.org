@@ -65,8 +65,8 @@
                 <title><xsl:value-of select="brilliant/document/title/text()" /><xsl:if test="brilliant/document/title/text() != ''"> // </xsl:if>Drexel Students for Christ</title>
 
                 <!-- First Party CSS -->
-                <link rel="stylesheet" href="%%host:cdn%%/style/screen.css" type="text/css" media="screen" />
-                <link rel="stylesheet" href="%%host:cdn%%/style/print.css" type="text/css" media="print" />
+                <link rel="stylesheet" href="%%host:cdn%%/style/screen.min.css" type="text/css" media="screen" />
+                <link rel="stylesheet" href="%%host:cdn%%/style/print.min.css" type="text/css" media="print" />
                 <link rel="shortcut icon">
                     <xsl:attribute name="href">
                         <xsl:value-of select="concat('%%host:cdn%%/ico/RGB-icon-', $styleClass, '.ico')" />
