@@ -23,15 +23,6 @@
             <name>church</name>
             <!-- KURTZ figure out how to handle this -->
         </template>
-        <headload>
-            <!--					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfqQ82nkWfCYEw2Ix-o0dQ3KXT7atfEr0&amp;v=3&amp;libraries=geometry" />-->
-            <!--					<script src="static/js/churchMap.js" />-->
-            <!-- KURTZ figure out how to handle this -->
-        </headload>
-        <onLoad>
-            <!--				doMap();-->
-            <!-- KURTZ figure out how to handle this -->
-        </onLoad>
         <updated>2015-09-20T15:01:36-04:00</updated>
         <summary>We exist to make and build disciples of Jesus Christ and strive to accomplish that by building a community where God grows Students in Love for Jesus Christ, the mission of proclaiming His gospel, and the local church.</summary>
         <!--				<author>-->

@@ -91,12 +91,6 @@
                 <!-- Header JS -->
                 <xsl:copy-of select="brilliant/document/headload/*" />
 
-                <xsl:text disable-output-escaping='yes'>&lt;script type=&quot;text/javascript&quot; &gt;function load() {</xsl:text>
-                <xsl:if test="brilliant/document/onLoad">
-                    <xsl:value-of select="brilliant/document/onLoad/text()"/>
-                </xsl:if>
-                <xsl:text disable-output-escaping='yes'>}&lt;/script&gt;</xsl:text>
-
 
                 <!-- SEO -->
                 <xsl:if test="$summary != ''">
@@ -410,13 +404,8 @@
                         </svg>
                     </div>
                 </nav>
-                <script type="text/javascript">
-                    try {
-                    load();
-                    } catch (e) {
-                    document.addEventListener('load', load);
-                    }
-                </script>
+
+                <xsl:copy-of select="brilliant/document/footload/*" />
                 <script>
                     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
