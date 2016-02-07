@@ -54,7 +54,7 @@
                                     <xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if>
                                 </h3>
                                 <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
-                                    select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                    select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
                                     select="canonical" /></xsl:attribute>details...</a>
                                 <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                     <xsl:copy-of select="description[@type='xhtml']/*" />
@@ -77,7 +77,7 @@
                                     <xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if>
                                 </h3>
                                 <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
-                                    select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                    select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
                                     select="canonical" /></xsl:attribute>details...</a>
                                 <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                     <xsl:copy-of select="description[@type='xhtml']/*" />
@@ -111,7 +111,7 @@
                         <xsl:for-each select="children/event[@tense='present']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
-                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                 <xsl:copy-of select="description[@type='xhtml']/*" />
@@ -125,7 +125,7 @@
                         <xsl:for-each select="children/event[@tense='future']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
-                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                 <xsl:copy-of select="description[@type='xhtml']/*" />
@@ -139,7 +139,7 @@
                         <xsl:for-each select="children/event[@tense='past']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
-                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                 <xsl:copy-of select="description[@type='xhtml']/*" />
@@ -153,7 +153,7 @@
                         <xsl:for-each select="children/eventSet[@tense='present']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:if test="location/name != ''"><xsl:value-of
-                                    select="location/name" /> &#8901; </xsl:if><a><xsl:attribute name="href">//dev.<xsl:value-of
+                                    select="location/name" /> &#8901; </xsl:if><a><xsl:attribute name="href">//<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                 <xsl:copy-of select="description[@type='xhtml']/*" />
@@ -167,7 +167,7 @@
                         <xsl:for-each select="children/eventSet[@tense='future']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:if test="location/name != ''"><xsl:value-of
-                                    select="location/name" /> &#8901; </xsl:if><a><xsl:attribute name="href">//dev.<xsl:value-of
+                                    select="location/name" /> &#8901; </xsl:if><a><xsl:attribute name="href">//<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                 <xsl:copy-of select="description[@type='xhtml']/*" />
@@ -181,7 +181,7 @@
                         <xsl:for-each select="children/eventSet[@tense='past']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:if test="location/name != ''"><xsl:value-of
-                                    select="location/name" /> &#8901; </xsl:if><a><xsl:attribute name="href">//dev.<xsl:value-of
+                                    select="location/name" /> &#8901; </xsl:if><a><xsl:attribute name="href">//<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                 <xsl:copy-of select="description[@type='xhtml']/*" />
@@ -245,7 +245,7 @@
                         <xsl:for-each select="children/event[@tense='present']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
-                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                 <xsl:copy-of select="description[@type='xhtml']/*" />
@@ -259,7 +259,7 @@
                         <xsl:for-each select="children/event[@tense='future']">
                             <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
                             <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
-                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//dev.<xsl:value-of
+                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
                                 select="canonical" /></xsl:attribute>details...</a>
                             <xsl:if test="description[@type='xhtml'] != $topMostDescription">
                                 <xsl:copy-of select="description[@type='xhtml']/*" />

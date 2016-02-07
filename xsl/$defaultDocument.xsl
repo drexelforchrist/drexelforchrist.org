@@ -59,7 +59,7 @@
 
     <xsl:template match="event">
         <a>
-            <xsl:attribute name="href">http://dev.<xsl:value-of select="canonical/text()" /></xsl:attribute><!-- TODO remove dev. -->
+            <xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>
             <b><xsl:value-of select="name/text()" /></b>
             <xsl:if test="subtitle">
                 : <xsl:value-of select="subtitle/text()" />
@@ -71,13 +71,13 @@
     </xsl:template>
     <xsl:template match="person">
         <a>
-            <xsl:attribute name="href">http://dev.<xsl:value-of select="canonical/text()" /></xsl:attribute><!-- TODO remove dev. -->
+            <xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>
             <b><xsl:value-of select="name/preferred" />&#160;<xsl:value-of select="name/last" /></b>
         </a>
     </xsl:template>
     <xsl:template match="scripture">
         <!--<a>-->
-            <!--<xsl:attribute name="href">http://dev.<xsl:value-of select="canonical/text()" /></xsl:attribute>&lt;!&ndash; TODO remove dev. &ndash;&gt;-->
+            <!--<xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>-->
             <b><xsl:value-of select="name" /></b>
         <!--</a>-->
     </xsl:template>

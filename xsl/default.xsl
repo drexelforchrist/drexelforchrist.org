@@ -80,7 +80,7 @@
 
                 <!-- SEO Canon -->
                 <link rel="canonical">
-                    <xsl:attribute name="href">https://dev.<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute><!-- KURTZ remove dev.*  Possibly switch to https? -->
+                    <xsl:attribute name="href">https://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
                 </link>
 
                 <!-- Bibly -->
@@ -124,7 +124,7 @@
 
                 <!-- Open Graph data -->
                 <meta property="og:url">
-                    <xsl:attribute name="content">https://dev.<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute><!-- KURTZ remove dev.*  Possibly switch to https? -->
+                    <xsl:attribute name="content">https://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
                 </meta>
                 <meta property="og:title">
                     <xsl:attribute name="content">
