@@ -199,8 +199,8 @@
                     <xsl:when test="$styleClass = 'ninja'" >
                         <div class="background" id="ninjaBackground">
                             <video autoplay="autoplay" loop="loop" muted="muted" preload="auto">
-                                <source src="https://cdn.drexelforchrist.org/_resources/Blue_Discs.webm" type="video/webm" />
-                                <source src="https://cdn.drexelforchrist.org/_resources/Blue_Discs.mp4" type="video/mp4" />
+                                <source src="%%host:cdn%%/backgrounds/Blue_Discs.webm" type="video/webm" />
+                                <source src="%%host:cdn%%/backgrounds/Blue_Discs.mp4" type="video/mp4" />
                                 <!-- KURTZ alternative for browsers which don't support the Video tag -->
                             </video>
                         </div>
