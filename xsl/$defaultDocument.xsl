@@ -47,7 +47,7 @@
                     <table>
                         <xsl:for-each select="softmember">
                             <tr>
-                                <td><xsl:value-of select="@type" /></td>
+                                <td><xsl:value-of select="@title" /></td>
                                 <td><xsl:apply-templates select="*" /></td>
                             </tr>
                         </xsl:for-each>
