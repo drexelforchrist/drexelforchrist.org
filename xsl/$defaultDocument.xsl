@@ -61,7 +61,7 @@
         <a>
             <xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>
             <b><xsl:value-of select="name/text()" /></b>
-            <xsl:if test="subtitle">
+            <xsl:if test="subtitle/text() != ''">
                 : <xsl:value-of select="subtitle/text()" />
             </xsl:if>
         </a>
