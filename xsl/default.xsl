@@ -254,17 +254,20 @@
                                                 <a href="/events/_manage">manage</a>
                                             </li>
                                         </xsl:if>
-                                        <!--<li>-->
-                                            <!--<a href="/retreat">retreat</a>-->
-                                        <!--</li>-->
+                                        <li>
+                                            <a href="/events/sr16">spring retreat</a>
+                                        </li>
                                         <li>
                                             <a href="/smallgroups">growth groups</a>
+                                        </li>
+                                        <li>
+                                            <a href="/lg">large group</a>
                                         </li>
                                         <li>
                                             <a href="/sugar">sugar giveaway</a>
                                         </li>
                                         <li>
-                                            <a href="/lg">large group</a>
+                                            <a href="/events/427">week of prayer</a>
                                         </li>
                                     </ul>
                                 </li>
