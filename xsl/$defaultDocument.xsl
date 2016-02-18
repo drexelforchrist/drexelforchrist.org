@@ -27,7 +27,12 @@
                         <xsl:for-each select="softobject">
                             <tr>
                                 <xsl:for-each select="softmember" >
-                                    <td><xsl:apply-templates select="*" /></td>
+                                    <td>
+                                        <xsl:apply-templates select="*" />
+                                        <xsl:for-each select="*[position() > 1]">
+                                            <br /><xsl:apply-templates select="*" />
+                                        </xsl:for-each>
+                                    </td>
                                 </xsl:for-each>
                             </tr>
                         </xsl:for-each>
