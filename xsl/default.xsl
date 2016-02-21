@@ -266,9 +266,6 @@
                                         <li>
                                             <a href="/sugar">sugar giveaway</a>
                                         </li>
-                                        <li>
-                                            <a href="/events/427">week of prayer</a>
-                                        </li>
                                     </ul>
                                 </li>
                                 <li>
