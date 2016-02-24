@@ -21,7 +21,7 @@
                     <table>
                         <tr>
                             <xsl:for-each select="softmember">
-                                <th><xsl:value-of select="@title" /></th>
+                                <th><a><xsl:attribute name="href"><xsl:value-of select="concat('?_sort:+',@name)" /></xsl:attribute><xsl:value-of select="@title" /></a></th>
                             </xsl:for-each>
                         </tr>
                         <xsl:for-each select="softobject">
