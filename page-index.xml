@@ -1,136 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="xsl/default.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/_formatting/xsl/default.xsl"?>
+<brilliant>
+    <session>
+        <nouser />
+    </session>
+    <document>
+        <id>1</id>
+        <canonical>sexy.drexelforchrist.org/_pages/</canonical>
+        <title></title>
+        <subtitle></subtitle>
+        <template>
+            <notitle />
+        </template>
+        <headload>
+            <style type="text/css" >
+                /* FRONT PAGE */
 
-<brilliant><session><person><id>1</id><canonical>drexelforchrist.org/_people/1</canonical><address>me</address><name><first>James</first><middle>Karl</middle><last>Kurtz</last><preferred>James</preferred></name></person></session>
+                main#corset {
+                max-width:575px;
+                margin: 0.5em 0 35px auto;
+                }
 
-		<document>
-			<id>1</id>
-			<canonical>drexelforchrist.org/_pages/</canonical>
-			<title></title>
-			<subtitle></subtitle>
+                .frontColumn {
+                float: left;
+                position: relative;
+                z-index: 800;
+                }
 
-            <template>
-                <notitle />
-            </template>
+                .frontTile {
+                text-align: left;
+                width: 165px;
+                min-width: 165px;
+                margin: 0 0 8px 8px;
+                padding: 8px;
+                background: rgba(102,204,255,.9);
+                }
 
-            <headload>
-                <style type="text/css" >
-                    /* FRONT PAGE */
+                .frontTile span.frontHead {
+                font-family: 'Novecento wide Bold', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
+                font-size: 2.2em;
+                letter-spacing: -1px;
+                line-height: 0.9em;
+                text-transform: uppercase;
+                margin: 0;
+                padding: 0;
+                -moz-transition: all .5s, -moz-transform .5s;
+                -webkit-transition: all .5s, -webkit-transform .5s;
+                -o-transition: all .5s,-o-transform .5s;
+                display: block;
+                }
 
-                    main#corset {
-                        max-width:577px;
-                        margin: 0.5em 0 auto auto;
-                    }
+                .frontTile em {
+                font-family: 'Novecento wide Book', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
+                margin:0;
+                font-size:1.3em;
+                line-height:1.1em;
+                display: block;
+                font-style: normal;
+                }
 
-                    .frontColumn {
-                        float: left;
-                        position: relative;
-                        z-index: 800;
-                    }
+                .frontTile a.more {
+                font-family: 'Novecento wide Bold', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
+                font-size:0.8em;
+                color:#3a3a3a;
+                text-decoration:none;
+                }
+                .frontTile a.more:hover {
+                color:rgb(248,193,44);
+                }
 
-                    .frontTile {
-                        text-align: left;
-                        width: 165px;
-                        min-width: 165px;
-                        margin: 0 0 8px 8px;
-                        padding: 8px;
-                        background: rgba(161,220,255,.9);
-                    }
+                .frontTile a.button {
+                display:block;
+                text-align:center;
+                padding:.2em .5em .3em;
+                background:rgb(248,193,44);
+                font-family: 'Novecento wide Bold', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
+                font-size:1.4em;
+                color:#3a3a3a;
+                text-decoration:none;
+                transition:background 0.3s;
+                letter-spacing:-0.04em;
+                }
 
-                    .frontTile span.frontHead {
-                        font-family: 'Novecento wide Bold', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
-                        font-size: 2.2em;
-                        letter-spacing: -1px;
-                        line-height: 0.9em;
-                        text-transform: uppercase;
-                        margin: 0;
-                        padding: 0;
-                        -moz-transition: all .5s, -moz-transform .5s;
-                        -webkit-transition: all .5s, -webkit-transform .5s;
-                        -o-transition: all .5s,-o-transform .5s;
-                        display: block;
-                    }
+                .frontTile a.button:hover {
+                color:rgb(64,159,216);
+                background:rgb(247,221,46);
+                }
 
-                    .frontTile span.frontEm {
-                        font-family: 'Novecento wide Book', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
-                        margin:0;
-                        font-size:1.3em;
-                        line-height:1.1em;
-                        display: block;
-                    }
+                @media screen and (min-width: 0px) and (max-width: 577px) {
+                .frontColumn {
+                float: none;
+                }
+                .frontTile {
+                width: inherit;
+                margin-right: 8px;
+                margin-left:8px;
+                padding-left: 2.7em;
+                position: relative;
+                min-height: 50px;
+                min-width: 200px;
+                }
+                .frontTile span.frontHead {
+                transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -moz-transform: rotate(-90deg);
+                font-size: 1.2em;
+                display: block;
+                text-align: right;
+                width: 100px;
+                top: 35px;
+                left: -30px;
+                right: auto;
+                bottom: auto;
+                position: absolute;
+                }
+                }
 
-                    span.frontHead {
-                        color: #3a3a3a;
-                        font-family: "FreightSans Pro Book", 'freightsans_pro_bookregular', Calibri, Tahoma, sans-serif;
-                        font-size: 1.5em;
-                        line-height: 1.1em;
-                        margin: 0;
-                        padding: 0;
-                    }
+            </style>
+        </headload>
+        <updated>2015-09-19T08:25:37-04:00</updated>
+        <summary>Drexel Students for Christ exists to make and build disciples of Jesus Christ and strive to accomplish that by building a community where God grows Students in Love for Jesus Christ, the mission of proclaiming His gospel, and the local church.</summary>
+        <!--				<author>-->
+        <!--					<name>James Kurtz</name>-->
+        <!--					<id>1</id>-->
+        <!--				</author>-->
+        <!-- KURTZ figure out how to handle this -->
+        <content type="xhtml">
+            <div class="frontTile frontColumn">
+                <span class="frontHead">our vision</span>
+                <em>building a community where God grows students in love for Jesus Christ, the mission of proclaiming His Gospel, and the local church.</em>
+                <a href="/about" class="more">more about us ></a>
+            </div>
+            <div class="frontColumn">
+                <div class="frontTile">
+                    <span class="frontHead">large group</span>
+                    <p>
+                        <a href="/lg" class="more">preaching schedule ></a>
+                    </p>
 
-                    @media screen and (min-width: 0px) and (max-width: 577px) {
-                        .frontColumn {
-                            float: none;
-                        }
-                        .frontTile {
-                            width: inherit;
-                            margin-right: 8px;
-                            margin-left:8px;
-                            padding-left: 2.7em;
-                            position: relative;
-                            min-height: 50px;
-                            min-width: 200px;
-                        }
-                        .frontTile span.frontHead {
-                            transform: rotate(-90deg);
-                            -ms-transform: rotate(-90deg);
-                            -webkit-transform: rotate(-90deg);
-                            -moz-transform: rotate(-90deg);
-                            font-size: 1.2em;
-                            display: block;
-                            text-align: right;
-                            width: 100px;
-                            top: 35px;
-                            left: -30px;
-                            right: auto;
-                            bottom: auto;
-                            position: absolute;
-                        }
-                    }
+                </div>
+                <div class="frontTile">
+                    <span class="frontHead">growth groups</span>
+                    <p>we have a small group Bible study for you. </p>
+                    <a href="/smallgroups" class="button">find yours!</a>
 
-                </style>
-            </headload>
-			
-			<updated>2015-09-19T08:25:37-04:00</updated>
-			<summary>Drexel Students for Christ exists to make and build disciples of Jesus Christ and strive to accomplish that by building a community where God grows Students in Love for Jesus Christ, the mission of proclaiming His gospel, and the local church.</summary>
-<!--				<author>-->
-<!--					<name>James Kurtz</name>-->
-<!--					<id>1</id>-->
-<!--				</author>--><!-- KURTZ figure out how to handle this -->
-				<content type="xhtml">
-					<div class="frontTile frontColumn">
-    <span class="frontHead">our vision</span>
-    <span class="frontEm">building a community where God grows students in love for Jesus Christ, the mission of proclaiming His Gospel, and the local church.</span>
-    <a href="../about" class="more amis ayellow">more about us ></a>
-</div>
-<div class="frontColumn">
-    <div class="frontTile">
-        <span class="frontHead">large group</span>
+                </div>
+            </div>
+            <div class="frontTile frontColumn">
+                <span class="frontHead">looking ahead...</span>
+                <p>
+                    <a href="/events" class="more">full calendar ></a>
+                    <br />
+                    <a href="/join" class="more">get connected ></a>
+                </p>
+            </div>
+        </content>
 
-        <p><a href="../lg" class="more aevt agray">preaching schedule ></a></p>
-    </div>
-    <div class="frontTile">
-        <span class="frontHead">growth groups</span>
-        <p>we have a small group Bible study for you. </p>
-        <a href="../smallgroups" class="findyours">find yours!</a>
-    </div>
-</div>
-<div class="frontTile frontColumn">
-    <span class="frontHead">looking ahead...</span>
 
-    <p><a href="../events" class="more aevt">full calendar ></a><br />
-        <a href="../join" class="more aevt">get connected ></a></p>
-</div>				</content>
-
-		</document>
+    </document>
 </brilliant>
