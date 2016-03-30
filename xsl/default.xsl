@@ -255,6 +255,9 @@
                                             </li>
                                         </xsl:if>
                                         <li>
+                                            <a href="/alpha">alpha course</a>
+                                        </li>
+                                        <li>
                                             <a href="/events/sr16">spring retreat</a>
                                         </li>
                                         <li>
@@ -263,9 +266,9 @@
                                         <li>
                                             <a href="/lg">large group</a>
                                         </li>
-                                        <li>
-                                            <a href="/sugar">sugar giveaway</a>
-                                        </li>
+                                        <!--<li>-->
+                                            <!--<a href="/sugar">sugar giveaway</a>-->
+                                        <!--</li>-->
                                     </ul>
                                 </li>
                                 <li>
