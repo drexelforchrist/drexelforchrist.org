@@ -254,12 +254,12 @@
                                                 <a href="/events/_manage">manage</a>
                                             </li>
                                         </xsl:if>
-                                        <li>
-                                            <a href="/alpha">alpha course</a>
-                                        </li>
-                                        <li>
-                                            <a href="/events/sr16">spring retreat</a>
-                                        </li>
+                                        <!--<li>-->
+                                            <!--<a href="/alpha">alpha course</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="/events/sr16">spring retreat</a>-->
+                                        <!--</li>-->
                                         <li>
                                             <a href="/smallgroups">growth groups</a>
                                         </li>
