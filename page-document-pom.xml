@@ -26,11 +26,11 @@
                 </blockquote>
                 <p>This document contains a lot of perhaps-abstract ideas about our ministry.  As you are a part of this ministry, we hope that you desire to think passionately.  That means not only pausing occasionally to ponder what you believe, but also giving your life as though (and because) you understand the Gospel of Jesus Christ.  We know the battle against compromise will be life-long, and we know we cannot win it alone.  Our hope and victory lie in the completed and continuing work of Christ, which can alone bind us to the Gospel.  This Gospel reminds us of the joy that is ours through the cross, and the knowledge that our weakness and failure will not deter God from accomplishing His mission.  Thus, our Philosophy of Ministry seeks to acknowledge our utter dependence on God and take every opportunity that he has given us, so that we might treasure Christ above all things and thus can make and can build disciples of Jesus Christ.</p>
             </section>
-            <section>
+            <section class="expandable">
                 <h2>Mission</h2>
                 <p>Making and building disciples of Jesus Christ.<sup>2</sup></p>
             </section>
-            <section>
+            <section class="expandable">
                 <h2>Scope</h2>
                 <p>Drexel Students for Christ focuses primarily on the Drexel University community. People
                     from outside the Drexel community are welcome to join Drexel Students for Christ, and
@@ -38,7 +38,7 @@
                     However, Drexel Students for Christ primarily seeks to serve Drexel students as an extension
                     of the local church to the specific context where God has placed them: Drexel University.<sup>3</sup></p>
             </section>
-            <section>
+            <section class="expandable">
                 <h2>Message</h2>
                 <p>Our message is most fundamentally the person and work of our Redeemer, Jesus Christ.<sup>4</sup></p>
                 <h3>Scripture</h3>
@@ -60,12 +60,12 @@
                     Sanctification alone explains how, through God’s free grace,<sup>17</sup> we can be renewed into who we were created to
                     be:<sup>18</sup> dead to sin and alive to righteousness.<sup>19</sup> God’s will is your sanctification.<sup>20</sup></p>
             </section>
-            <section>
+            <section class="expandable">
                 <h2>Vision</h2>
                 <p>Drexel Students for Christ seeks to build a community where God grows students in Love
                     for Jesus Christ, the mission of proclaiming His Gospel, and the local church.</p>
             </section>
-            <section>
+            <section class="expandable">
                 <h2>Values</h2>
                 <p>As we plan for the future and evaluate our past, we will be looking for cooperative growth
                     in each of our values, both in organized ministry activities, and in the lives of our leadership
@@ -104,7 +104,7 @@
                     a unique subculture, that is flexible and loving, so as to be inviting to anyone from any
                     background, but also unwavering in convictions and distinct from secular society.<sup>35</sup></p>
             </section>
-            <section>
+            <section class="expandable expandable-closed">
                 <h2>References</h2>
                 <ol>
                     <li>Provocations: The Spiritual writings of Kierkegaard, Compiled by Charles E. Moore, (Farmington, PA: Plough Publishing House, 1999) p. 337</li>

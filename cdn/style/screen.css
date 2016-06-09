@@ -307,6 +307,28 @@ main#corset > section:hover {
   opacity: 1;
   transition: opacity 0.3s;
 }
+main#corset > section.expandable {
+  position: relative;
+}
+main#corset > section.expandable * {
+  transition: height 1s, opacity 1s;
+}
+main#corset > section.expandable.expandable-closed *:not(.expandable-toggle):not(h2) {
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+main#corset > section.expandable > a.expandable-toggle {
+  position: absolute;
+  top: 2px;
+  right: 7.5pt;
+  line-height: 1.2em;
+  font-size: 1.5em;
+  font-family: 'Novecento wide Book', sans-serif;
+  cursor: pointer;
+}
 @media (max-width: 1048px) {
   main#corset {
     margin: 0.5em 18pt 35px;
@@ -344,6 +366,7 @@ main#corset h2 {
   display: block;
   position: relative;
   line-height: 1.2em;
+  font-size: 1.5em;
 }
 main#corset h2::before,
 main#corset h2::after {
@@ -550,6 +573,9 @@ body h2::before,
 body h2::after,
 body h2::after {
   border: solid 4.5pt #66ccff;
+}
+body section.expandable > a.expandable-toggle {
+  color: rgba(255, 255, 255, 0.6);
 }
 body main#corset > h1,
 body main#corset > section,
@@ -787,6 +813,9 @@ body.church h2::after,
 body h2.church::after {
   border: solid 4.5pt #d11cf1;
 }
+body.church section.expandable > a.expandable-toggle {
+  color: rgba(255, 255, 255, 0.6);
+}
 body.church main#corset > h1,
 body.church main#corset > section,
 body.church nav#header,
@@ -1022,6 +1051,9 @@ body h2.prayer::before,
 body.prayer h2::after,
 body h2.prayer::after {
   border: solid 4.5pt #fe7a7a;
+}
+body.prayer section.expandable > a.expandable-toggle {
+  color: rgba(255, 255, 255, 0.6);
 }
 body.prayer main#corset > h1,
 body.prayer main#corset > section,
@@ -1259,6 +1291,9 @@ body.training h2::after,
 body h2.training::after {
   border: solid 4.5pt #f79844;
 }
+body.training section.expandable > a.expandable-toggle {
+  color: rgba(255, 255, 255, 0.6);
+}
 body.training main#corset > h1,
 body.training main#corset > section,
 body.training nav#header,
@@ -1494,6 +1529,9 @@ body h2.discipleship::before,
 body.discipleship h2::after,
 body h2.discipleship::after {
   border: solid 4.5pt #f7dd2e;
+}
+body.discipleship section.expandable > a.expandable-toggle {
+  color: rgba(255, 255, 255, 0.6);
 }
 body.discipleship main#corset > h1,
 body.discipleship main#corset > section,
@@ -1731,6 +1769,9 @@ body.outreach h2::after,
 body h2.outreach::after {
   border: solid 4.5pt #46fe21;
 }
+body.outreach section.expandable > a.expandable-toggle {
+  color: rgba(255, 255, 255, 0.6);
+}
 body.outreach main#corset > h1,
 body.outreach main#corset > section,
 body.outreach nav#header,
@@ -1966,6 +2007,9 @@ body h2.ninja::before,
 body.ninja h2::after,
 body h2.ninja::after {
   border: solid 4.5pt #777777;
+}
+body.ninja section.expandable > a.expandable-toggle {
+  color: rgba(0, 0, 0, 0.6);
 }
 body.ninja main#corset > h1,
 body.ninja main#corset > section,

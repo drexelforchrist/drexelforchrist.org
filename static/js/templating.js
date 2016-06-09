@@ -1,9 +1,8 @@
 
 ////  Static-mode for header
-var h;
 document.addEventListener('scroll', function() {
-    h = document.getElementById('header');
-    var    hs = document.getElementById('headerSpacer'),
+    var h = document.getElementById('header');
+    var hs = document.getElementById('headerSpacer'),
 
         scrollPos = window.scrollY,
 
@@ -28,3 +27,32 @@ document.addEventListener('scroll', function() {
 
 
 });
+
+function expandableToggle(evt) {
+    var toggle = evt.target;
+    var section = toggle.parentNode;
+    if (section.classList.contains('expandable-closed')) {
+        toggle.innerHTML = "-";
+        section.classList.remove('expandable-closed')
+    } else {
+        toggle.innerHTML = "+";
+        section.classList.add('expandable-closed')
+    }
+}
+
+var expandableInit = function() {
+    var exp, i;
+    exp = document.getElementsByClassName('expandable-toggle');
+    for (i = 0; i < exp.length; i++) {
+        document.removeChild(exp[i]);
+    }
+    exp = document.getElementsByClassName('expandable');
+    for (i = 0; i < exp.length; i++) {
+        var toggle = document.createElement('a');
+        toggle.innerHTML = (exp[i].classList.contains('expandable-closed') ? "+" : "-");
+        toggle.classList.add("expandable-toggle");
+        toggle.addEventListener('click', expandableToggle);
+        exp[i].appendChild(toggle);
+    }
+};
+window.addEventListener('load', expandableInit, false);

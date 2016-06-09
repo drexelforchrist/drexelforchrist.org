@@ -408,6 +408,29 @@ main#corset {
         transition: opacity 0.3s;
     }
 
+    & > section.expandable {
+        position: relative;
+    }
+    & > section.expandable * {
+        transition: height 1s, opacity 1s;
+    }
+    & > section.expandable.expandable-closed *:not(.expandable-toggle):not(h2) {
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+    }
+    & > section.expandable > a.expandable-toggle {
+        position: absolute;
+        top:2px;
+        right:(@sectionPadding*0.5);
+        line-height:1.2em;
+        font-size:1.5em;
+        font-family: 'Novecento wide Book', sans-serif;
+        cursor: pointer;
+    }
+
     @media (max-width: @maxWideWidth) {
         margin: 0.5em @corsetPadding 35px;
         //max-width: 2*convert(@corsetPadding, px) + @maxCorsetWidth; /* use this value for @maxWideWidth */
@@ -425,7 +448,8 @@ main#corset {
         font-family: 'Novecento wide Bold', sans-serif;
         text-transform: uppercase;
     }
-    h1, h4 {
+    h1,
+    h4 {
         font-family: 'Novecento wide Book', sans-serif;
         text-transform: uppercase;
     }
@@ -448,6 +472,7 @@ main#corset {
             display: block;
             position: relative; // to maintain position for :before
             line-height:1.2em;
+            font-size:1.5em;
         }
         &::before,
         &::after  {
@@ -481,7 +506,6 @@ main#corset {
                 display: none;
             }
         }
-
     }
     h4 {
         margin: 0;
@@ -695,6 +719,10 @@ nav#footer {
         &::after {
             border: solid 0.25*@corsetPadding @secondary;
         }
+    }
+
+    body@{className} section.expandable > a.expandable-toggle {
+        color:fade(@background, 60%);
     }
 
     body@{className} main#corset > h1,
