@@ -86,7 +86,8 @@
                 <!-- Bibly -->
                 <link href="https://cdn.drexelforchrist.com/bibly/bibly.core.min.css" rel="stylesheet" />
 
-                <script src="%%host:static%%/js/templating.js" type="text/javascript" />
+                <!-- templating -->
+                <script src="%%host:static%%/js/templating.js" type="text/javascript" async="async" />
 
                 <!-- Header JS -->
                 <xsl:copy-of select="brilliant/document/headload/*" />
@@ -217,7 +218,7 @@
                         </svg>
                     </div>
                     <div id="pageLogo">
-                        <img src="%%host:cdn%%/logo/CMYK_community_wide.svg" class="printOnly" id="printLogo" alt="Drexel Students for Christ" />
+                        <img src="%%host:cdn%%/logo/CMYK_community_wide.svg" class="printOnly" id="printLogo" alt="Drexel Students for Christ" height="0" width="0" />
                         <a id="pageLogoMark" href="/" />
                         <a id="pageLogoText" href="/" />
 
