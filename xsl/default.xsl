@@ -83,9 +83,6 @@
                     <xsl:attribute name="href">https://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
                 </link>
 
-                <!-- Bibly -->
-                <link href="https://cdn.drexelforchrist.com/bibly/bibly.core.min.css" rel="stylesheet" />
-
                 <!-- templating -->
                 <script src="%%host:static%%/js/templating.js" type="text/javascript" async="async" />
 
@@ -452,6 +449,8 @@
                     <!--}(document, "script"));-->
                 <!--</script>-->
 
+                <!-- Bibly -->
+                <link href="https://cdn.drexelforchrist.com/bibly/bibly.core.min.css" rel="stylesheet" />
                 <script src="https://cdn.drexelforchrist.com/bibly/bibly.min.js"><!--Bibly--></script>
                 <script type="text/javascript"><![CDATA[
                     bibly.toShortUrl = function (reference) {
