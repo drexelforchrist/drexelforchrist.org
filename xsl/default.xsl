@@ -66,8 +66,8 @@
 
                 <!-- First Party CSS -->
                 <link rel="stylesheet" href="%%host:cdn%%/style/screen.min.css" type="text/css" media="screen" />
-                <link rel="stylesheet" href="%%host:cdn%%/style/print.min.css" type="text/css" media="print" />
-                <link rel="shortcut icon">
+                <link rel="stylesheet" href="%%host:cdn%%/style/print.min.css" defer="defer" type="text/css" media="print" />
+                <link rel="shortcut icon" defer="defer">
                     <xsl:attribute name="href">
                         <xsl:value-of select="concat('%%host:cdn%%/ico/RGB-icon-', $styleClass, '.ico')" />
                     </xsl:attribute>
@@ -263,6 +263,9 @@
                                         </li>
                                         <li>
                                             <a href="/lg">large group</a>
+                                        </li>
+                                        <li>
+                                            <a href="/sharing">Campus Sharing</a>
                                         </li>
                                         <!--<li>-->
                                             <!--<a href="/sugar">sugar giveaway</a>-->
