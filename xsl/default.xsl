@@ -265,7 +265,7 @@
                                             <a href="/lg">large group</a>
                                         </li>
                                         <li>
-                                            <a href="/sharing">Campus Sharing</a>
+                                            <a href="/sharing">campus sharing</a>
                                         </li>
                                         <!--<li>-->
                                             <!--<a href="/sugar">sugar giveaway</a>-->
