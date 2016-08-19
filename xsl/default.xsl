@@ -388,7 +388,12 @@
                 </main>
                 <nav id="footer">
                     <ul>
-                        <li class="copyrightText">&#169;&#160;2016 <span class="narrowHide">Drexel&#160;Students&#160;for&#160;Christ</span> // <span class="bold">connect<span class="narrowHide">&#160;with&#160;us</span>: </span></li>
+                        <li class="copyrightText">
+                            &#169;&#160;2016&#160;
+                            <span class="narrowHide">Drexel&#160;Students&#160;for&#160;Christ</span>
+                            &#160;//&#160;
+                            <span class="bold">connect<span class="narrowHide">&#160;with&#160;us</span>: </span>
+                        </li>
                         <li><a href="https://www.facebook.com/drexelforchrist" title="Facebook" id="connectFacebook">Facebook</a></li>
                         <li><a href="https://twitter.com/drexelforchrist" title="Twitter" id="connectTwitter">Twitter</a></li>
                         <li><a href="https://www.youtube.com/drexel4christ" title="YouTube" id="connectYoutube">YouTube</a></li>
