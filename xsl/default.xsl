@@ -441,22 +441,6 @@
                         <!--/></noscript>-->
                 <!-- End Facebook Pixel Code -->
 
-                <!--<script src="http://www.esvapi.org/crossref/crossref.min.js" type="text/javascript" />-->
-                <!--<script>-->
-                    <!--var refTagger = {-->
-                    <!--settings: {-->
-                    <!--bibleVersion: "ESV",-->
-                    <!--dropShadow: false,-->
-                    <!--socialSharing: []-->
-                    <!--}-->
-                    <!--};-->
-                    <!--(function(d, t) {-->
-                    <!--var g = d.createElement(t), s = d.getElementsByTagName(t)[0];-->
-                    <!--g.src = "//api.reftagger.com/v2/RefTagger.js";-->
-                    <!--s.parentNode.insertBefore(g, s);-->
-                    <!--}(document, "script"));-->
-                <!--</script>-->
-
                 <!-- Bibly -->
                 <link href="https://cdn.drexelforchrist.com/bibly/bibly.core.min.css" rel="stylesheet" />
                 <script src="https://cdn.drexelforchrist.com/bibly/bibly.min.js"><!--Bibly--></script>
