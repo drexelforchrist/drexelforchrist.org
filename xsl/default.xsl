@@ -245,7 +245,7 @@
                                     <a href="/churches">churches</a>
                                 </li>
                                 <li>
-                                    <a href="https://drexelforchrist.org/events">events</a>
+                                    <a href="/events">events</a>
                                     <ul>
                                         <xsl:if test="brilliant/session/person">
                                             <li>
