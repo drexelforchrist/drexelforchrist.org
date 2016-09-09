@@ -74,12 +74,14 @@
             <br /><xsl:value-of select="when/human/text()" />
         </xsl:if>
     </xsl:template>
+
     <xsl:template match="person">
         <a>
             <xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>
             <b><xsl:value-of select="name/preferred" />&#160;<xsl:value-of select="name/last" /></b>
         </a>
     </xsl:template>
+
     <xsl:template match="scripture">
         <!--<a>-->
             <!--<xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>-->

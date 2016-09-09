@@ -225,6 +225,17 @@
                                 <td itemprop="name"><xsl:value-of select="location/name" /></td>
                             </tr>
                         </xsl:if>
+                        <xsl:if test="owner/person/name/first != ''" >
+                            <tr>
+                                <td>Coordinator:</td>
+                                <td>
+                                    <a>
+                                        <xsl:attribute name="href">//<xsl:value-of select="owner/person/canonical/text()" /></xsl:attribute>
+                                        <xsl:value-of select="owner/person/name/preferred" />&#160;<xsl:value-of select="owner/person/name/last" />
+                                    </a>
+                                </td>
+                            </tr>
+                        </xsl:if>
                         <xsl:if test="eventStatus != 'confirmed'" >
                             <tr>
                                 <td>Status:</td>
@@ -243,12 +254,14 @@
                     <section>
                         <h2>Happening Now</h2>
                         <xsl:for-each select="children/event[@tense='present']">
-                            <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
-                            <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
-                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
-                                select="canonical" /></xsl:attribute>details...</a>
-                            <xsl:if test="description[@type='xhtml'] != $topMostDescription">
-                                <xsl:copy-of select="description[@type='xhtml']/*" />
+                            <xsl:if test="eventStatus != 'cancelled'" >
+                                <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
+                                <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
+                                    select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
+                                    select="canonical" /></xsl:attribute>details...</a>
+                                <xsl:if test="description[@type='xhtml'] != $topMostDescription">
+                                    <xsl:copy-of select="description[@type='xhtml']/*" />
+                                </xsl:if>
                             </xsl:if>
                         </xsl:for-each>
                     </section>
@@ -257,12 +270,14 @@
                     <section>
                         <h2>Upcoming</h2>
                         <xsl:for-each select="children/event[@tense='future']">
-                            <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
-                            <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
-                                select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
-                                select="canonical" /></xsl:attribute>details...</a>
-                            <xsl:if test="description[@type='xhtml'] != $topMostDescription">
-                                <xsl:copy-of select="description[@type='xhtml']/*" />
+                            <xsl:if test="eventStatus != 'cancelled'" >
+                                <h3><xsl:value-of select="name" /><xsl:if test="subtitle != ''"> // <xsl:value-of select="subtitle" /></xsl:if></h3>
+                                <xsl:value-of select="when/human" /><xsl:if test="location/name != ''"> &#8901; <xsl:value-of
+                                    select="location/name" /></xsl:if> &#8901; <a><xsl:attribute name="href">//<xsl:value-of
+                                    select="canonical" /></xsl:attribute>details...</a>
+                                <xsl:if test="description[@type='xhtml'] != $topMostDescription">
+                                    <xsl:copy-of select="description[@type='xhtml']/*" />
+                                </xsl:if>
                             </xsl:if>
                         </xsl:for-each>
                     </section>

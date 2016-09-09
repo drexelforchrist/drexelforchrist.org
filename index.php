@@ -21,11 +21,8 @@ if (file_exists($requestedContent)) {
 
 function loadAndProcess($requestedContent) {
 
-	// Load the XSL
-	$xslContent = file_get_contents('xsl/default.xsl');
-
 	// Load the configuration
-	$hostReplacements = array();
+	$hostReplacements = [];
 	if (($handle = fopen("config.txt", "r")) !== FALSE) {
 		while (($data = fgetcsv($handle, 1000, "\t")) !== FALSE) {
 			if (count($data) < 2 || substr($data[0], 0, 1) == "#") {
@@ -39,32 +36,46 @@ function loadAndProcess($requestedContent) {
 		fclose($handle);
 	}
 
-	// Make needed adjustments to the XSL for the current configuration.
-	foreach ($hostReplacements as $needle => $replacement) {
-		$xslContent = str_replace("%%".$needle."%%", $replacement, $xslContent);
+	// Load the XML file.
+	$requestedContent = file_get_contents($requestedContent);
+
+	// Determine which XSL file to use... first, anyway.
+	$matches = [];
+	while (preg_match('/href=\"([A-Za-z\_\/.]+)\"[\w]*\?>/', $requestedContent, $matches)) {
+		$matches[1] = substr($matches[1], 13);
+
+		$xslContent = file_get_contents($matches[1]);
+
+		// Make needed adjustments to the XSL for the current configuration.
+		foreach ($hostReplacements as $needle => $replacement) {
+			$xslContent = str_replace("%%" . $needle . "%%", $replacement, $xslContent);
+		}
+
+		if (strpos($_SERVER['QUERY_STRING'], 'xslExport') !== false) {
+			header("Content-Type: text/plain");
+			echo $xslContent;
+			die();
+		}
+
+		// Load the XML source
+		$xml = new DOMDocument;
+		$xml->loadXML($requestedContent);
+
+		// Load XSL content into DOMDocument.
+		$xsl = new DOMDocument;
+		$xsl->loadXML($xslContent);
+
+		// Configure the transformer
+		$proc = new XSLTProcessor;
+		$proc->importStyleSheet($xsl);
+
+		//var_dump();
+
+		$requestedContent = $proc->transformToXML($xml);
+
 	}
 
-	if (strpos($_SERVER['QUERY_STRING'], 'xslExport') !== false) {
-		header("Content-Type: text/plain");
-		echo $xslContent;
-		die();
-	}
-
-	// Load the XML source
-	$xml = new DOMDocument;
-	$xml->load($requestedContent);
-
-	// Load XSL content into DOMDocument.
-	$xsl = new DOMDocument;
-	$xsl->loadXML($xslContent);
-
-	// Configure the transformer
-	$proc = new XSLTProcessor;
-	$proc->importStyleSheet($xsl);
-
-	//var_dump();
-
-	echo $proc->transformToXML($xml);
+	echo $requestedContent;
 }
 
 
