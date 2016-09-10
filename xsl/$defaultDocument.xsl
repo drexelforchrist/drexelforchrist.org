@@ -20,12 +20,21 @@
                 <section>
                     <table>
                         <tr>
+                            <th />
                             <xsl:for-each select="softmember">
                                 <th><a><xsl:attribute name="href"><xsl:value-of select="concat('?_sort:+',@name)" /></xsl:attribute><xsl:value-of select="@title" /></a></th>
                             </xsl:for-each>
                         </tr>
                         <xsl:for-each select="softobject">
                             <tr>
+                                <td>
+                                    <xsl:if test="name != ''">
+                                        <a>
+                                            <xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>
+                                            <b><xsl:value-of select="name/text()" /></b>
+                                        </a>
+                                    </xsl:if>
+                                </td>
                                 <xsl:for-each select="softmember" >
                                     <td>
                                         <xsl:apply-templates select="*[1]" />
