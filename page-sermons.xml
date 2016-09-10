@@ -1,0 +1,1378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/_formatting/xsl/$defaultDocument.xsl"?>
+<brilliant>
+    <softclass type="sermon" singular="Sermon" plural="Sermons">
+        <id>sermon</id>
+        <canonical>sexy.drexelforchrist.org/_soft/sermon</canonical>
+        <address>sermon</address>
+        <name>Sermons</name>
+        <softmember name="passage" type="Scripture" title="Primary Passage" required="" allowmultiple="" />
+        <softmember name="speaker" type="Person" title="Speaker" required="" allowmultiple="1" />
+        <softmember name="event" type="Event" title="Event" required="1" allowmultiple="" />
+        <softmember name="media" type="Media" title="Media" required="" allowmultiple="1" />
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>2</id>
+            <name>Sermon #2</name>
+            <canonical>sexy.drexelforchrist.org/_soft/2</canonical>
+            <address>2</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>654508096</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/654508096</canonical>
+                    <address>654508096</address>
+                    <name>Matthew 3</name>
+                    <abbrev>Mt3</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>1098</id>
+                    <canonical>sexy.drexelforchrist.org/_people/1098</canonical>
+                    <address>1098</address>
+                    <name>
+                        <first>Gavin</first>
+                        <middle></middle>
+                        <last>Lymberopoulos</last>
+                        <preferred>Gavin</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>44</id>
+                    <canonical>sexy.drexelforchrist.org/_events/44</canonical>
+                    <address>44</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Mitchell Auditorium (in Bossone)</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        This week, Gavin Lymberopoulos will be kicking off our new series on Matthew with Matthew 3.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>This week, Gavin Lymberopoulos will be kicking off our new series on Matthew with Matthew 3.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-01-07T19:15:00-05:00</startDate>
+                        <endDate>2016-01-07T20:30:00-05:00</endDate>
+                        <human>Thu 1/7/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>3</id>
+            <name>Sermon #3</name>
+            <canonical>sexy.drexelforchrist.org/_soft/3</canonical>
+            <address>3</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>654577753</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/654577753</canonical>
+                    <address>654577753</address>
+                    <name>Matthew 4</name>
+                    <abbrev>Mt4</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>759</id>
+                    <canonical>sexy.drexelforchrist.org/_people/759</canonical>
+                    <address>759</address>
+                    <name>
+                        <first>Talib</first>
+                        <middle></middle>
+                        <last>Smith</last>
+                        <preferred>Talib</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>45</id>
+                    <canonical>sexy.drexelforchrist.org/_events/45</canonical>
+                    <address>45</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Disque 108</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        This week, Talib Smith will be continuing our series on Matthew with Matthew 4.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>This week, Talib Smith will be continuing our series on Matthew with Matthew 4.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-01-14T19:15:00-05:00</startDate>
+                        <endDate>2016-01-14T20:30:00-05:00</endDate>
+                        <human>Thu 1/14/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>4</id>
+            <name>Sermon #4</name>
+            <canonical>sexy.drexelforchrist.org/_soft/4</canonical>
+            <address>4</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>654680201</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/654680201</canonical>
+                    <address>654680201</address>
+                    <name>Matthew 5</name>
+                    <abbrev>Mt5</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>28</id>
+                    <canonical>sexy.drexelforchrist.org/_people/28</canonical>
+                    <address>28</address>
+                    <name>
+                        <first>Brian</first>
+                        <middle></middle>
+                        <last>Musser</last>
+                        <preferred>Brian</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>46</id>
+                    <canonical>sexy.drexelforchrist.org/_events/46</canonical>
+                    <address>46</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Disque 108</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        This week, Brian Musser will be continuing our series on Matthew with Matthew 5.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>This week, Brian Musser will be continuing our series on Matthew with Matthew 5.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-01-21T19:15:00-05:00</startDate>
+                        <endDate>2016-01-21T20:30:00-05:00</endDate>
+                        <human>Thu 1/21/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>9</id>
+            <name>Sermon #9</name>
+            <canonical>sexy.drexelforchrist.org/_soft/9</canonical>
+            <address>9</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>654876843</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/654876843</canonical>
+                    <address>654876843</address>
+                    <name>Matthew 6</name>
+                    <abbrev>Mt6</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>1480</id>
+                    <canonical>sexy.drexelforchrist.org/_people/1480</canonical>
+                    <address>1480</address>
+                    <name>
+                        <first>Jordan</first>
+                        <middle></middle>
+                        <last>Schoenberger</last>
+                        <preferred>Jordan</preferred>
+                    </name>
+                </person>
+                <person>
+                    <id>1479</id>
+                    <canonical>sexy.drexelforchrist.org/_people/1479</canonical>
+                    <address>1479</address>
+                    <name>
+                        <first>Tyler</first>
+                        <middle></middle>
+                        <last>Schoenberger</last>
+                        <preferred>Tyler</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>47</id>
+                    <canonical>sexy.drexelforchrist.org/_events/47</canonical>
+                    <address>47</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Disque 108</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-01-28T19:15:00-05:00</startDate>
+                        <endDate>2016-01-28T20:30:00-05:00</endDate>
+                        <human>Thu 1/28/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>5</id>
+            <name>Sermon #5</name>
+            <canonical>sexy.drexelforchrist.org/_soft/5</canonical>
+            <address>5</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>655016136</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/655016136</canonical>
+                    <address>655016136</address>
+                    <name>Matthew 7</name>
+                    <abbrev>Mt7</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>76</id>
+                    <canonical>sexy.drexelforchrist.org/_people/76</canonical>
+                    <address>76</address>
+                    <name>
+                        <first>Bob</first>
+                        <middle></middle>
+                        <last>Hudson</last>
+                        <preferred>Bob</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>48</id>
+                    <canonical>sexy.drexelforchrist.org/_events/48</canonical>
+                    <address>48</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Disque 108</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-02-04T19:15:00-05:00</startDate>
+                        <endDate>2016-02-04T20:30:00-05:00</endDate>
+                        <human>Thu 2/4/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>6</id>
+            <name>Sermon #6</name>
+            <canonical>sexy.drexelforchrist.org/_soft/6</canonical>
+            <address>6</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>655134992</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/655134992</canonical>
+                    <address>655134992</address>
+                    <name>Matthew 8-9</name>
+                    <abbrev>Mt8-9</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>764</id>
+                    <canonical>sexy.drexelforchrist.org/_people/764</canonical>
+                    <address>764</address>
+                    <name>
+                        <first>Carroll</first>
+                        <middle></middle>
+                        <last>Wynne</last>
+                        <preferred>Carroll</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>49</id>
+                    <canonical>sexy.drexelforchrist.org/_events/49</canonical>
+                    <address>49</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Disque 108</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        This week, Carroll Wynne from Tenth will be continuing our series on Matthew with Matthew 8 &amp; 9.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>This week, Carroll Wynne from Tenth will be continuing our series on Matthew with Matthew 8 &amp; 9.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-02-11T19:15:00-05:00</startDate>
+                        <endDate>2016-02-11T20:30:00-05:00</endDate>
+                        <human>Thu 2/11/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>7</id>
+            <name>Sermon #7</name>
+            <canonical>sexy.drexelforchrist.org/_soft/7</canonical>
+            <address>7</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>655429946</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/655429946</canonical>
+                    <address>655429946</address>
+                    <name>Matthew 10</name>
+                    <abbrev>Mt10</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>1477</id>
+                    <canonical>sexy.drexelforchrist.org/_people/1477</canonical>
+                    <address>1477</address>
+                    <name>
+                        <first>Tim</first>
+                        <middle></middle>
+                        <last>Shorey</last>
+                        <preferred>Tim</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>50</id>
+                    <canonical>sexy.drexelforchrist.org/_events/50</canonical>
+                    <address>50</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Disque 108</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        This week, Tim Shorey will be continuing our series on Matthew with chapter 10.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>This week, Tim Shorey will be continuing our series on Matthew with chapter 10.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-02-18T19:15:00-05:00</startDate>
+                        <endDate>2016-02-18T20:30:00-05:00</endDate>
+                        <human>Thu 2/18/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>10</id>
+            <name>Sermon #10</name>
+            <canonical>sexy.drexelforchrist.org/_soft/10</canonical>
+            <address>10</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>655602008</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/655602008</canonical>
+                    <address>655602008</address>
+                    <name>Matthew 11</name>
+                    <abbrev>Mt11</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>1475</id>
+                    <canonical>sexy.drexelforchrist.org/_people/1475</canonical>
+                    <address>1475</address>
+                    <name>
+                        <first>Alex</first>
+                        <middle></middle>
+                        <last>Chen</last>
+                        <preferred>Alex</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>51</id>
+                    <canonical>sexy.drexelforchrist.org/_events/51</canonical>
+                    <address>51</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Disque 108</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        This week, Alex Chen will be continuing our series on Matthew with chapter 11.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>This week, Alex Chen will be continuing our series on Matthew with chapter 11.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-02-25T19:15:00-05:00</startDate>
+                        <endDate>2016-02-25T20:30:00-05:00</endDate>
+                        <human>Thu 2/25/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>8</id>
+            <name>Sermon #8</name>
+            <canonical>sexy.drexelforchrist.org/_soft/8</canonical>
+            <address>8</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>655724938</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/655724938</canonical>
+                    <address>655724938</address>
+                    <name>Matthew 12</name>
+                    <abbrev>Mt12</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>32</id>
+                    <canonical>sexy.drexelforchrist.org/_people/32</canonical>
+                    <address>32</address>
+                    <name>
+                        <first>Branden</first>
+                        <middle></middle>
+                        <last>Tolle</last>
+                        <preferred>Branden</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>52</id>
+                    <canonical>sexy.drexelforchrist.org/_events/52</canonical>
+                    <address>52</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Disque 108</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        This week, Branden Tolle will be continuing our series on Matthew with chapter 12.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>This week, Branden Tolle will be continuing our series on Matthew with chapter 12.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-03-03T19:15:00-05:00</startDate>
+                        <endDate>2016-03-03T20:30:00-05:00</endDate>
+                        <human>Thu 3/3/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>11</id>
+            <name>Sermon #11</name>
+            <canonical>sexy.drexelforchrist.org/_soft/11</canonical>
+            <address>11</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="1">
+                    <id>655929796</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/655929796</canonical>
+                    <address>655929796</address>
+                    <name>Matthew 13</name>
+                    <abbrev>Mt13</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>53</id>
+                    <canonical>sexy.drexelforchrist.org/_events/53</canonical>
+                    <address>53</address>
+                    <name>Large Group</name>
+                    <subtitle>Winter 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>Disque 108</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        This week, Lawrence Lockett will be continuing our series on Matthew with chapter 13.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>This week, Lawrence Lockett will be continuing our series on Matthew with chapter 13.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-03-10T19:15:00-05:00</startDate>
+                        <endDate>2016-03-10T20:30:00-05:00</endDate>
+                        <human>Thu 3/10/2016&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>13</id>
+            <name>Sermon #13</name>
+            <canonical>sexy.drexelforchrist.org/_soft/13</canonical>
+            <address>13</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="">
+                    <id>658695214</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/658695214</canonical>
+                    <address>658695214</address>
+                    <name>Matthew 28:20</name>
+                    <abbrev>Mt28.20</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>42</id>
+                    <canonical>sexy.drexelforchrist.org/_events/42</canonical>
+                    <address>42</address>
+                    <name>Large Group</name>
+                    <subtitle>Christmas Edition</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>CAT 061</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        Andrew Kalvelage from Covenant Community Church will be speaking on The Church.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>Andrew Kalvelage from Covenant Community Church will be speaking on The Church.</p>
+                    </description>
+                    <when>
+                        <startDate>2015-12-03T19:15:00-05:00</startDate>
+                        <endDate>2015-12-03T20:30:00-05:00</endDate>
+                        <human>Thu 12/3/2015&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>1</id>
+            <name>Sermon #1</name>
+            <canonical>sexy.drexelforchrist.org/_soft/1</canonical>
+            <address>1</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="">
+                    <id>738697346</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/738697346</canonical>
+                    <address>738697346</address>
+                    <name>Romans 5:6-14</name>
+                    <abbrev>Ro5.6-14</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>750</id>
+                    <canonical>sexy.drexelforchrist.org/_people/750</canonical>
+                    <address>750</address>
+                    <name>
+                        <first>Doug</first>
+                        <middle></middle>
+                        <last>Logan</last>
+                        <preferred>Doug</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>38</id>
+                    <canonical>sexy.drexelforchrist.org/_events/38</canonical>
+                    <address>38</address>
+                    <name>Large Group</name>
+                    <subtitle>Fall 2015</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>CAT 061</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2015-10-29T19:15:00-04:00</startDate>
+                        <endDate>2015-10-29T20:30:00-04:00</endDate>
+                        <human>Thu 10/29/2015&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>12</id>
+            <name>Sermon #12</name>
+            <canonical>sexy.drexelforchrist.org/_soft/12</canonical>
+            <address>12</address>
+            <softmember name="passage" title="Primary Passage">
+                <scripture wholechapters="">
+                    <id>838918163</id>
+                    <canonical>sexy.drexelforchrist.org/_scripture/838918163</canonical>
+                    <address>838918163</address>
+                    <name>Colossians 1:15-20</name>
+                    <abbrev>Col1.15-20</abbrev>
+                </scripture>
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>743</id>
+                    <canonical>sexy.drexelforchrist.org/_people/743</canonical>
+                    <address>743</address>
+                    <name>
+                        <first>Liam</first>
+                        <middle></middle>
+                        <last>Goligher</last>
+                        <preferred>Liam</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>41</id>
+                    <canonical>sexy.drexelforchrist.org/_events/41</canonical>
+                    <address>41</address>
+                    <name>Large Group</name>
+                    <subtitle>Fall 2015</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>confirmed</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name>CAT 061</name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">*Please note the unusual time.*
+
+                        Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.
+
+                        This week, Liam Goligher from Tenth will be speaking on Creation.</description>
+                    <description type="xhtml">
+                        <p>
+                            <em>Please note the unusual time.</em>
+                        </p>
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                        <p>This week, Liam Goligher from Tenth will be speaking on Creation.</p>
+                    </description>
+                    <when>
+                        <startDate>2015-11-19T20:00:00-05:00</startDate>
+                        <endDate>2015-11-19T20:45:00-05:00</endDate>
+                        <human>Thu 11/19/2015&#160;&#8901;&#160;8:00pm&#160;-&#160;8:45pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>21</id>
+            <name>Identity in Christ</name>
+            <canonical>sexy.drexelforchrist.org/_soft/21</canonical>
+            <address>21</address>
+            <softmember name="passage" title="Primary Passage">
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>1098</id>
+                    <canonical>sexy.drexelforchrist.org/_people/1098</canonical>
+                    <address>1098</address>
+                    <name>
+                        <first>Gavin</first>
+                        <middle></middle>
+                        <last>Lymberopoulos</last>
+                        <preferred>Gavin</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="future">
+                    <id>551</id>
+                    <canonical>sexy.drexelforchrist.org/_events/551</canonical>
+                    <address>551</address>
+                    <name>Large Group</name>
+                    <subtitle>Fall 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>tentative</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name></name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>692</id>
+                            <canonical>sexy.drexelforchrist.org/_people/692</canonical>
+                            <address>692</address>
+                            <name>
+                                <first>Alyssa</first>
+                                <middle></middle>
+                                <last>Norbury</last>
+                                <preferred>Alyssa</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-09-22T19:15:00-04:00</startDate>
+                        <endDate>2016-09-22T20:30:00-04:00</endDate>
+                        <human>Thu 9/22&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>23</id>
+            <name>The Exodus</name>
+            <canonical>sexy.drexelforchrist.org/_soft/23</canonical>
+            <address>23</address>
+            <softmember name="passage" title="Primary Passage">
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>742</id>
+                    <canonical>sexy.drexelforchrist.org/_people/742</canonical>
+                    <address>742</address>
+                    <name>
+                        <first>Dave</first>
+                        <middle></middle>
+                        <last>Freer</last>
+                        <preferred>Dave</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="future">
+                    <id>553</id>
+                    <canonical>sexy.drexelforchrist.org/_events/553</canonical>
+                    <address>553</address>
+                    <name>Large Group</name>
+                    <subtitle>Fall 2016</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>tentative</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name></name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>692</id>
+                            <canonical>sexy.drexelforchrist.org/_people/692</canonical>
+                            <address>692</address>
+                            <name>
+                                <first>Alyssa</first>
+                                <middle></middle>
+                                <last>Norbury</last>
+                                <preferred>Alyssa</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2016-10-06T19:15:00-04:00</startDate>
+                        <endDate>2016-10-06T20:30:00-04:00</endDate>
+                        <human>Thu 10/6&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>18</id>
+            <name>Sermon #18</name>
+            <canonical>sexy.drexelforchrist.org/_soft/18</canonical>
+            <address>18</address>
+            <softmember name="passage" title="Primary Passage">
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>758</id>
+                    <canonical>sexy.drexelforchrist.org/_people/758</canonical>
+                    <address>758</address>
+                    <name>
+                        <first>Joel</first>
+                        <middle></middle>
+                        <last>Shorey</last>
+                        <preferred>Joel</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>20</id>
+                    <canonical>sexy.drexelforchrist.org/_events/20</canonical>
+                    <address>20</address>
+                    <name>Large Group</name>
+                    <subtitle>Spring 2015</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>tentative</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name></name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2015-06-04T19:15:00-04:00</startDate>
+                        <endDate>2015-06-04T20:30:00-04:00</endDate>
+                        <human>Thu 6/4/2015&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>14</id>
+            <name>Sermon #14</name>
+            <canonical>sexy.drexelforchrist.org/_soft/14</canonical>
+            <address>14</address>
+            <softmember name="passage" title="Primary Passage">
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>738</id>
+                    <canonical>sexy.drexelforchrist.org/_people/738</canonical>
+                    <address>738</address>
+                    <name>
+                        <first>John</first>
+                        <middle></middle>
+                        <last>Davis</last>
+                        <preferred>John</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>12</id>
+                    <canonical>sexy.drexelforchrist.org/_events/12</canonical>
+                    <address>12</address>
+                    <name>Large Group</name>
+                    <subtitle>Spring 2015</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>tentative</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name></name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2015-04-09T19:15:00-04:00</startDate>
+                        <endDate>2015-04-09T20:30:00-04:00</endDate>
+                        <human>Thu 4/9/2015&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>15</id>
+            <name>Sermon #15</name>
+            <canonical>sexy.drexelforchrist.org/_soft/15</canonical>
+            <address>15</address>
+            <softmember name="passage" title="Primary Passage">
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>734</id>
+                    <canonical>sexy.drexelforchrist.org/_people/734</canonical>
+                    <address>734</address>
+                    <name>
+                        <first>Jeff</first>
+                        <middle></middle>
+                        <last>Boettcher</last>
+                        <preferred>Jeff</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>13</id>
+                    <canonical>sexy.drexelforchrist.org/_events/13</canonical>
+                    <address>13</address>
+                    <name>Large Group</name>
+                    <subtitle>Spring 2015</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>tentative</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name></name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2015-04-16T19:15:00-04:00</startDate>
+                        <endDate>2015-04-16T20:30:00-04:00</endDate>
+                        <human>Thu 4/16/2015&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>16</id>
+            <name>Sermon #16</name>
+            <canonical>sexy.drexelforchrist.org/_soft/16</canonical>
+            <address>16</address>
+            <softmember name="passage" title="Primary Passage">
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+                <person>
+                    <id>742</id>
+                    <canonical>sexy.drexelforchrist.org/_people/742</canonical>
+                    <address>742</address>
+                    <name>
+                        <first>Dave</first>
+                        <middle></middle>
+                        <last>Freer</last>
+                        <preferred>Dave</preferred>
+                    </name>
+                </person>
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>15</id>
+                    <canonical>sexy.drexelforchrist.org/_events/15</canonical>
+                    <address>15</address>
+                    <name>Large Group</name>
+                    <subtitle>Spring 2015</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>tentative</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name></name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2015-04-30T19:15:00-04:00</startDate>
+                        <endDate>2015-04-30T20:30:00-04:00</endDate>
+                        <human>Thu 4/30/2015&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+        <softobject type="sermon" singular="Sermon" plural="Sermons">
+            <id>17</id>
+            <name>Sermon #17</name>
+            <canonical>sexy.drexelforchrist.org/_soft/17</canonical>
+            <address>17</address>
+            <softmember name="passage" title="Primary Passage">
+            </softmember>
+            <softmember name="speaker" title="Speaker">
+            </softmember>
+            <softmember name="event" title="Event">
+                <event tense="past">
+                    <id>17</id>
+                    <canonical>sexy.drexelforchrist.org/_events/17</canonical>
+                    <address>17</address>
+                    <name>Large Group</name>
+                    <subtitle>Spring 2015</subtitle>
+                    <userPermission>1</userPermission>
+                    <eventStatus>tentative</eventStatus>
+                    <eventStatusReason></eventStatusReason>
+                    <location>
+                        <id></id>
+                        <name></name>
+                        <!-- KURTZ location stuff -->
+
+                    </location>
+                    <owner>
+                        <person>
+                            <id>22</id>
+                            <canonical>sexy.drexelforchrist.org/_people/22</canonical>
+                            <address>22</address>
+                            <name>
+                                <first>Ariel</first>
+                                <middle></middle>
+                                <last>Miller</last>
+                                <preferred>Ariel</preferred>
+                            </name>
+                        </person>
+                    </owner>
+                    <description type="text">Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</description>
+                    <description type="xhtml">
+                        <p>Drexel Students for Christ seeks to build community. One of the ways we do that is through our weekly Large Group meetings where we worship our Savior and hear His word, as delivered by a local pastor.</p>
+                    </description>
+                    <when>
+                        <startDate>2015-05-14T19:15:00-04:00</startDate>
+                        <endDate>2015-05-14T20:30:00-04:00</endDate>
+                        <human>Thu 5/14/2015&#160;&#8901;&#160;7:15pm&#160;-&#160;8:30pm</human>
+                    </when>
+                </event>
+            </softmember>
+            <softmember name="media" title="Media">
+            </softmember>
+        </softobject>
+    </softclass>
+</brilliant>

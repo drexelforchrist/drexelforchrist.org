@@ -7,10 +7,9 @@ if (isset($_SERVER['QUERY_STRING'])) {
 //	$requestedContent = explode("/", $requestedContent)[1];
 }
 
+
+
 if (file_exists($requestedContent)) {
-	loadAndProcess($requestedContent);
-	die();
-} else if (strpos($_SERVER['QUERY_STRING'], 'xslExport') !== false) {
 	loadAndProcess($requestedContent);
 	die();
 } else {
@@ -41,8 +40,8 @@ function loadAndProcess($requestedContent) {
 
 	// Determine which XSL file to use... first, anyway.
 	$matches = [];
-	while (preg_match('/href=\"([A-Za-z\_\/.]+)\"[\w]*\?>/', $requestedContent, $matches)) {
-		$matches[1] = substr($matches[1], 13);
+	while (preg_match('/href=\"([A-Za-z\_\/.\$]+)\"[\w]*\?>/', $requestedContent, $matches)) {
+		$matches[1] = str_replace("/_formatting/","", $matches[1]);
 
 		$xslContent = file_get_contents($matches[1]);
 
@@ -67,11 +66,9 @@ function loadAndProcess($requestedContent) {
 
 		// Configure the transformer
 		$proc = new XSLTProcessor;
-		$proc->importStyleSheet($xsl);
+		$proc->importStylesheet($xsl);
 
-		//var_dump();
-
-		$requestedContent = $proc->transformToXML($xml);
+		$requestedContent = $proc->transformToXml($xml);
 
 	}
 
