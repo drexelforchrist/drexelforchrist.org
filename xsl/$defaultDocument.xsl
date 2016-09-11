@@ -98,4 +98,8 @@
         <!--</a>-->
     </xsl:template>
 
+    <xsl:template match="img">
+        <xsl:copy-of select=".." />
+    </xsl:template>
+
 </xsl:stylesheet>
