@@ -104,6 +104,8 @@ The logo is not required on slides beyond the Welcome slide.  In fact, tbe best 
 
 Drexel Students for Christ primarily uses three specific fonts.  There is significant freedom available to the designer in regards to fonts, but all fonts should always be used carefully, with awareness that font provides the tone of written communication.  
 
+Never, under any circumstances, should "default" fonts be used, unless that default is set by a Drexel Students for Christ template and is one of the fonts enumerated below.   
+
 ### Novecento Wide
 
 The Novecento Wide font family is the primary display typeface for headings and other prominent text.  It is a strong, but approachable font, and should be associated with hallmark Drexel Students for Christ activities, such as Large Groups and Small Groups.  [Novecento Wide is available here](https://www.fontsquirrel.com/fonts/novecento-wide). 
@@ -132,6 +134,18 @@ Light and Lightweightness
 
 Minimal effects and filters
 
+### The Medium is the Message[^1]
+
+[^1]: The phrase, "The Medium is the Message" is a hallmark phrase coined by Marshall McLuhan, that describes how different means of communication carry their messages differently. For more, see [the Wikipedia article on the phrase](https://en.wikipedia.org/wiki/The_medium_is_the_message) or take [DIGM 105](http://catalog.drexel.edu/search/?P=DIGM%20105). 
+
+When preparing artwork, consider the medium the artwork will assume.  Generally, there should be different, but related, versions of artwork for every different medium.  Make sure that the image size (particularly, the ratio) is appropriate, so that images are displayed in their proper form, and are not cropped awkwardly.  
+
+Always consider what amount of information is appropriate given the particular medium.  For instance, if the artwork is for online posting, many of the logical details should be left out of the image, because those details are presented immediately adjacent when the artwork is posted.  For projection slides, information can be provided adjacent, in the form of what the presenter is saying.  
+
+For instance, a projection slide should never be uploaded to social media as-is: the size is almost certainly wrong, and there's going to be excessive and duplicate information. 
+
+Simplicity is a key part of design, not only for our branding, but for design in general.  Excessive or redundant information only adds clutter.   
+
 ### Core Media
 
 These are the ministry's front line; the things people see when they're first introduced to Drexel Students for Christ.  This includes any fliers, slides, and any other artwork designed to inform the campus or general public about core events that are integral to the character of Drexel Students for Christ.  Because these events are integral to the character of Drexel Students for Christ, representing them well is integral to the visual identity of Drexel Students for Christ.  
@@ -154,3 +168,5 @@ Email should always be used sparingly, and should always be accurate so as to pr
 ## Colors
 
 A full list of the colors used as part of the Drexel Students for Christ logo are included in the Media Kit.  While designers are welcome to use any natural color they deem appropriate (neon colors, for instance, are not natural and are never appropriate), they may wish to consider using colors within the branding, particularly if addressing different values.
+
+## Footnotes
