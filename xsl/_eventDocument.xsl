@@ -225,14 +225,34 @@
                                 <td itemprop="name"><xsl:value-of select="location/name" /></td>
                             </tr>
                         </xsl:if>
+                        <xsl:if test="related/softobject[@type='sermon']/softmember[@name='passage']" >
+                            <tr>
+                                <td>Passage:</td>
+                                <td><xsl:apply-templates select="related/softobject[@type='sermon']/softmember[@name='passage']" /></td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="related/softobject[@type='sermon']/softmember[@name!='speaker']" >
+                            <tr>
+                                <td>Speaker:</td>
+                                <td><xsl:for-each select="related/softobject[@type='sermon']/softmember[@name='speaker']">
+                                    <xsl:apply-templates select="*[1]" />
+                                    <xsl:for-each select="*[position() > 1]">
+                                        <br /><xsl:apply-templates select="*/.." />
+                                    </xsl:for-each>
+                                </xsl:for-each></td>
+                            </tr>
+                        </xsl:if>
+                        <xsl:if test="related/softobject[@type='sermon']/name" >
+                            <tr>
+                                <td>Topic:</td>
+                                <td><xsl:value-of select="related/softobject[@type='sermon']/name" /></td>
+                            </tr>
+                        </xsl:if>
                         <xsl:if test="owner/person/name/first != ''" >
                             <tr>
                                 <td>Coordinator:</td>
                                 <td>
-                                    <a>
-                                        <xsl:attribute name="href">//<xsl:value-of select="owner/person/canonical/text()" /></xsl:attribute>
-                                        <xsl:value-of select="owner/person/name/preferred" />&#160;<xsl:value-of select="owner/person/name/last" />
-                                    </a>
+                                    <xsl:apply-templates select="owner" />
                                 </td>
                             </tr>
                         </xsl:if>
@@ -284,5 +304,19 @@
                 </xsl:if>
             </content>
         </document>
+    </xsl:template>
+
+    <xsl:template match="person">
+        <a>
+            <xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>
+            <b><xsl:value-of select="name/preferred" />&#160;<xsl:value-of select="name/last" /></b>
+        </a>
+    </xsl:template>
+
+    <xsl:template match="scripture">
+        <!--<a>-->
+        <!--<xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>-->
+        <b><xsl:value-of select="name" /></b>
+        <!--</a>-->
     </xsl:template>
 </xsl:stylesheet>
