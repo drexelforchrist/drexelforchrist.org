@@ -206,7 +206,7 @@
             <id><xsl:value-of select="id" /></id>
             <summary><xsl:value-of select="when/human" /> &#8901; <xsl:value-of select="description" /></summary>
             <content type="xhtml">
-                <section>
+                <section itemprop="description">
                     <xsl:copy-of select="description[@type='xhtml']/*" />
                 </section>
                 <section>
@@ -234,7 +234,7 @@
                         <xsl:if test="related/softobject[@type='sermon']/softmember[@name!='speaker']" >
                             <tr>
                                 <td>Speaker:</td>
-                                <td><xsl:for-each select="related/softobject[@type='sermon']/softmember[@name='speaker']">
+                                <td itemprop="performer"><xsl:for-each select="related/softobject[@type='sermon']/softmember[@name='speaker']">
                                     <xsl:apply-templates select="*[1]" />
                                     <xsl:for-each select="*[position() > 1]">
                                         <br /><xsl:apply-templates select="*/.." />
@@ -307,9 +307,9 @@
     </xsl:template>
 
     <xsl:template match="person">
-        <a>
+        <a itemscope="" itemtype="http://schema.org/Person">
             <xsl:attribute name="href">//<xsl:value-of select="canonical/text()" /></xsl:attribute>
-            <b><xsl:value-of select="name/preferred" />&#160;<xsl:value-of select="name/last" /></b>
+            <b itemprop="name"><xsl:value-of select="name/preferred" />&#160;<xsl:value-of select="name/last" /></b>
         </a>
     </xsl:template>
 
