@@ -259,7 +259,7 @@
                                             <!--<a href="/events/sr16">spring retreat</a>-->
                                         <!--</li>-->
                                         <li>
-                                            <a href="/smallgroups">growth groups</a>
+                                            <a href="/smallgroups">small groups</a>
                                         </li>
                                         <li>
                                             <a href="/lg">large group</a>
