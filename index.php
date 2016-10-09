@@ -1,3 +1,4 @@
+<base href="https://drexelforchrist.org" />
 <?php
 
 $requestedContent = "index.xml";
