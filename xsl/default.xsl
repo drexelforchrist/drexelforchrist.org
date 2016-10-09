@@ -166,7 +166,7 @@
                 <xsl:choose>
                     <xsl:when test="$styleClass = 'community'">
                         <div class="background" id="communityBackground">
-                            <img src="%%host:cdn%%/backgrounds/bg_hanes_Community.jpg" alt="" />
+                            <img src="%%host:cdn%%/backgrounds/bg_hanes_Community_ScaledOptimized.jpg" alt="" />
                         </div>
                     </xsl:when>
                     <xsl:when test="$styleClass = 'church'">
@@ -365,8 +365,8 @@
                         <xsl:attribute name="itemtype"><xsl:value-of select="brilliant/document/itemscope/@itemtype" /></xsl:attribute>
                     </xsl:if>
 
-                    <xsl:if test="brilliant/document/content/div[@class = 'map']" >
-                        <xsl:copy-of select="brilliant/document/content/div[@class = 'map']" />
+                    <xsl:if test="brilliant/document/content/img[@class = 'header']" >
+                        <xsl:copy-of select="brilliant/document/content/img[@class = 'header']" />
                     </xsl:if>
 
                     <xsl:if test="not(brilliant/document/template/notitle)" >
@@ -382,7 +382,7 @@
                     </xsl:if>
 
                     <xsl:for-each select="brilliant/document/content">
-                        <xsl:copy-of select="*[not(@class = 'map')]" />
+                        <xsl:copy-of select="*[not(@class = 'header')]" />
                     </xsl:for-each>
 
                 </main>

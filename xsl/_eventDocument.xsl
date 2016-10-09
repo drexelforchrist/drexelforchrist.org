@@ -98,10 +98,23 @@
             <canonical><xsl:value-of select="canonical" /></canonical>
             <template>
                 <name><xsl:value-of select="eventCalendar/address" /></name>
+                <xsl:if test="related/softobject[@type='eventHeader']/softmember[@name='image']/img" >
+                    <notitle />
+                </xsl:if>
             </template>
             <id><xsl:value-of select="id" /></id>
             <summary><xsl:value-of select="description[@type='text']" /></summary>
             <content type="xhtml">
+                <xsl:if test="related/softobject[@type='eventHeader']/softmember[@name='image']/img" >
+                    <img class="header">
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="related/softobject[@type='eventHeader']/softmember[@name='image']/img/@src" />
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                            <xsl:value-of select="name" />
+                        </xsl:attribute>
+                    </img>
+                </xsl:if>
                 <section>
                     <xsl:copy-of select="description[@type='xhtml']/*" />
                 </section>
@@ -202,10 +215,23 @@
             <canonical><xsl:value-of select="canonical" /></canonical>
             <template>
                 <name><xsl:value-of select="eventCalendar/address" /></name>
+                <xsl:if test="related/softobject[@type='eventHeader']/softmember[@name='image']/img" >
+                    <notitle />
+                </xsl:if>
             </template>
             <id><xsl:value-of select="id" /></id>
             <summary><xsl:value-of select="when/human" /> &#8901; <xsl:value-of select="description" /></summary>
             <content type="xhtml">
+                <xsl:if test="related/softobject[@type='eventHeader']/softmember[@name='image']/img" >
+                    <img class="header">
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="related/softobject[@type='eventHeader']/softmember[@name='image']/img/@src" />
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                            <xsl:value-of select="name" />
+                        </xsl:attribute>
+                    </img>
+                </xsl:if>
                 <section itemprop="description">
                     <xsl:copy-of select="description[@type='xhtml']/*" />
                 </section>

@@ -374,12 +374,13 @@ nav#header {
 
 //// Body
 main#corset {
-    & > div.map,
     & > img {
         width:100%; // max of 1000
-        padding-bottom: 33%; // max of 330, 'cause bottom padding is based on width.  http://stackoverflow.com/questions/1495407/css-maintain-div-aspect-ratio
+        max-height:330px;
     }
     & > div.map {
+        width:100%; // max of 1000
+        padding-bottom: 33%; // max of 330, 'cause bottom padding is based on width.  http://stackoverflow.com/questions/1495407/css-maintain-div-aspect-ratio
         opacity: 0.94; // matches max opacity of section blocks
     }
     & > section {
