@@ -1,4 +1,3 @@
-<base href="https://drexelforchrist.org" />
 <?php
 
 $requestedContent = "index.xml";
@@ -20,6 +19,8 @@ if (file_exists($requestedContent)) {
 
 
 function loadAndProcess($requestedContent) {
+
+	echo "<base href=\"https://drexelforchrist.org\" />";
 
 	// Load the configuration
 	$hostReplacements = [];
