@@ -415,14 +415,19 @@ main#corset {
     & > section.expandable {
         position: relative;
     }
-    & > section.expandable * {
-        transition: height 1s, opacity 1s;
+    & > section.expandable > * {
+        display:block;
+        opacity:1;
+        max-height:100%;
+        transition: max-height 0.2s, opacity 0.5s, margin 0.2s, padding 0.2s;
     }
-    & > section.expandable.expandable-closed *:not(.expandable-toggle):not(h2) {
-        height: 0;
+    & > section.expandable.expandable-closed > *:not(.expandable-toggle):not(h2) {
+        max-height: 0;
         overflow: hidden;
-        margin: 0;
-        padding: 0;
+        margin-top: 0;
+        margin-bottom:0;
+        padding-top: 0;
+        padding-bottom: 0;
         opacity: 0;
     }
     & > section.expandable > a.expandable-toggle {
