@@ -1,3 +1,112 @@
+
+
+/* BLOCKS & COLUMNS */
+main#corset {
+    max-width:590px;
+    margin: 0.5em 0 35px auto;
+}
+
+.frontColumn {
+    float: left;
+    position: relative;
+    z-index: 800;
+}
+
+.frontTile {
+    text-align: left;
+    width: 170px;
+    min-width: 170px;
+    margin: 0 0 8px 8px;
+    padding: 8px;
+    background: rgba(102,204,255,.9);
+}
+
+.frontTile em {
+    font-family: 'Novecento wide Book', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
+    margin:0;
+    font-size:1.3em;
+    line-height:1.1em;
+    display: block;
+    font-style: normal;
+}
+
+.frontTile span.frontHead {
+    font-family: 'Novecento wide Bold', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
+    font-size: 2.2em;
+    letter-spacing: -1px;
+    line-height: 0.9em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    -moz-transition: all .5s, -moz-transform .5s;
+    -webkit-transition: all .5s, -webkit-transform .5s;
+    -o-transition: all .5s,-o-transform .5s;
+    display: block;
+}
+
+.frontTile a.more {
+    font-family: 'Novecento wide Bold', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
+    font-size:0.8em;
+    color:#3a3a3a;
+    text-decoration:none;
+}
+
+.frontTile a.more:hover {
+    color:rgb(248,193,44);
+}
+
+.frontTile a.button {
+    display:block;
+    text-align:center;
+    padding:.2em .5em .3em;
+    background:rgb(248,193,44);
+    font-family: 'Novecento wide Bold', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
+    font-size:1.4em;
+    color:#3a3a3a;
+    text-decoration:none;
+    transition:background 0.3s;
+    letter-spacing:-0.04em;
+}
+
+.frontTile a.button:hover {
+    color:rgb(64,159,216);
+    background:rgb(247,221,46);
+}
+
+@media screen and (max-width: 600px) {
+    .frontColumn {
+        float: none;
+    }
+    .frontTile {
+        width: inherit;
+        margin-right: 8px;
+        margin-left:8px;
+        padding-left: 2.7em;
+        position: relative;
+        min-height: 50px;
+        min-width: 200px;
+    }
+    .frontTile span.frontHead {
+        transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        font-size: 1.2em;
+        display: block;
+        text-align: right;
+        width: 100px;
+        top: 35px;
+        left: -30px;
+        right: auto;
+        bottom: auto;
+        position: absolute;
+    }
+}
+
+
+
+/* EVENT TILES */
+
 div#eventTileContainer {
     margin-top:4px;
 }
