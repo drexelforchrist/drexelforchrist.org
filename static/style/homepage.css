@@ -49,7 +49,7 @@ a.eventTile div span {
 
 a.eventTile div span span {
     font-family: 'Novecento wide Bold', "Segoe UI", "Lucida Grande", Tahoma, Arial, sans-serif;
-    display:inline-block;
+    display:block;
     max-width:100%;
     overflow:hidden;
 
