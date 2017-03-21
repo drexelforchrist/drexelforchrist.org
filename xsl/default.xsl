@@ -116,7 +116,7 @@
                 </meta>
                 <!--<meta name="twitter:creator" content="@author_handle">-->
                 <!-- Twitter Summary card images must be at least 120x120px -->
-                <meta property="twitter:image">
+                <meta name="twitter:image">
                     <xsl:attribute name="content">http://13.drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(brilliant/document/canonical, 21)" /></xsl:attribute>
                 </meta>
 
