@@ -4,17 +4,23 @@ $requestedContent = "index.xml";
 
 if (isset($_SERVER['QUERY_STRING'])) {
 	$requestedContent = $_SERVER['QUERY_STRING'];
-//	$requestedContent = explode("/", $requestedContent)[1];
 }
 
+
+if ($requestedContent=='export') {
+	include_once 'exportAll.php';
+	die();
+}
 
 
 if (file_exists($requestedContent)) {
 	loadAndProcess($requestedContent);
 	die();
-} else {
-	directoryListing();
 }
+
+
+directoryListing();
+
 
 
 
@@ -39,6 +45,11 @@ function loadAndProcess($requestedContent) {
 
 	// Load the XML file.
 	$requestedContent = file_get_contents($requestedContent);
+
+	// replace any strings in static pages
+	foreach ($hostReplacements as $needle => $replacement) {
+		$requestedContent = str_replace("%%" . $needle . "%%", $replacement, $requestedContent);
+	}
 
 	// Determine which XSL file to use... first, anyway.
 	$matches = [];
@@ -79,7 +90,7 @@ function loadAndProcess($requestedContent) {
 
 
 function directoryListing() {
-	echo "<p><a href=\"?xslExport\" >XSL Export...</a></p>";
+	echo "<p><a href=\"export\" >export all XSLs to 'xsl_export' dir...</a></p>";
 
 	if ($handle = opendir('.')) {
 		echo "<p>Choose a content file:</p><ul>";

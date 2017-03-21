@@ -14,3 +14,4 @@ static/fonts/*.woff2
 cdn/fonts/*.woff2
 static/fonts/*import.css
 cdn/fonts/*import.css
+/xsl_export/

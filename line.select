@@ -1,0 +1,21 @@
+# Used to tell the 'line' command which files to count or ignore.
+# https://github.com/MorganZhang100/line-counter
+
+# Include:
+*.php
+*.xsl
+*.md
+*.html
+
+*.less
+*.css
+
+*.js
+
+# Ignore:
+!libs/**
+!.elasticbeanstalk/**
+
+!cdn/**.css
+!**.min.css
+!**.min.**

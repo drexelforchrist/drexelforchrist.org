@@ -1,4 +1,6 @@
-#host:cdn	http://cdn.drexelforchrist.com/formatting
+## One hash makes the thing useful for export.  Multiple hashes make a comment.
+
+#host:cdn	https://cdn.drexelforchrist.com/formatting
 #host:static	/_formatting/static
 host:cdn	http://sexy.drexelforchrist.org:8000/DrexelForChrist/ideas/xsl/cdn
 host:static	http://sexy.drexelforchrist.org:8000/DrexelForChrist/ideas/xsl/static
