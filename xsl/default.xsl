@@ -365,6 +365,10 @@
                     <xsl:if test="brilliant/document/itemscope[@itemtype]">
                         <xsl:attribute name="itemscope" />
                         <xsl:attribute name="itemtype"><xsl:value-of select="brilliant/document/itemscope/@itemtype" /></xsl:attribute>
+                        
+                        <meta itemprop="url">
+                            <xsl:attribute name="content">//<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
+                        </meta>
                     </xsl:if>
 
                     <xsl:if test="brilliant/document/content/img[@class = 'header']" >
