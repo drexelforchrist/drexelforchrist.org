@@ -367,7 +367,7 @@
                         <xsl:attribute name="itemtype"><xsl:value-of select="brilliant/document/itemscope/@itemtype" /></xsl:attribute>
                         
                         <meta itemprop="url">
-                            <xsl:attribute name="content">//<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
+                            <xsl:attribute name="content">https://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
                         </meta>
                     </xsl:if>
 
