@@ -368,10 +368,11 @@
                     </xsl:if>
 
                     <xsl:if test="brilliant/document/content/img[@class = 'header']" >
-                        <xsl:copy-of select="brilliant/document/content/img[@class = 'header']" />
+                        <xsl:apply-templates select="brilliant/document/content/img[@class = 'header']" />
                     </xsl:if>
 
-                    <xsl:if test="not(brilliant/document/template/notitle)" >
+                    <xsl:choose>
+                        <xsl:when test="not(brilliant/document/template/notitle)" >
                         <h1 class="noPrint">
                             <xsl:if test="brilliant/document/itemscope[@itemtype]">
                                 <xsl:attribute name="itemprop">name</xsl:attribute>
@@ -381,7 +382,16 @@
                                 //&#160;<xsl:value-of select="brilliant/document/subtitle" />
                             </xsl:if>
                         </h1>
-                    </xsl:if>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <meta itemprop="name">
+                                <xsl:attribute name="content">
+                                    <xsl:value-of select="brilliant/document/title"/>
+                                    <xsl:if test="brilliant/document/subtitle != ''">&#160;//&#160;<xsl:value-of select="brilliant/document/subtitle" /></xsl:if>
+                                </xsl:attribute>
+                            </meta>
+                        </xsl:otherwise>
+                    </xsl:choose>
 
                     <xsl:for-each select="brilliant/document/content">
                         <xsl:copy-of select="*[not(@class = 'header')]" />
@@ -462,4 +472,18 @@
             <b><xsl:value-of select="name/preferred" />&#160;<xsl:value-of select="name/last" /></b>
         </a>
     </xsl:template>
+
+    <xsl:template match="brilliant/document/content/img[@class = 'header']" >
+        <xsl:copy>
+            <xsl:attribute name="itemprop">image</xsl:attribute>
+            <xsl:apply-templates select="@*|node()" />
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="@*|node()">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()" />
+        </xsl:copy>
+    </xsl:template>
+
 </xsl:stylesheet>
