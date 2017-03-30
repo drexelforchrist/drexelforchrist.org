@@ -277,6 +277,9 @@ nav#header ul#topNav input {
   font-size: 1em;
   text-align: center;
 }
+main#corset {
+  display: block;
+}
 main#corset > img {
   width: 100%;
   max-height: 330px;
