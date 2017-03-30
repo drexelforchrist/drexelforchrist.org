@@ -21,23 +21,23 @@ if (typeof window.DOMParser != "undefined") {
 
 function tileListener () {
     var xml = parseXml(this.responseText),
-        tileItr = xml.evaluate("//softobject[@type='eventTile']", xml, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE),
+        tileItr = xml.evaluate("//softobject[@type='eventTile']", xml, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null),
         tile,
         container = document.getElementById('eventTileContainer');
 
     container.innerHTML = '';
 
     while (tile = tileItr.iterateNext()) {
-        var evtN = xml.evaluate("softmember[@name='event']/event[@tense='future']", tile, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue;
-        var imgUrl = xml.evaluate("softmember[@name='image']/img/@src", tile, null, XPathResult.ANY_UNORDERED_NODE_TYPE).singleNodeValue.textContent;
+        var evtN = xml.evaluate("softmember[@name='event']/event[@tense='future']", tile, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+        var imgUrl = xml.evaluate("softmember[@name='image']/img/@src", tile, null, XPathResult.ANY_UNORDERED_NODE_TYPE, null).singleNodeValue.textContent;
         var evt = {};
 
-        evt.name = xml.evaluate('name', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.textContent;
-        evt.url = "//" + xml.evaluate('canonical', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.textContent;
-        evt.subtitle = xml.evaluate('subtitle', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.textContent;
-        evt.color = xml.evaluate('eventCalendar/address', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.textContent;
-        evt.where = xml.evaluate('location/name', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.textContent.split(',')[0];
-        evt.when = xml.evaluate('when/human', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.textContent.replace(/[\u22c5<>]/gim,"<br />");
+        evt.name = xml.evaluate('name', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent;
+        evt.url = "//" + xml.evaluate('canonical', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent;
+        evt.subtitle = xml.evaluate('subtitle', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent;
+        evt.color = xml.evaluate('eventCalendar/address', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent;
+        evt.where = xml.evaluate('location/name', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.split(',')[0];
+        evt.when = xml.evaluate('when/human', evtN, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.textContent.replace(/[\u22c5<>]/gim,"<br />");
 
         console.log(evt);
 
@@ -95,8 +95,6 @@ oReq.send();
 
 /* START LG PREACHING PREVIEW */
 
-var speaker;
-
 function lgListener () {
     var xml = parseXml(this.responseText),
         container = document.getElementById('lgInfo'),
@@ -107,7 +105,7 @@ function lgListener () {
     str += "Large Group will be <b>" + xml.getElementsByTagName('human')[0].childNodes[0].nodeValue.replace("⋅", "</b>at<b>").split("-")[0].trim() + "</b>";
 
     // location if available
-    var location = xml.evaluate("/brilliant/event/location/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML;
+    var location = xml.evaluate("/brilliant/event/location/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML;
     if (location != null && location != '') {
         str += " in <b>" + location + "</b>";
     }
@@ -116,8 +114,8 @@ function lgListener () {
     str += '.';
 
     // speaker
-    var speakerFirst = xml.evaluate("//softmember[@name='speaker']/person/name/preferred", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML,
-        speakerLast = xml.evaluate("//softmember[@name='speaker']/person/name/last", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML;
+    var speakerFirst = xml.evaluate("//softmember[@name='speaker']/person/name/preferred", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML,
+        speakerLast = xml.evaluate("//softmember[@name='speaker']/person/name/last", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML;
 
 
 
@@ -125,7 +123,7 @@ function lgListener () {
 
 
     // topic
-    var topic = xml.evaluate("/brilliant/event/related/softobject[@type='sermon']/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML;
+    var topic = xml.evaluate("/brilliant/event/related/softobject[@type='sermon']/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML;
     str += " on " + topic;
 
     // period for that second sentence.
@@ -133,7 +131,7 @@ function lgListener () {
 
 
     // details link
-    var href = xml.evaluate("/brilliant/event/canonical", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML,
+    var href = xml.evaluate("/brilliant/event/canonical", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML,
         a = document.createElement('a'),
         br = document.createElement('br');
     a.setAttribute('href', '//' + href);
