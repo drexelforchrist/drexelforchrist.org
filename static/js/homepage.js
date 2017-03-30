@@ -92,3 +92,64 @@ oReq.open("GET", "/$eventTile.oml?event:tense=future");
 oReq.send();
 
 /* END EVENT TILE STUFF */
+
+/* START LG PREACHING PREVIEW */
+
+var speaker;
+
+function lgListener () {
+    var xml = parseXml(this.responseText),
+        container = document.getElementById('lgInfo'),
+        str = '';
+    container.innerHTML = '';
+
+    // date and time.
+    str += "Large Group will be <b>" + xml.getElementsByTagName('human')[0].childNodes[0].nodeValue.replace("⋅", "</b>at<b>").split("-")[0].trim() + "</b>";
+
+    // location if available
+    var location = xml.evaluate("/brilliant/event/location/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML;
+    if (location != null && location != '') {
+        str += " in <b>" + location + "</b>";
+    }
+
+    // period for that first sentence.
+    str += '.';
+
+    // speaker
+    var speakerFirst = xml.evaluate("//softmember[@name='speaker']/person/name/preferred", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML,
+        speakerLast = xml.evaluate("//softmember[@name='speaker']/person/name/last", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML;
+
+
+
+    str += "  <b>" + speakerFirst + " " + speakerLast + "</b> will be speaking";
+
+
+    // topic
+    var topic = xml.evaluate("/brilliant/event/related/softobject[@type='sermon']/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML;
+    str += " on " + topic;
+
+    // period for that second sentence.
+    str += '.';
+
+
+    // details link
+    var href = xml.evaluate("/brilliant/event/canonical", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue.innerHTML,
+        a = document.createElement('a'),
+        br = document.createElement('br');
+    a.setAttribute('href', '//' + href);
+    a.setAttribute('class', 'more');
+    a.innerHTML = "more details&nbsp;>";
+
+
+
+    container.innerHTML = str + '<br />';
+    container.appendChild(a);
+    container.appendChild(br);
+}
+
+var lgReq = new XMLHttpRequest();
+lgReq.addEventListener("load", lgListener);
+lgReq.open("GET", "/events/lg/_next.oml");
+lgReq.send();
+
+/* END LG PREACHING PREVIEW */
