@@ -30,8 +30,9 @@
         </author>
         <content type="xhtml">
             <section>
-                <div id="churchMap" class="map" />
+
                 <p>We'd love to help you get plugged into a church in the Philly area! Students are involved in the local churches listed below, and the distant ones have carpools from Drexel's campus on Sundays.  Please contact us with any questions or if you need transportation! </p>
+                <div id="churchMap" class="map" />
             </section>
             <section>
                 <h2>Antioch of Calvary Chapel</h2>

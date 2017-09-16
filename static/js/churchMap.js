@@ -88,7 +88,7 @@ var doMap = function () {
         position: drexelLatLong,
         map: map,
         title: "Drexel University",
-        icon: "http://sexy.drexelforchrist.org:8000/DrexelForChrist/ideas/xsl/static/application/church/drexel-icon.png"
+        icon: "https://cdn.drexelforchrist.com/s/9535599b35ae/drexel-icon.png"
     });
 
 //        addChurch('Antioch of Calvary Chapel, 4721 Chestnut Street, Philadelphia Pa', '1');
@@ -117,7 +117,7 @@ function addChurch(address,lbl) {
                 var marker = new google.maps.Marker({
                     map: map,
                     text: lbl.toString(),
-                    icon: "%%host:static%%/application/church/church-icon.png",
+                    icon: "https://cdn.drexelforchrist.com/s/51bf11c78e52/church-icon.png",
                     visible: false,
                     position: results[0].geometry.location,
                     zIndex: 40
