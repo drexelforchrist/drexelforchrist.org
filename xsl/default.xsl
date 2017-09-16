@@ -370,9 +370,16 @@
                         </meta>
                     </xsl:if>
 
-                    <xsl:if test="brilliant/document/content/img[@class = 'header']" >
-                        <xsl:apply-templates select="brilliant/document/content/img[@class = 'header']" />
-                    </xsl:if>
+                    <xsl:choose>
+                        <xsl:when test="brilliant/document/content/img[@class = 'header']" >
+                            <xsl:apply-templates select="brilliant/document/content/img[@class = 'header']" />
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:if test="brilliant/document/content/section/div[@class = 'map']" >
+                                <xsl:apply-templates select="brilliant/document/content/section/div[@class = 'map']" />
+                            </xsl:if>
+                        </xsl:otherwise>
+                    </xsl:choose>
 
                     <xsl:choose>
                         <xsl:when test="not(brilliant/document/template/notitle)" >

@@ -94,27 +94,13 @@ var doMap = function () {
 //        addChurch('Antioch of Calvary Chapel, 4721 Chestnut Street, Philadelphia Pa', '1');
 
     //window.console.log('1  Antioch of Calvary Chapel', '');
-    addChurch('Antioch of Calvary Chapel, 4721 Chestnut Street, Philadelphia, Pa', '1');
+    addChurch('Antioch of Calvary Chapel, 4721 Chestnut Street, Philadelphia, Pa', 'A');
     //window.console.log('2  Covenant Community Church', '');
-    addChurch('Covenant Community Church, 4115 Baltimore Avenue, Philadelphia, PA', '2');
-    //window.console.log('3  Covenant Fellowship Church', '');
-    addChurch('Covenant Fellowship Church, 1 Fellowship Drive, Glen Mills, PA', '3');
-    //window.console.log('4  Enon Tabernacle Baptist Church (East)', '');
-    addChurch('Enon Tabernacle Baptist Church (East), 2800 West Cheltenham Ave., Philadelphia, PA', '4');
-    //window.console.log('5  Enon Tabernacle Baptist Church (West)', '');
-    addChurch('Enon Tabernacle Baptist Church (West), 230 West Coulter St., Philadelphia, PA', '5');
-    //window.console.log('6  Epic Church', '');
-    addChurch('Epic Church, 480 S. Broad Street, Philadelphia, PA', '6');
-    //window.console.log('7  Grace Covenant Church (GCC)', '');
-    addChurch('Grace Covenant Church (GCC), 3400 Walnut St, Philadelphia, PA', '7');
+    addChurch('Covenant Community Church, 4115 Baltimore Avenue, Philadelphia, PA', 'C');
     //window.console.log('8  Liberti Church Center City', '');
-    addChurch('Liberti Church Center City, 123 S. 17th Street, Philadelphia, PA', '8');
-    //window.console.log('9  Philadelphia Mission Baptist Church (PMBC)', '');
-    addChurch('Philadelphia Mission Baptist Church (PMBC), 3400 Spruce St, Philadelphia, PA', '9');
+    addChurch('Liberti Church Center City, 123 S. 17th Street, Philadelphia, PA', 'L');
     //window.console.log('10  Tenth Presbyterian Church', '');
-    addChurch('Tenth Presbyterian Church, 1700 Spruce, Philadelphia', '10');
-    //window.console.log('11  University City Chinese Christian Church (UCCCC)', '');
-    addChurch('University City Chinese Christian Church (UCCCC), 4501 Walnut Street, Philadelphia, PA 19139', '11');
+    addChurch('Tenth Presbyterian Church, 1700 Spruce, Philadelphia', 'T');
 
 };
 
@@ -179,7 +165,7 @@ function Label(opt_options) {
     var div = this.div_ = document.createElement('div');
     div.appendChild(span);
     div.style.cssText = 'position: absolute; display: none';
-};
+}
 Label.prototype = new google.maps.OverlayView;
 
 // Implement onAdd
