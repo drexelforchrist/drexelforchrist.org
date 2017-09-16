@@ -156,7 +156,7 @@ function Label(opt_options) {
         'min-width:20px;' +
         'white-space: nowrap; ' +
         'padding: 0; ' +
-        'background-image: url("http://sexy.drexelforchrist.org:8000/DrexelforChrist/ideas/xsl/static/application/church/church-icon.png");' +
+        'background-image: url("https://cdn.drexelforchrist.com/s/51bf11c78e52/church-icon.png");' +
         'color: white; ' +
         'font-weight: bold; ' +
         'font-size:11px; ' +
@@ -213,7 +213,7 @@ Label.prototype.draw = function () {
     span.style.textAlign = 'center';
     span.style.lineHeight = '38px';
     span.style.verticalAlign = 'bottom';
-    span.style.backgroundImage = 'url(http://sexy.drexelforchrist.org:8000/DrexelForChrist/ideas/xsl/static/application/church/church-icon.png)';
+    span.style.backgroundImage = 'url(https://cdn.drexelforchrist.com/s/51bf11c78e52/church-icon.png)';
 };
 
 
