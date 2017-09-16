@@ -201,7 +201,6 @@
                             <video autoplay="autoplay" loop="loop" muted="muted" preload="auto">
                                 <source src="%%host:cdn%%/backgrounds/Blue_Discs.webm" type="video/webm" />
                                 <source src="%%host:cdn%%/backgrounds/Blue_Discs.mp4" type="video/mp4" />
-                                <!-- KURTZ alternative for browsers which don't support the Video tag -->
                             </video>
                         </div>
                     </xsl:when>
@@ -405,7 +404,7 @@
                 <nav id="footer">
                     <ul>
                         <li class="copyrightText">
-                            &#169;&#160;2016&#160;
+                            &#169;&#160;2017&#160;
                             <span class="narrowHide">Drexel&#160;Students&#160;for&#160;Christ</span>
                             &#160;//&#160;
                             <span class="bold">connect<span class="narrowHide">&#160;with&#160;us</span>: </span>

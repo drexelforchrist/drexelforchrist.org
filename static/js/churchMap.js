@@ -88,7 +88,7 @@ var doMap = function () {
         position: drexelLatLong,
         map: map,
         title: "Drexel University",
-        icon: 'static/application/church/drexel-icon.png'
+        icon: "http://sexy.drexelforchrist.org:8000/DrexelForChrist/ideas/xsl/static/application/church/drexel-icon.png"
     });
 
 //        addChurch('Antioch of Calvary Chapel, 4721 Chestnut Street, Philadelphia Pa', '1');
@@ -127,11 +127,11 @@ function addChurch(address,lbl) {
     geocoder.geocode({ 'address': address }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             //window.console.info(results[0]);
-            if (google.maps.geometry.spherical.computeDistanceBetween(drexelLatLong, results[0].geometry.location) < 3219) { // 2 miles
+            if (google.maps.geometry.spherical.computeDistanceBetween(drexelLatLong, results[0].geometry.location) < (3219*40)) { // 2 miles *40
                 var marker = new google.maps.Marker({
                     map: map,
                     text: lbl.toString(),
-                    icon: 'static/application/church/church-icon.png',
+                    icon: "%%host:static%%/application/church/church-icon.png",
                     visible: false,
                     position: results[0].geometry.location,
                     zIndex: 40
@@ -147,7 +147,7 @@ function addChurch(address,lbl) {
                 window.console.log('outside radius');
             }
         } else {
-            alert("Geocode was not successful for the following reason: " + status);
+            window.console.warn("Geocode for " + address + " was not successful for the following reason: " + status);
         }
     });
 }
@@ -170,7 +170,7 @@ function Label(opt_options) {
         'min-width:20px;' +
         'white-space: nowrap; ' +
         'padding: 0; ' +
-        'background-image: url("static/application/church/church-icon.png");' +
+        'background-image: url("http://sexy.drexelforchrist.org:8000/DrexelforChrist/ideas/xsl/static/application/church/church-icon.png");' +
         'color: white; ' +
         'font-weight: bold; ' +
         'font-size:11px; ' +
@@ -227,7 +227,7 @@ Label.prototype.draw = function () {
     span.style.textAlign = 'center';
     span.style.lineHeight = '38px';
     span.style.verticalAlign = 'bottom';
-    span.style.backgroundImage = 'url(static/application/church/church-icon.png)';
+    span.style.backgroundImage = 'url(http://sexy.drexelforchrist.org:8000/DrexelForChrist/ideas/xsl/static/application/church/church-icon.png)';
 };
 
 
