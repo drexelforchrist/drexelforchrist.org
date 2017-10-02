@@ -119,15 +119,17 @@ function lgListener () {
 
 
 
-    str += "  <b>" + speakerFirst + " " + speakerLast + "</b> will be speaking";
+    str += "  <b>" + speakerFirst + " " + speakerLast + "</b> will be";
 
 
-    // topic
+    // topic & end of second sentence
     var topic = xml.evaluate("/brilliant/event/related/softobject[@type='sermon']/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML;
-    str += " on " + topic;
 
-    // period for that second sentence.
-    str += '.';
+    if (topic.charAt(topic.length - 1) === '?') {
+        str += " answering the question, \"" + topic + "\""
+    } else {
+        str += " speaking on " + topic + ".";
+    }
 
 
     // details link
@@ -137,8 +139,6 @@ function lgListener () {
     a.setAttribute('href', '//' + href);
     a.setAttribute('class', 'more');
     a.innerHTML = "more details&nbsp;>";
-
-
 
     container.innerHTML = str + '<br />';
     container.appendChild(a);
