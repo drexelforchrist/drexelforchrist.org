@@ -105,7 +105,7 @@ function lgListener () {
     str += "Large Group will be <b>" + xml.getElementsByTagName('human')[0].childNodes[0].nodeValue.replace("⋅", "</b>at<b>").split("-")[0].trim() + "</b>";
 
     // location if available
-    var location = xml.evaluate("/brilliant/event/location/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML;
+    var location = xml.evaluate("/doxolo/event/location/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML;
     if (location != null && location != '') {
         str += " in <b>" + location + "</b>";
     }
@@ -123,7 +123,7 @@ function lgListener () {
 
 
     // topic & end of second sentence
-    var topic = xml.evaluate("/brilliant/event/related/softobject[@type='sermon']/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML;
+    var topic = xml.evaluate("/doxolo/event/related/softobject[@type='sermon']/name", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML;
 
     if (topic.charAt(topic.length - 1) === '?') {
         str += " answering the question, \"" + topic + "\""
@@ -133,7 +133,7 @@ function lgListener () {
 
 
     // details link
-    var href = xml.evaluate("/brilliant/event/canonical", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML,
+    var href = xml.evaluate("/doxolo/event/canonical", xml, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.innerHTML,
         a = document.createElement('a'),
         br = document.createElement('br');
     a.setAttribute('href', '//' + href);

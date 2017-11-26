@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="xsl/default.xsl"?>
 
-<brilliant>
+<doxolo>
     <lang>en-us</lang>
     <session>
         <nouser />
@@ -146,4 +146,4 @@
             </section>
         </content>
     </document>
-</brilliant>
+</doxolo>

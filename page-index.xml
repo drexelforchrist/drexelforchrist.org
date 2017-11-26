@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="/_formatting/xsl/default.xsl"?>
-<brilliant><session><person><id>1</id><canonical>drexelforchrist.org/_people/1</canonical><address>me</address><name><first>James</first><middle>Karl</middle><last>Kurtz</last><preferred>James</preferred></name></person></session>
+<doxolo><session><person><id>1</id><canonical>drexelforchrist.org/_people/1</canonical><address>me</address><name><first>James</first><middle>Karl</middle><last>Kurtz</last><preferred>James</preferred></name></person></session>
 
 		<document>
 			<id>1</id>
@@ -58,4 +58,4 @@
 </div>			</content>
 
 		</document>
-</brilliant>
+</doxolo>

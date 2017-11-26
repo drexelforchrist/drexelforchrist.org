@@ -3,15 +3,15 @@
     <xsl:output method="xml" encoding="utf-8" indent="yes" />
     <xsl:template match="/">
         <xsl:text disable-output-escaping='yes'>&lt;?xml-stylesheet type="text/xsl" href="/_formatting/xsl/default.xsl"?&gt;&#xa;</xsl:text>
-        <brilliant>
+        <doxolo>
             <xsl:if test="lang != ''">
-                <lang><xsl:value-of select="brilliant/lang" /></lang>
+                <lang><xsl:value-of select="doxolo/lang" /></lang>
             </xsl:if>
             <xsl:apply-templates />
-        </brilliant>
+        </doxolo>
     </xsl:template>
 
-    <xsl:template match="brilliant/softclass">
+    <xsl:template match="doxolo/softclass">
         <document>
             <title><xsl:value-of select="name" /></title>
             <canonical><xsl:value-of select="canonical" /></canonical>
@@ -51,7 +51,7 @@
         </document>
     </xsl:template>
 
-    <xsl:template match="brilliant/softobject">
+    <xsl:template match="doxolo/softobject">
         <document>
             <title><xsl:value-of select="name" /></title>
             <canonical><xsl:value-of select="canonical" /></canonical>

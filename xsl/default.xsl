@@ -4,9 +4,9 @@
     <xsl:template match="/">
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html prefix="og: http://ogp.me/ns#">
-            <xsl:if test="brilliant/lang != ''">
+            <xsl:if test="doxolo/lang != ''">
                 <xsl:attribute name="lang">
-                    <xsl:value-of select="brilliant/lang" />
+                    <xsl:value-of select="doxolo/lang" />
                 </xsl:attribute>
             </xsl:if>
 
@@ -14,8 +14,8 @@
             <!-- Extract body className for template. -->
             <xsl:variable name="rawStyleClass">
                 <xsl:choose>
-                    <xsl:when test="brilliant/document/template/name">
-                        <xsl:value-of select="translate(brilliant/document/template/name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
+                    <xsl:when test="doxolo/document/template/name">
+                        <xsl:value-of select="translate(doxolo/document/template/name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')" />
                     </xsl:when>
                     <xsl:otherwise>community</xsl:otherwise><!-- some value is necessary for non-css components (like the icon)  -->
                 </xsl:choose>
@@ -39,8 +39,8 @@
 
             <!-- Isolate Summary -->
             <xsl:variable name="summary">
-                <xsl:if test="brilliant/document/summary">
-                    <xsl:value-of select="brilliant/document/summary" />
+                <xsl:if test="doxolo/document/summary">
+                    <xsl:value-of select="doxolo/document/summary" />
                 </xsl:if>
             </xsl:variable>
 
@@ -48,8 +48,8 @@
             <!-- Isolate Summary -->
             <!--<xsl:variable name="author" as="element()">-->
             <!--<xsl:choose>-->
-            <!--<xsl:when test="brilliant/document/author">-->
-            <!--<xsl:copy-of select="brilliant/document/author" />-->
+            <!--<xsl:when test="doxolo/document/author">-->
+            <!--<xsl:copy-of select="doxolo/document/author" />-->
             <!--</xsl:when>-->
             <!--<xsl:otherwise />-->
             <!--</xsl:choose>-->
@@ -62,7 +62,7 @@
                 <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" name="viewport" />
 
                 <!-- things that are actually visible -->
-                <title><xsl:value-of select="brilliant/document/title/text()" /><xsl:if test="brilliant/document/title/text() != ''"> // </xsl:if>Drexel Students for Christ</title>
+                <title><xsl:value-of select="doxolo/document/title/text()" /><xsl:if test="doxolo/document/title/text() != ''"> // </xsl:if>Drexel Students for Christ</title>
 
                 <!-- First Party CSS -->
                 <link rel="stylesheet" href="%%host:cdn%%/style/screen.min.css" type="text/css" media="screen" />
@@ -80,21 +80,21 @@
 
                 <!-- SEO Canon -->
                 <link rel="canonical">
-                    <xsl:attribute name="href">https://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
+                    <xsl:attribute name="href">https://<xsl:value-of select="doxolo/document/canonical" /></xsl:attribute>
                 </link>
 
                 <!-- templating -->
                 <script src="%%host:static%%/js/templating.js" type="text/javascript" async="async" />
 
                 <!-- Header JS -->
-                <xsl:copy-of select="brilliant/document/headload/*" />
+                <xsl:copy-of select="doxolo/document/headload/*" />
 
 
                 <!-- SEO -->
                 <xsl:if test="$summary != ''">
                     <meta name="description">
                         <xsl:attribute name="content">
-                            Drexel Students for Christ // <xsl:value-of select="brilliant/document/title/text()" /><xsl:if test="brilliant/document/title/text() != ''"> // </xsl:if>
+                            Drexel Students for Christ // <xsl:value-of select="doxolo/document/title/text()" /><xsl:if test="doxolo/document/title/text() != ''"> // </xsl:if>
                             <xsl:value-of select="$summary" />
                         </xsl:attribute>
                     </meta>
@@ -106,7 +106,7 @@
                 <meta name="twitter:site" content="@DrexelForChrist" />
                 <meta name="twitter:title">
                     <xsl:attribute name="content">
-                        <xsl:value-of select="brilliant/document/title/text()" />
+                        <xsl:value-of select="doxolo/document/title/text()" />
                     </xsl:attribute>
                 </meta>
                 <meta name="twitter:description">
@@ -117,21 +117,21 @@
                 <!--<meta name="twitter:creator" content="@author_handle">-->
                 <!-- Twitter Summary card images must be at least 120x120px -->
                 <meta name="twitter:image">
-                    <xsl:attribute name="content">http://13.drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(brilliant/document/canonical, 21)" /></xsl:attribute>
+                    <xsl:attribute name="content">http://13.drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(doxolo/document/canonical, 21)" /></xsl:attribute>
                 </meta>
 
                 <!-- Open Graph data -->
                 <meta property="og:url">
-                    <xsl:attribute name="content">https://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
+                    <xsl:attribute name="content">https://<xsl:value-of select="doxolo/document/canonical" /></xsl:attribute>
                 </meta>
                 <meta property="og:title">
                     <xsl:attribute name="content">
-                        <xsl:value-of select="brilliant/document/title/text()" />
+                        <xsl:value-of select="doxolo/document/title/text()" />
                     </xsl:attribute>
                 </meta>
                 <!--<meta property="og:type" content="article" />-->
                 <meta property="og:image">
-                    <xsl:attribute name="content">http://13.drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(brilliant/document/canonical, 21)" /></xsl:attribute>
+                    <xsl:attribute name="content">http://13.drexelforchrist.org/dev/imageText/facebook.php/<xsl:value-of select="substring(doxolo/document/canonical, 21)" /></xsl:attribute>
                 </meta>
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
@@ -220,8 +220,8 @@
                         <a id="pageLogoMark" href="/" />
                         <a id="pageLogoText" href="/" />
 
-                        <div class="printOnly printPageTitle"><xsl:value-of select="brilliant/document/title" />
-                            <span id="printPageSubtitle"><xsl:value-of select="brilliant/document/subtitle" /></span>
+                        <div class="printOnly printPageTitle"><xsl:value-of select="doxolo/document/title" />
+                            <span id="printPageSubtitle"><xsl:value-of select="doxolo/document/subtitle" /></span>
                         </div>
                     </div>
 
@@ -248,7 +248,7 @@
                                 <li>
                                     <a href="/events">events</a>
                                     <ul>
-                                        <xsl:if test="brilliant/session/person">
+                                        <xsl:if test="doxolo/session/person">
                                             <li>
                                                 <a href="/events/_manage">manage</a>
                                             </li>
@@ -332,14 +332,14 @@
                             <ul>
                                 <li>
                                     <xsl:choose>
-                                        <xsl:when test="brilliant/session/person">
+                                        <xsl:when test="doxolo/session/person">
                                             <a>
                                                 <xsl:attribute name="href">
-                                                    <xsl:value-of select="brilliant/session/person/address/text()" />
+                                                    <xsl:value-of select="doxolo/session/person/address/text()" />
                                                 </xsl:attribute>
-                                                <xsl:value-of select="brilliant/session/person/name/first/text()" />
-                                                <xsl:if test="brilliant/session/person/name/first/text() != ''">
-                                                    &#160;<xsl:value-of select="substring(brilliant/session/person/name/last/text(),1,1)" />.
+                                                <xsl:value-of select="doxolo/session/person/name/first/text()" />
+                                                <xsl:if test="doxolo/session/person/name/first/text() != ''">
+                                                    &#160;<xsl:value-of select="substring(doxolo/session/person/name/last/text(),1,1)" />.
                                                 </xsl:if>
                                             </a>
                                             <ul>
@@ -361,49 +361,49 @@
                 </nav>
                 <div id="headerSpacer" />
                 <main id="corset">
-                    <xsl:if test="brilliant/document/itemscope[@itemtype]">
+                    <xsl:if test="doxolo/document/itemscope[@itemtype]">
                         <xsl:attribute name="itemscope" />
-                        <xsl:attribute name="itemtype"><xsl:value-of select="brilliant/document/itemscope/@itemtype" /></xsl:attribute>
+                        <xsl:attribute name="itemtype"><xsl:value-of select="doxolo/document/itemscope/@itemtype" /></xsl:attribute>
                         
                         <meta itemprop="url">
-                            <xsl:attribute name="content">https://<xsl:value-of select="brilliant/document/canonical" /></xsl:attribute>
+                            <xsl:attribute name="content">https://<xsl:value-of select="doxolo/document/canonical" /></xsl:attribute>
                         </meta>
                     </xsl:if>
 
                     <xsl:choose>
-                        <xsl:when test="brilliant/document/content/img[@class = 'header']" >
-                            <xsl:apply-templates select="brilliant/document/content/img[@class = 'header']" />
+                        <xsl:when test="doxolo/document/content/img[@class = 'header']" >
+                            <xsl:apply-templates select="doxolo/document/content/img[@class = 'header']" />
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:if test="brilliant/document/content/section/div[@class = 'map']" >
-                                <xsl:apply-templates select="brilliant/document/content/section/div[@class = 'map']" />
+                            <xsl:if test="doxolo/document/content/section/div[@class = 'map']" >
+                                <xsl:apply-templates select="doxolo/document/content/section/div[@class = 'map']" />
                             </xsl:if>
                         </xsl:otherwise>
                     </xsl:choose>
 
                     <xsl:choose>
-                        <xsl:when test="not(brilliant/document/template/notitle)" >
+                        <xsl:when test="not(doxolo/document/template/notitle)" >
                         <h1 class="noPrint">
-                            <xsl:if test="brilliant/document/itemscope[@itemtype]">
+                            <xsl:if test="doxolo/document/itemscope[@itemtype]">
                                 <xsl:attribute name="itemprop">name</xsl:attribute>
                             </xsl:if>
-                            <span id="pageTitle"><xsl:value-of select="brilliant/document/title" /></span>
-                            <xsl:if test="brilliant/document/subtitle != ''">
-                                //&#160;<xsl:value-of select="brilliant/document/subtitle" />
+                            <span id="pageTitle"><xsl:value-of select="doxolo/document/title" /></span>
+                            <xsl:if test="doxolo/document/subtitle != ''">
+                                //&#160;<xsl:value-of select="doxolo/document/subtitle" />
                             </xsl:if>
                         </h1>
                         </xsl:when>
                         <xsl:otherwise>
                             <meta itemprop="name">
                                 <xsl:attribute name="content">
-                                    <xsl:value-of select="brilliant/document/title"/>
-                                    <xsl:if test="brilliant/document/subtitle != ''">&#160;//&#160;<xsl:value-of select="brilliant/document/subtitle" /></xsl:if>
+                                    <xsl:value-of select="doxolo/document/title"/>
+                                    <xsl:if test="doxolo/document/subtitle != ''">&#160;//&#160;<xsl:value-of select="doxolo/document/subtitle" /></xsl:if>
                                 </xsl:attribute>
                             </meta>
                         </xsl:otherwise>
                     </xsl:choose>
 
-                    <xsl:for-each select="brilliant/document/content">
+                    <xsl:for-each select="doxolo/document/content">
                         <xsl:copy-of select="*[not(@class = 'header')]" />
                     </xsl:for-each>
 
@@ -436,7 +436,7 @@
                     </div>
                 </nav>
 
-                <xsl:copy-of select="brilliant/document/footload/*" />
+                <xsl:copy-of select="doxolo/document/footload/*" />
                 <script>
                     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -483,7 +483,7 @@
         </a>
     </xsl:template>
 
-    <xsl:template match="brilliant/document/content/img[@class = 'header']" >
+    <xsl:template match="doxolo/document/content/img[@class = 'header']" >
         <xsl:copy>
             <xsl:attribute name="itemprop">image</xsl:attribute>
             <xsl:apply-templates select="@*|node()" />
