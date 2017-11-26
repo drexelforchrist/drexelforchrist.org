@@ -223,3 +223,7 @@ blockquote p {
 .noPrint {
   display: none;
 }
+/* Expansion toggles */
+main#corset > section.expandable > a.expandable-toggle {
+  display: none;
+}
