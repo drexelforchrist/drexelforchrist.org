@@ -145,6 +145,30 @@
                 <meta property="fb:admins" content="590301109" />
                 <meta property="fb:app_id" content="471343559743264" />
 
+                <!-- Android and Chrome stuff -->
+                <xsl:choose>
+                    <xsl:when test="$styleClass = 'community'">
+                        <meta name="theme-color" content="#2c82c5" />
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'church'">
+                        <meta name="theme-color" content="#b800d9" />
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'prayer'">
+                        <meta name="theme-color" content="#c91b1b" />
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'training'">
+                        <meta name="theme-color" content="#f3712c" />
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'discipleship'">
+                        <meta name="theme-color" content="#efa81e" />
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'outreach'">
+                        <meta name="theme-color" content="#31bd15" />
+                    </xsl:when>
+                    <xsl:when test="$styleClass = 'ninja'" >
+                        <meta name="theme-color" content="#111111" />
+                    </xsl:when>
+                </xsl:choose>
 
 
                 <!--<xsl:if test="$author">-->
